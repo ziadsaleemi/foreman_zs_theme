@@ -485,7 +485,10 @@ body.foreman-theme .pf-v5-c-nav__link.pf-m-current::before,
 body.foreman-theme .pf-v5-c-nav__item.pf-m-current .pf-v5-c-nav__link::before,
 body.foreman-theme .pf-v6-c-nav__link.pf-m-current::before,
 body.foreman-theme .pf-v6-c-nav__item.pf-m-current .pf-v6-c-nav__link::before {
-  border-color: var(--zs-sidebar-active-border) !important;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  border-left-color: var(--zs-sidebar-active-border) !important;
 }
 
 body.foreman-theme .pf-v5-c-nav__item.pf-m-expandable::before,
@@ -493,6 +496,16 @@ body.foreman-theme .pf-v5-c-nav__item.pf-m-current::before,
 body.foreman-theme .pf-v6-c-nav__item.pf-m-expandable::before,
 body.foreman-theme .pf-v6-c-nav__item.pf-m-current::before {
   border-color: var(--zs-sidebar-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__link:not(.pf-m-current)::before,
+body.foreman-theme .pf-v5-c-nav__item:not(.pf-m-current) > .pf-v5-c-nav__link:not(.pf-m-current)::before,
+body.foreman-theme .pf-v6-c-nav__link:not(.pf-m-current)::before,
+body.foreman-theme .pf-v6-c-nav__item:not(.pf-m-current) > .pf-v6-c-nav__link:not(.pf-m-current)::before {
+  border-color: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme .pf-v5-c-nav__link:hover,
@@ -549,6 +562,49 @@ body.foreman-theme .nav-pf-secondary-nav,
 body.foreman-theme .nav-pf-tertiary-nav {
   border-top-color: var(--zs-sidebar-border) !important;
   border-bottom-color: var(--zs-sidebar-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-divider,
+body.foreman-theme .pf-v5-c-nav .pf-v5-c-divider,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-divider,
+body.foreman-theme .pf-v6-c-nav .pf-v6-c-divider,
+body.foreman-theme .pf-v5-c-page__sidebar [role="separator"],
+body.foreman-theme .pf-v6-c-page__sidebar [role="separator"],
+body.foreman-theme .nav-pf-vertical [role="separator"],
+body.foreman-theme .nav-pf-secondary-nav [role="separator"],
+body.foreman-theme .nav-pf-tertiary-nav [role="separator"] {
+  --pf-v5-c-divider--BackgroundColor: var(--zs-sidebar-border);
+  --pf-v5-c-divider--after--BackgroundColor: var(--zs-sidebar-border);
+  --pf-v6-c-divider--BackgroundColor: var(--zs-sidebar-border);
+  --pf-v6-c-divider--after--BackgroundColor: var(--zs-sidebar-border);
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: var(--zs-sidebar-border) !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-divider::before,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-divider::after,
+body.foreman-theme .pf-v5-c-nav .pf-v5-c-divider::before,
+body.foreman-theme .pf-v5-c-nav .pf-v5-c-divider::after,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-divider::before,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-divider::after,
+body.foreman-theme .pf-v6-c-nav .pf-v6-c-divider::before,
+body.foreman-theme .pf-v6-c-nav .pf-v6-c-divider::after,
+body.foreman-theme .pf-v5-c-page__sidebar [role="separator"]::before,
+body.foreman-theme .pf-v5-c-page__sidebar [role="separator"]::after,
+body.foreman-theme .pf-v6-c-page__sidebar [role="separator"]::before,
+body.foreman-theme .pf-v6-c-page__sidebar [role="separator"]::after,
+body.foreman-theme .nav-pf-vertical [role="separator"]::before,
+body.foreman-theme .nav-pf-vertical [role="separator"]::after,
+body.foreman-theme .nav-pf-secondary-nav [role="separator"]::before,
+body.foreman-theme .nav-pf-secondary-nav [role="separator"]::after,
+body.foreman-theme .nav-pf-tertiary-nav [role="separator"]::before,
+body.foreman-theme .nav-pf-tertiary-nav [role="separator"]::after {
+  background: var(--zs-sidebar-border) !important;
+  background-color: var(--zs-sidebar-border) !important;
+  border-color: var(--zs-sidebar-border) !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme .nav-pf-vertical .list-group-item > a,

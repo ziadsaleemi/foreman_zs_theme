@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.19
+Version: 0.1.20
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -56,6 +56,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.20-1
+- Neutralize PatternFly sidebar dividers and keep active nav accents to the left edge only.
+
 * Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.19-1
 - Force the React/PatternFly masthead toolbar containers black so the full topbar band is uniform.
 
