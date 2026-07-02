@@ -144,6 +144,10 @@ body.foreman-theme .pf-v5-c-page__header,
 body.foreman-theme .pf-v6-c-page__header,
 body.foreman-theme .pf-v5-c-masthead,
 body.foreman-theme .pf-v6-c-masthead,
+body.foreman-theme .pf-v5-c-masthead__main,
+body.foreman-theme .pf-v6-c-masthead__main,
+body.foreman-theme .pf-v5-c-masthead__content,
+body.foreman-theme .pf-v6-c-masthead__content,
 body.foreman-theme .navbar-pf,
 body.foreman-theme .navbar-pf-alt,
 body.foreman-theme .navbar-pf-alt-navbar,
@@ -157,6 +161,24 @@ body.foreman-theme .navbar-inverse {
   background-image: none !important;
   border-color: var(--zs-border) !important;
   box-shadow: inset 0 -1px 0 var(--zs-border);
+}
+
+body.foreman-theme #data-toolbar,
+body.foreman-theme .pf-v5-c-masthead #data-toolbar,
+body.foreman-theme .pf-v6-c-masthead #data-toolbar,
+body.foreman-theme .pf-v5-c-masthead .pf-v5-c-toolbar,
+body.foreman-theme .pf-v6-c-masthead .pf-v6-c-toolbar,
+body.foreman-theme .pf-v5-c-masthead .pf-v5-c-toolbar__content,
+body.foreman-theme .pf-v6-c-masthead .pf-v6-c-toolbar__content,
+body.foreman-theme .pf-v5-c-masthead .pf-v5-c-toolbar__content-section,
+body.foreman-theme .pf-v6-c-masthead .pf-v6-c-toolbar__content-section,
+body.foreman-theme .pf-v5-c-masthead .pf-v5-c-toolbar__group,
+body.foreman-theme .pf-v6-c-masthead .pf-v6-c-toolbar__group,
+body.foreman-theme .pf-v5-c-masthead .pf-v5-c-toolbar__item,
+body.foreman-theme .pf-v6-c-masthead .pf-v6-c-toolbar__item {
+  background: var(--zs-topbar) !important;
+  background-color: var(--zs-topbar) !important;
+  background-image: none !important;
 }
 
 body.foreman-theme .navbar-pf-vertical::before,
