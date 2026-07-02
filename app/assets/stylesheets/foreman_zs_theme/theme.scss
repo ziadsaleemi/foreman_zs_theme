@@ -4,20 +4,20 @@
  */
 
 :root {
-  --zs-bg: #26292d;
+  --zs-bg: #222428;
   --zs-topbar: #000000;
   --zs-shell: #1b1d21;
-  --zs-sidebar: #26292d;
-  --zs-sidebar-2: #36373a;
-  --zs-sidebar-3: #0f1214;
+  --zs-sidebar: #222428;
+  --zs-sidebar-2: #2d2f33;
+  --zs-sidebar-3: #222428;
   --zs-sidebar-border: #444548;
   --zs-sidebar-accent: #aaabac;
   --zs-sidebar-active-border: #1fa7f8;
   --zs-panel: #1b1d21;
-  --zs-panel-2: #212427;
-  --zs-panel-3: #36373a;
+  --zs-panel-2: #222428;
+  --zs-panel-3: #2d2f33;
   --zs-border: #444548;
-  --zs-border-soft: #36373a;
+  --zs-border-soft: #3a3d42;
   --zs-text: #e0e0e0;
   --zs-muted: #aaabac;
   --zs-dim: #868789;
@@ -49,18 +49,18 @@ body.foreman-theme .ca {
 }
 
 body.foreman-theme.zs-dark-theme {
-  --pf-global--BackgroundColor--100: #1b1d21;
-  --pf-global--BackgroundColor--150: #212427;
-  --pf-global--BackgroundColor--200: #0f1214;
-  --pf-global--BackgroundColor--300: #26292d;
-  --pf-global--BackgroundColor--400: #36373a;
-  --pf-global--BackgroundColor--light-100: #1b1d21;
-  --pf-global--BackgroundColor--light-200: #0f1214;
-  --pf-global--BackgroundColor--light-300: #26292d;
-  --pf-global--BackgroundColor--dark-100: #1b1d21;
-  --pf-global--BackgroundColor--dark-200: #0f1214;
-  --pf-global--BackgroundColor--dark-300: #26292d;
-  --pf-global--BackgroundColor--dark-400: #36373a;
+  --pf-global--BackgroundColor--100: var(--zs-bg);
+  --pf-global--BackgroundColor--150: var(--zs-panel);
+  --pf-global--BackgroundColor--200: var(--zs-panel);
+  --pf-global--BackgroundColor--300: var(--zs-bg);
+  --pf-global--BackgroundColor--400: var(--zs-panel-3);
+  --pf-global--BackgroundColor--light-100: var(--zs-bg);
+  --pf-global--BackgroundColor--light-200: var(--zs-panel);
+  --pf-global--BackgroundColor--light-300: var(--zs-bg);
+  --pf-global--BackgroundColor--dark-100: var(--zs-panel);
+  --pf-global--BackgroundColor--dark-200: var(--zs-topbar);
+  --pf-global--BackgroundColor--dark-300: var(--zs-bg);
+  --pf-global--BackgroundColor--dark-400: var(--zs-panel-3);
   --pf-global--Color--100: #e0e0e0;
   --pf-global--Color--200: #aaabac;
   --pf-global--Color--light-100: #e0e0e0;
@@ -624,14 +624,19 @@ body.foreman-theme .pf-v5-c-page__main-section,
 body.foreman-theme .pf-v5-c-page__main-section.pf-m-light,
 body.foreman-theme .pf-v6-c-page__main-breadcrumb,
 body.foreman-theme .pf-v6-c-page__main-section,
-body.foreman-theme .pf-v6-c-page__main-section.pf-m-light,
+body.foreman-theme .pf-v6-c-page__main-section.pf-m-light {
+  background: var(--zs-bg) !important;
+  color: var(--zs-text) !important;
+  border-color: var(--zs-border-soft) !important;
+}
+
 body.foreman-theme .rails-table-toolbar,
 body.foreman-theme .toolbar-pf,
 body.foreman-theme .title_filter,
 body.foreman-theme .page-table-toolbar {
-  background: var(--zs-bg) !important;
+  background: var(--zs-panel) !important;
   color: var(--zs-text) !important;
-  border-color: var(--zs-border-soft) !important;
+  border-color: var(--zs-border) !important;
 }
 
 body.foreman-theme .pf-v5-c-card,
@@ -697,6 +702,7 @@ body.foreman-theme .tt-menu {
   background: var(--zs-panel) !important;
   color: var(--zs-text) !important;
   border-color: var(--zs-border) !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme #dashboard,
@@ -717,7 +723,7 @@ body.foreman-theme #dashboard > ul > li,
 body.foreman-theme .dashboard.gridster > ul > li {
   background: var(--zs-panel) !important;
   border: 1px solid var(--zs-border) !important;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 10px 22px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme #dashboard .widget,
@@ -854,7 +860,7 @@ body.foreman-theme .bootstrap-switch-handle-off.bootstrap-switch-primary {
 
 body.foreman-theme .bootstrap-switch-handle-off.bootstrap-switch-default,
 body.foreman-theme .bootstrap-switch-label {
-  background-color: #101720 !important;
+  background-color: var(--zs-panel) !important;
   color: var(--zs-muted) !important;
 }
 
@@ -864,7 +870,7 @@ body.foreman-theme .pf-v6-c-table__thead,
 body.foreman-theme .pf-v6-c-table__thead *,
 body.foreman-theme [class*="Table"] [class*="Header"],
 body.foreman-theme [class*="table"] [class*="header"] {
-  background-color: #101720 !important;
+  background-color: var(--zs-bg) !important;
   color: var(--zs-muted) !important;
 }
 
@@ -884,7 +890,7 @@ body.foreman-theme .pf-v6-c-table td {
 body.foreman-theme .table > thead > tr > th,
 body.foreman-theme .pf-v5-c-table thead th,
 body.foreman-theme .pf-v6-c-table thead th {
-  background: #101720 !important;
+  background: var(--zs-bg) !important;
   color: var(--zs-muted) !important;
   border-bottom: 1px solid var(--zs-border) !important;
   font-weight: 600;
@@ -949,8 +955,8 @@ body.foreman-theme .select2-choices,
 body.foreman-theme input,
 body.foreman-theme select,
 body.foreman-theme textarea {
-  background: #0f141a !important;
-  border-color: #3a4654 !important;
+  background: var(--zs-panel-3) !important;
+  border-color: var(--zs-border) !important;
   color: var(--zs-text) !important;
 }
 
@@ -982,14 +988,14 @@ body.foreman-theme .btn,
 body.foreman-theme .pf-v5-c-button,
 body.foreman-theme .pf-v6-c-button {
   background: var(--zs-panel-3) !important;
-  border-color: #445164 !important;
+  border-color: var(--zs-border) !important;
   color: var(--zs-text) !important;
 }
 
 body.foreman-theme .btn:hover,
 body.foreman-theme .pf-v5-c-button:hover,
 body.foreman-theme .pf-v6-c-button:hover {
-  background: #2a3442 !important;
+  background: #35373c !important;
   border-color: var(--zs-accent) !important;
 }
 
@@ -1066,7 +1072,7 @@ body.foreman-theme .pagination > li > a,
 body.foreman-theme .pagination > li > span,
 body.foreman-theme .pf-v5-c-pagination,
 body.foreman-theme .pf-v6-c-pagination {
-  background: var(--zs-panel) !important;
+  background: var(--zs-bg) !important;
   border-color: var(--zs-border) !important;
   color: var(--zs-text) !important;
 }
@@ -1103,7 +1109,7 @@ body.foreman-theme .pf-v5-c-progress,
 body.foreman-theme .pf-v5-c-progress__bar,
 body.foreman-theme .pf-v6-c-progress,
 body.foreman-theme .pf-v6-c-progress__bar {
-  background: #101720 !important;
+  background: var(--zs-panel) !important;
   border-color: var(--zs-border) !important;
 }
 
@@ -1115,18 +1121,18 @@ body.foreman-theme [class*="skeleton"],
 body.foreman-theme [class*="placeholder"],
 body.foreman-theme [class*="Placeholder"],
 body.foreman-theme [data-ouia-component-type*="Skeleton"] {
-  --pf-v5-c-skeleton--BackgroundColor: #1f2a36;
-  --pf-v5-c-skeleton--after--BackgroundColor: #2b3542;
-  --pf-v5-c-skeleton--after--LinearGradientColorStop1: #1f2a36;
-  --pf-v5-c-skeleton--after--LinearGradientColorStop2: #2b3542;
-  --pf-v5-c-skeleton--after--LinearGradientColorStop3: #1f2a36;
-  --pf-v6-c-skeleton--BackgroundColor: #1f2a36;
-  --pf-v6-c-skeleton--after--BackgroundColor: #2b3542;
-  --pf-v6-c-skeleton--after--LinearGradientColorStop1: #1f2a36;
-  --pf-v6-c-skeleton--after--LinearGradientColorStop2: #2b3542;
-  --pf-v6-c-skeleton--after--LinearGradientColorStop3: #1f2a36;
-  background-color: #1f2a36 !important;
-  background-image: linear-gradient(90deg, #1f2a36 0%, #2b3542 45%, #1f2a36 90%) !important;
+  --pf-v5-c-skeleton--BackgroundColor: #202327;
+  --pf-v5-c-skeleton--after--BackgroundColor: #2d2f33;
+  --pf-v5-c-skeleton--after--LinearGradientColorStop1: #202327;
+  --pf-v5-c-skeleton--after--LinearGradientColorStop2: #2d2f33;
+  --pf-v5-c-skeleton--after--LinearGradientColorStop3: #202327;
+  --pf-v6-c-skeleton--BackgroundColor: #202327;
+  --pf-v6-c-skeleton--after--BackgroundColor: #2d2f33;
+  --pf-v6-c-skeleton--after--LinearGradientColorStop1: #202327;
+  --pf-v6-c-skeleton--after--LinearGradientColorStop2: #2d2f33;
+  --pf-v6-c-skeleton--after--LinearGradientColorStop3: #202327;
+  background-color: #202327 !important;
+  background-image: linear-gradient(90deg, #202327 0%, #2d2f33 45%, #202327 90%) !important;
   border-color: var(--zs-border) !important;
 }
 
@@ -1144,8 +1150,8 @@ body.foreman-theme [class*="placeholder"]::before,
 body.foreman-theme [class*="placeholder"]::after,
 body.foreman-theme [class*="Placeholder"]::before,
 body.foreman-theme [class*="Placeholder"]::after {
-  background-color: #2b3542 !important;
-  background-image: linear-gradient(90deg, #1f2a36 0%, #2b3542 45%, #1f2a36 90%) !important;
+  background-color: #2d2f33 !important;
+  background-image: linear-gradient(90deg, #202327 0%, #2d2f33 45%, #202327 90%) !important;
 }
 
 body.foreman-theme .pf-v5-c-skeleton svg,
@@ -1153,8 +1159,8 @@ body.foreman-theme .pf-v6-c-skeleton svg,
 body.foreman-theme .skeleton svg,
 body.foreman-theme [class*="Skeleton"] svg,
 body.foreman-theme [class*="skeleton"] svg {
-  fill: #1f2a36 !important;
-  stroke: #2b3542 !important;
+  fill: #202327 !important;
+  stroke: #2d2f33 !important;
 }
 
 body.foreman-theme .c3 text,
@@ -1167,7 +1173,7 @@ body.foreman-theme .c3 line,
 body.foreman-theme .c3 path,
 body.foreman-theme .nv-axis line,
 body.foreman-theme .nv-axis path {
-  stroke: #3a4654 !important;
+  stroke: var(--zs-border) !important;
 }
 
 body.foreman-theme .login-pf,

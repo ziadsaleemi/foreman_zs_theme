@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.20
+Version: 0.1.21
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -56,6 +56,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.21-1
+- Align sidebar, content, table, toolbar, form, and skeleton colors with AWX dark surfaces.
+
 * Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.20-1
 - Neutralize PatternFly sidebar dividers and keep active nav accents to the left edge only.
 
