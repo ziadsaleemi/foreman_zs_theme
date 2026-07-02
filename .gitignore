@@ -1,0 +1,23 @@
+# Build outputs
+pkg/
+*.gem
+*.rpm
+
+# Local verification artifacts
+tmp/
+outputs/
+work/
+*.log
+*.png
+
+# Environment and credentials
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# OS/editor noise
+.DS_Store
+*.swp
+*~

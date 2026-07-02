@@ -1,0 +1,113 @@
+%global gem_name foreman_zs_theme
+%global gem_dir /usr/share/gems
+
+Name: rubygem-%{gem_name}
+Version: 0.1.18
+Release: 1%{?dist}
+Summary: ZS dark theme plugin for Foreman
+License: GPL-3.0-or-later
+URL: https://foreman.corp.zs.us/
+Source0: %{gem_name}-%{version}.gem
+BuildArch: noarch
+Requires: foreman >= 3.19
+Requires: rubygems
+Requires(post): systemd
+Requires(postun): systemd
+
+%description
+Foreman Rails-engine plugin that applies the ZS AWX-inspired dark theme and
+Red Hat Satellite branding without editing Foreman package-managed files.
+
+%prep
+
+%build
+
+%install
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{gem_dir}
+gem install --local --install-dir %{buildroot}%{gem_dir} --force --ignore-dependencies --no-document %{SOURCE0}
+
+mkdir -p %{buildroot}%{_datadir}/foreman/bundler.d
+cat > %{buildroot}%{_datadir}/foreman/bundler.d/%{gem_name}.rb <<'EOF'
+gem 'foreman_zs_theme'
+EOF
+
+mkdir -p %{buildroot}%{_datadir}/foreman/public/assets/%{gem_name}
+install -m 0644 %{buildroot}%{gem_dir}/gems/%{gem_name}-%{version}/theme.css %{buildroot}%{_datadir}/foreman/public/assets/%{gem_name}/theme.css
+install -m 0644 %{buildroot}%{gem_dir}/gems/%{gem_name}-%{version}/theme.js %{buildroot}%{_datadir}/foreman/public/assets/%{gem_name}/theme.js
+install -m 0644 %{buildroot}%{gem_dir}/gems/%{gem_name}-%{version}/redhat-satellite-logo.svg %{buildroot}%{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
+
+%post
+systemctl try-restart foreman httpd >/dev/null 2>&1 || :
+
+%postun
+if [ "$1" -eq 0 ]; then
+  systemctl try-restart foreman httpd >/dev/null 2>&1 || :
+fi
+
+%files
+%{gem_dir}/gems/%{gem_name}-%{version}
+%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
+%{gem_dir}/cache/%{gem_name}-%{version}.gem
+%config(noreplace) %{_datadir}/foreman/bundler.d/%{gem_name}.rb
+%dir %{_datadir}/foreman/public/assets/%{gem_name}
+%{_datadir}/foreman/public/assets/%{gem_name}/theme.css
+%{_datadir}/foreman/public/assets/%{gem_name}/theme.js
+%{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
+
+%changelog
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.18-1
+- Rename theme plugin, gem, RPM, bundler hook, assets, settings, CSS hooks, and JS hooks to ZS.
+- Preserve the AWX-inspired dark theme coverage and cache-busted public assets.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.16-1
+- Force remaining topbar containers black and neutralize blue sidebar horizontal separators.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.15-1
+- Darken topbar child controls and switch the bundled logo to a transparent dark-header variant.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.14-1
+- Make the topbar black and remove the hamburger menu button fill.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.13-1
+- Align dark theme palette with the live AWX PatternFly dark tokens.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.12-1
+- Rename the theme settings category to Dark Theme.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.11-1
+- Register ZS theme settings through the Rails reloader during plugin boot.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.10-1
+- Add Foreman settings for the theme logo URL and hiding the FOREMAN header text.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.9-1
+- Darken Red Hat repository containers and Bootstrap switch controls.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.8-1
+- Restrict sidebar selected styling to the active item and darken Katello React tables.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.7-1
+- Darken skeleton loader shimmer and placeholder variants.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.6-1
+- Neutralize PatternFly nav item pseudo-element blue separators.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.5-1
+- Neutralize blue sidebar separator and selected-item accents.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.4-1
+- Override PatternFly nav link background tokens to remove remaining teal rows.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.3-1
+- Change sidebar/nav palette from teal to AWX-style charcoal gray.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.2-1
+- Darken Bootstrap table hover, selected, and status row states.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.1-2
+- Keep Foreman plugin registry version in sync with the gem version.
+
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.1-1
+- Package plugin as an installable/upgradable RPM.
+- Improve dashboard widget and legacy sidebar dark-mode coverage.

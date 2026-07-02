@@ -1,0 +1,1105 @@
+/*
+ * ZS AWX-inspired Foreman/Katello dark theme.
+ * Shipped as a Foreman plugin asset so package updates do not overwrite it.
+ */
+
+:root {
+  --zs-bg: #26292d;
+  --zs-topbar: #000000;
+  --zs-shell: #1b1d21;
+  --zs-sidebar: #26292d;
+  --zs-sidebar-2: #36373a;
+  --zs-sidebar-3: #0f1214;
+  --zs-sidebar-border: #444548;
+  --zs-sidebar-accent: #aaabac;
+  --zs-sidebar-active-border: #1fa7f8;
+  --zs-panel: #1b1d21;
+  --zs-panel-2: #212427;
+  --zs-panel-3: #36373a;
+  --zs-border: #444548;
+  --zs-border-soft: #36373a;
+  --zs-text: #e0e0e0;
+  --zs-muted: #aaabac;
+  --zs-dim: #868789;
+  --zs-accent: #1fa7f8;
+  --zs-accent-2: #73bcf7;
+  --zs-green: #5ba352;
+  --zs-danger: #fe5142;
+  --zs-warning: #f0ab00;
+}
+
+html,
+body.foreman-theme,
+body.foreman-theme #rails-app-content,
+body.foreman-theme .pf-v5-c-page,
+body.foreman-theme .pf-v6-c-page,
+body.foreman-theme #main,
+body.foreman-theme #content,
+body.foreman-theme .pf-v5-c-page__main,
+body.foreman-theme .pf-v5-c-page__main-section,
+body.foreman-theme .pf-v6-c-page__main,
+body.foreman-theme .pf-v6-c-page__main-section,
+body.foreman-theme .container-pf-nav-pf-vertical,
+body.foreman-theme .container-pf-alt-nav-pf-vertical-alt,
+body.foreman-theme .container-fluid,
+body.foreman-theme .row,
+body.foreman-theme .ca {
+  background: var(--zs-bg) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme.zs-dark-theme {
+  --pf-global--BackgroundColor--100: #1b1d21;
+  --pf-global--BackgroundColor--150: #212427;
+  --pf-global--BackgroundColor--200: #0f1214;
+  --pf-global--BackgroundColor--300: #26292d;
+  --pf-global--BackgroundColor--400: #36373a;
+  --pf-global--BackgroundColor--light-100: #1b1d21;
+  --pf-global--BackgroundColor--light-200: #0f1214;
+  --pf-global--BackgroundColor--light-300: #26292d;
+  --pf-global--BackgroundColor--dark-100: #1b1d21;
+  --pf-global--BackgroundColor--dark-200: #0f1214;
+  --pf-global--BackgroundColor--dark-300: #26292d;
+  --pf-global--BackgroundColor--dark-400: #36373a;
+  --pf-global--Color--100: #e0e0e0;
+  --pf-global--Color--200: #aaabac;
+  --pf-global--Color--light-100: #e0e0e0;
+  --pf-global--Color--light-200: #aaabac;
+  --pf-global--BorderColor--100: #444548;
+  --pf-global--BorderColor--200: #444548;
+  --pf-global--BorderColor--300: #57585a;
+  --pf-global--active-color--100: #1fa7f8;
+  --pf-global--primary-color--100: #1fa7f8;
+  --pf-global--primary-color--light-100: #1fa7f8;
+  --pf-global--primary-color--dark-100: #1fa7f8;
+  --pf-global--link--Color: #1fa7f8;
+  --pf-global--link--Color--hover: #73bcf7;
+  --pf-global--link--Color--light: #1fa7f8;
+  --pf-global--link--Color--light--hover: #73bcf7;
+  --pf-global--link--Color--dark: #1fa7f8;
+  --pf-global--link--Color--dark--hover: #73bcf7;
+  --pf-v5-global--BackgroundColor--100: var(--zs-bg);
+  --pf-v5-global--BackgroundColor--200: var(--zs-shell);
+  --pf-v5-global--Color--100: var(--zs-text);
+  --pf-v5-global--Color--200: var(--zs-muted);
+  --pf-v5-global--BorderColor--100: var(--zs-border);
+  --pf-v5-global--primary-color--100: var(--zs-accent);
+  --pf-v5-global--link--Color: var(--zs-accent-2);
+  --pf-t--global--background--color--primary--default: var(--zs-bg);
+  --pf-t--global--background--color--secondary--default: var(--zs-shell);
+  --pf-t--global--background--color--floating--default: var(--zs-panel);
+  --pf-t--global--text--color--regular: var(--zs-text);
+  --pf-t--global--text--color--subtle: var(--zs-muted);
+  --pf-t--global--border--color--default: var(--zs-border);
+  --pf-t--global--color--brand--default: var(--zs-accent);
+  --navbar-pf-bg-color: var(--zs-topbar);
+  --navbar-pf-navbar-bg-color: var(--zs-topbar);
+  --navbar-pf-navbar-primary-bg-color: var(--zs-topbar);
+  --navbar-pf-navbar-utility-bg-color: var(--zs-topbar);
+  --navbar-pf-border-color: var(--zs-topbar);
+  --navbar-pf-link-color: var(--zs-text);
+  --navbar-pf-link-hover-bg-color: var(--zs-panel-2);
+  color-scheme: dark;
+}
+
+body.foreman-theme a {
+  color: var(--zs-accent-2);
+}
+
+body.foreman-theme a:hover,
+body.foreman-theme a:focus {
+  color: #9bdcff;
+}
+
+body.foreman-theme:not(.zs-custom-logo) img[src*="header_logo"],
+body.foreman-theme:not(.zs-custom-logo) img[src*="login_logo"],
+body:not(.foreman-theme):not(.zs-custom-logo) img[src*="login_logo"] {
+  content: url("/assets/foreman_zs_theme/redhat-satellite-logo.svg");
+  width: 150px !important;
+  height: 42px !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-sizing: content-box !important;
+  padding: 0 !important;
+}
+
+body.foreman-theme img.zs-theme-logo,
+body:not(.foreman-theme) img.zs-theme-logo {
+  width: 150px !important;
+  max-width: 180px !important;
+  height: 42px !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-sizing: content-box !important;
+  padding: 0 !important;
+}
+
+body.foreman-theme .zs-theme-hidden-wordmark {
+  display: none !important;
+}
+
+body.foreman-theme .pf-v5-c-page__header,
+body.foreman-theme .pf-v6-c-page__header,
+body.foreman-theme .pf-v5-c-masthead,
+body.foreman-theme .pf-v6-c-masthead,
+body.foreman-theme .navbar-pf,
+body.foreman-theme .navbar-pf-alt,
+body.foreman-theme .navbar-pf-alt-navbar,
+body.foreman-theme .navbar-pf-navbar,
+body.foreman-theme .navbar-pf-vertical,
+body.foreman-theme .navbar,
+body.foreman-theme .navbar-default,
+body.foreman-theme .navbar-inverse {
+  background: var(--zs-topbar) !important;
+  background-color: var(--zs-topbar) !important;
+  background-image: none !important;
+  border-color: var(--zs-border) !important;
+  box-shadow: inset 0 -1px 0 var(--zs-border);
+}
+
+body.foreman-theme .navbar-pf-vertical::before,
+body.foreman-theme .navbar-pf-vertical::after,
+body.foreman-theme .navbar::before,
+body.foreman-theme .navbar::after,
+body.foreman-theme .navbar-pf::before,
+body.foreman-theme .navbar-pf::after,
+body.foreman-theme .navbar-pf-alt::before,
+body.foreman-theme .navbar-pf-alt::after,
+body.foreman-theme .navbar-pf-navbar::before,
+body.foreman-theme .navbar-pf-navbar::after,
+body.foreman-theme .pf-v5-c-page__header::before,
+body.foreman-theme .pf-v5-c-page__header::after,
+body.foreman-theme .pf-v6-c-page__header::before,
+body.foreman-theme .pf-v6-c-page__header::after {
+  background: var(--zs-topbar) !important;
+  background-color: var(--zs-topbar) !important;
+  background-image: none !important;
+  border-color: var(--zs-topbar) !important;
+}
+
+body.foreman-theme .pf-v5-c-page__header > *,
+body.foreman-theme .pf-v6-c-page__header > *,
+body.foreman-theme .pf-v5-c-masthead > *,
+body.foreman-theme .pf-v6-c-masthead > *,
+body.foreman-theme .navbar-pf > *,
+body.foreman-theme .navbar-pf .container,
+body.foreman-theme .navbar-pf .container-fluid,
+body.foreman-theme .navbar-pf .navbar-header,
+body.foreman-theme .navbar-pf .navbar-brand,
+body.foreman-theme .navbar-pf .navbar-collapse,
+body.foreman-theme .navbar-pf .navbar-left,
+body.foreman-theme .navbar-pf .navbar-right,
+body.foreman-theme .navbar-pf .navbar-menu,
+body.foreman-theme .navbar-pf .navbar-nav,
+body.foreman-theme .navbar-pf .navbar-nav > li,
+body.foreman-theme .navbar-pf .navbar-nav > li > a,
+body.foreman-theme .navbar-pf .navbar-primary,
+body.foreman-theme .navbar-pf .navbar-persistent,
+body.foreman-theme .navbar-pf .navbar-pf-navbar,
+body.foreman-theme .navbar-pf .navbar-pf-vertical-nav,
+body.foreman-theme .navbar-pf .navbar-utility,
+body.foreman-theme .navbar-pf .navbar-utility > li,
+body.foreman-theme .navbar-pf .navbar-utility > li > a,
+body.foreman-theme .navbar-pf .navbar-form,
+body.foreman-theme .navbar-pf #org-menu,
+body.foreman-theme .navbar-pf #loc-menu,
+body.foreman-theme .navbar-pf #account_menu,
+body.foreman-theme .navbar-pf .dropdown > a,
+body.foreman-theme .navbar-pf .dropdown-toggle,
+body.foreman-theme .navbar-pf .btn,
+body.foreman-theme .navbar-pf .btn-default,
+body.foreman-theme .navbar-pf .bootstrap-select > .dropdown-toggle,
+body.foreman-theme .navbar-pf .select2-container .select2-choice,
+body.foreman-theme .navbar-pf .select2-choice,
+body.foreman-theme .navbar-pf-vertical > *,
+body.foreman-theme .navbar-pf-vertical .container,
+body.foreman-theme .navbar-pf-vertical .container-fluid,
+body.foreman-theme .navbar-pf-vertical .navbar-header,
+body.foreman-theme .navbar-pf-vertical .navbar-brand,
+body.foreman-theme .navbar-pf-vertical .navbar-collapse,
+body.foreman-theme .navbar-pf-vertical .navbar-left,
+body.foreman-theme .navbar-pf-vertical .navbar-right,
+body.foreman-theme .navbar-pf-vertical .navbar-menu,
+body.foreman-theme .navbar-pf-vertical .navbar-nav,
+body.foreman-theme .navbar-pf-vertical .navbar-nav > li,
+body.foreman-theme .navbar-pf-vertical .navbar-nav > li > a,
+body.foreman-theme .navbar-pf-vertical .navbar-primary,
+body.foreman-theme .navbar-pf-vertical .navbar-persistent,
+body.foreman-theme .navbar-pf-vertical .navbar-pf-navbar,
+body.foreman-theme .navbar-pf-vertical .navbar-pf-vertical-nav,
+body.foreman-theme .navbar-pf-vertical .navbar-utility,
+body.foreman-theme .navbar-pf-vertical .navbar-utility > li,
+body.foreman-theme .navbar-pf-vertical .navbar-utility > li > a,
+body.foreman-theme .navbar-pf-vertical .navbar-form,
+body.foreman-theme .navbar-pf-vertical #org-menu,
+body.foreman-theme .navbar-pf-vertical #loc-menu,
+body.foreman-theme .navbar-pf-vertical #account_menu,
+body.foreman-theme .navbar-pf-vertical .dropdown > a,
+body.foreman-theme .navbar-pf-vertical .dropdown-toggle,
+body.foreman-theme .navbar-pf-vertical .btn,
+body.foreman-theme .navbar-pf-vertical .btn-default,
+body.foreman-theme .navbar-pf-vertical .bootstrap-select > .dropdown-toggle,
+body.foreman-theme .navbar-pf-vertical .select2-container .select2-choice,
+body.foreman-theme .navbar-pf-vertical .select2-choice,
+body.foreman-theme .navbar .navbar-header,
+body.foreman-theme .navbar .navbar-brand,
+body.foreman-theme .navbar .navbar-collapse,
+body.foreman-theme .navbar .navbar-left,
+body.foreman-theme .navbar .navbar-right,
+body.foreman-theme .navbar .navbar-menu,
+body.foreman-theme .navbar .navbar-nav,
+body.foreman-theme .navbar .navbar-nav > li,
+body.foreman-theme .navbar .navbar-nav > li > a,
+body.foreman-theme .navbar .navbar-form,
+body.foreman-theme .navbar .dropdown > a,
+body.foreman-theme .navbar .dropdown-toggle,
+body.foreman-theme .navbar .btn,
+body.foreman-theme .navbar .btn-default,
+body.foreman-theme .navbar .bootstrap-select > .dropdown-toggle,
+body.foreman-theme .navbar .select2-container .select2-choice,
+body.foreman-theme .navbar .select2-choice {
+  background: var(--zs-topbar) !important;
+  background-color: var(--zs-topbar) !important;
+  background-image: none !important;
+  border-color: var(--zs-topbar) !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .navbar-pf-vertical .navbar-brand,
+body.foreman-theme .navbar .navbar-brand {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body.foreman-theme .navbar-pf-vertical .open > a,
+body.foreman-theme .navbar-pf-vertical .open > a:hover,
+body.foreman-theme .navbar-pf-vertical .open > a:focus,
+body.foreman-theme .navbar-pf .open > a,
+body.foreman-theme .navbar-pf .open > a:hover,
+body.foreman-theme .navbar-pf .open > a:focus,
+body.foreman-theme .navbar-pf .dropdown-toggle:hover,
+body.foreman-theme .navbar-pf .dropdown-toggle:focus,
+body.foreman-theme .navbar-pf .btn:hover,
+body.foreman-theme .navbar-pf .btn:focus,
+body.foreman-theme .navbar-pf-vertical .dropdown-toggle:hover,
+body.foreman-theme .navbar-pf-vertical .dropdown-toggle:focus,
+body.foreman-theme .navbar-pf-vertical .btn:hover,
+body.foreman-theme .navbar-pf-vertical .btn:focus,
+body.foreman-theme .navbar .open > a,
+body.foreman-theme .navbar .open > a:hover,
+body.foreman-theme .navbar .open > a:focus,
+body.foreman-theme .navbar .dropdown-toggle:hover,
+body.foreman-theme .navbar .dropdown-toggle:focus,
+body.foreman-theme .navbar .btn:hover,
+body.foreman-theme .navbar .btn:focus {
+  background: var(--zs-panel-2) !important;
+  background-color: var(--zs-panel-2) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .navbar-pf-vertical .navbar-toggle,
+body.foreman-theme .navbar-pf-vertical .navbar-toggle:hover,
+body.foreman-theme .navbar-pf-vertical .navbar-toggle:focus,
+body.foreman-theme .navbar-pf-vertical .navbar-toggle:active,
+body.foreman-theme .navbar-pf .navbar-toggle,
+body.foreman-theme .navbar-pf .navbar-toggle:hover,
+body.foreman-theme .navbar-pf .navbar-toggle:focus,
+body.foreman-theme .navbar-pf .navbar-toggle:active,
+body.foreman-theme .navbar .navbar-toggle,
+body.foreman-theme .navbar .navbar-toggle:hover,
+body.foreman-theme .navbar .navbar-toggle:focus,
+body.foreman-theme .navbar .navbar-toggle:active,
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button,
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button:hover,
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button:focus,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button:hover,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button:focus {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .navbar-pf-vertical .navbar-toggle .icon-bar,
+body.foreman-theme .navbar .navbar-toggle .icon-bar {
+  background-color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar,
+body.foreman-theme .pf-v5-c-page__sidebar-body,
+body.foreman-theme .pf-v6-c-page__sidebar,
+body.foreman-theme .pf-v6-c-page__sidebar-body,
+body.foreman-theme .nav-pf-vertical,
+body.foreman-theme .nav-pf-vertical-alt,
+body.foreman-theme .nav-pf-secondary-nav,
+body.foreman-theme .nav-pf-tertiary-nav,
+body.foreman-theme .sidebar-pf,
+body.foreman-theme #vertical-nav {
+  background: var(--zs-sidebar) !important;
+  border-right: 1px solid var(--zs-sidebar-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-nav,
+body.foreman-theme .pf-v5-c-nav__list,
+body.foreman-theme .pf-v5-c-nav__section,
+body.foreman-theme .pf-v5-c-nav__item,
+body.foreman-theme .pf-v5-c-nav__subnav,
+body.foreman-theme .pf-v6-c-nav,
+body.foreman-theme .pf-v6-c-nav__list,
+body.foreman-theme .pf-v6-c-nav__section,
+body.foreman-theme .pf-v6-c-nav__item,
+body.foreman-theme .pf-v6-c-nav__subnav,
+body.foreman-theme .list-group,
+body.foreman-theme .nav-stacked,
+body.foreman-theme .nav-pf-vertical .list-group,
+body.foreman-theme .nav-pf-secondary-nav .list-group,
+body.foreman-theme .nav-pf-tertiary-nav .list-group {
+  background: transparent !important;
+}
+
+body.foreman-theme .nav-pf-vertical .list-group-item,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item {
+  background: transparent !important;
+  border-color: var(--zs-sidebar-border) !important;
+}
+
+body.foreman-theme .nav-pf-vertical .list-group-item,
+body.foreman-theme .nav-pf-vertical .list-group-item > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item > a,
+body.foreman-theme .sidebar-pf .list-group-item,
+body.foreman-theme .sidebar-pf .list-group-item > a,
+body.foreman-theme #vertical-nav .list-group-item,
+body.foreman-theme #vertical-nav .list-group-item > a {
+  border-top-color: var(--zs-sidebar-border) !important;
+  border-right-color: var(--zs-sidebar-border) !important;
+  border-bottom-color: var(--zs-sidebar-border) !important;
+  background-image: none !important;
+}
+
+body.foreman-theme .nav-pf-vertical .list-group-item:not(.active)::before,
+body.foreman-theme .nav-pf-vertical .list-group-item:not(.active)::after,
+body.foreman-theme .nav-pf-vertical .list-group-item:not(.active) > a::before,
+body.foreman-theme .nav-pf-vertical .list-group-item:not(.active) > a::after,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item:not(.active)::before,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item:not(.active)::after,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item:not(.active) > a::before,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item:not(.active) > a::after,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item:not(.active)::before,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item:not(.active)::after,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item:not(.active) > a::before,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item:not(.active) > a::after,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item:not(.active)::before,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item:not(.active)::after,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item:not(.active) > a::before,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item:not(.active) > a::after,
+body.foreman-theme .sidebar-pf .list-group-item:not(.active)::before,
+body.foreman-theme .sidebar-pf .list-group-item:not(.active)::after,
+body.foreman-theme .sidebar-pf .list-group-item:not(.active) > a::before,
+body.foreman-theme .sidebar-pf .list-group-item:not(.active) > a::after,
+body.foreman-theme #vertical-nav .list-group-item:not(.active)::before,
+body.foreman-theme #vertical-nav .list-group-item:not(.active)::after,
+body.foreman-theme #vertical-nav .list-group-item:not(.active) > a::before,
+body.foreman-theme #vertical-nav .list-group-item:not(.active) > a::after {
+  border-top-color: var(--zs-sidebar-border) !important;
+  border-right-color: var(--zs-sidebar-border) !important;
+  border-bottom-color: var(--zs-sidebar-border) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__link,
+body.foreman-theme .pf-v6-c-nav__link,
+body.foreman-theme .nav-pf-vertical a,
+body.foreman-theme .nav-pf-vertical .list-group-item > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a,
+body.foreman-theme .sidebar-pf a,
+body.foreman-theme #vertical-nav a,
+body.foreman-theme .navbar a {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--zs-text) !important;
+  --pf-v5-c-nav__link--BackgroundColor: transparent;
+  --pf-v5-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-2);
+  --pf-v5-c-nav__link--hover--BackgroundColor: transparent;
+  --pf-v5-c-nav__link--before--BorderColor: transparent;
+  --pf-v5-c-nav__link--m-current--before--BorderColor: var(--zs-sidebar-active-border);
+  --pf-v5-c-nav__link--after--BorderColor: var(--zs-sidebar-border);
+  --pf-v6-c-nav__link--BackgroundColor: transparent;
+  --pf-v6-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-2);
+  --pf-v6-c-nav__link--hover--BackgroundColor: transparent;
+  --pf-v6-c-nav__link--before--BorderColor: transparent;
+  --pf-v6-c-nav__link--m-current--before--BorderColor: var(--zs-sidebar-active-border);
+  --pf-v6-c-nav__link--after--BorderColor: var(--zs-sidebar-border);
+}
+
+body.foreman-theme .pf-v5-c-nav__link::before,
+body.foreman-theme .pf-v5-c-nav__link::after,
+body.foreman-theme .pf-v5-c-nav__item::before,
+body.foreman-theme .pf-v5-c-nav__item::after,
+body.foreman-theme .pf-v6-c-nav__link::before,
+body.foreman-theme .pf-v6-c-nav__link::after,
+body.foreman-theme .pf-v6-c-nav__item::before,
+body.foreman-theme .pf-v6-c-nav__item::after {
+  border-color: var(--zs-sidebar-border) !important;
+  background-color: transparent !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__link.pf-m-current::before,
+body.foreman-theme .pf-v5-c-nav__item.pf-m-current .pf-v5-c-nav__link::before,
+body.foreman-theme .pf-v6-c-nav__link.pf-m-current::before,
+body.foreman-theme .pf-v6-c-nav__item.pf-m-current .pf-v6-c-nav__link::before {
+  border-color: var(--zs-sidebar-active-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__item.pf-m-expandable::before,
+body.foreman-theme .pf-v5-c-nav__item.pf-m-current::before,
+body.foreman-theme .pf-v6-c-nav__item.pf-m-expandable::before,
+body.foreman-theme .pf-v6-c-nav__item.pf-m-current::before {
+  border-color: var(--zs-sidebar-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__link:hover,
+body.foreman-theme .pf-v6-c-nav__link:hover,
+body.foreman-theme .nav-pf-vertical .active > a,
+body.foreman-theme .nav-pf-vertical a:hover,
+body.foreman-theme .nav-pf-vertical .list-group-item.active > a,
+body.foreman-theme .nav-pf-vertical .list-group-item:hover > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item:hover > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a:focus,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item:hover > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a:focus,
+body.foreman-theme .sidebar-pf a:hover,
+body.foreman-theme #vertical-nav a:hover {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-left-color: transparent !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__subnav .pf-v5-c-nav__link:not(.pf-m-current),
+body.foreman-theme .pf-v5-c-nav__item.pf-m-expanded > .pf-v5-c-nav__link:not(.pf-m-current),
+body.foreman-theme .pf-v6-c-nav__subnav .pf-v6-c-nav__link:not(.pf-m-current),
+body.foreman-theme .pf-v6-c-nav__item.pf-m-expanded > .pf-v6-c-nav__link:not(.pf-m-current) {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-left-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__link.pf-m-current,
+body.foreman-theme .pf-v6-c-nav__link.pf-m-current,
+body.foreman-theme .nav-pf-vertical .active > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a {
+  background: var(--zs-sidebar-2) !important;
+  color: #ffffff !important;
+  border-left-color: var(--zs-sidebar-active-border) !important;
+  box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__link.pf-m-current::before,
+body.foreman-theme .pf-v6-c-nav__link.pf-m-current::before {
+  border-left-color: var(--zs-sidebar-active-border) !important;
+  border-left-width: 3px !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__subnav,
+body.foreman-theme .pf-v6-c-nav__subnav,
+body.foreman-theme .pf-v5-c-nav__section,
+body.foreman-theme .pf-v6-c-nav__section,
+body.foreman-theme .nav-pf-secondary-nav,
+body.foreman-theme .nav-pf-tertiary-nav {
+  border-top-color: var(--zs-sidebar-border) !important;
+  border-bottom-color: var(--zs-sidebar-border) !important;
+}
+
+body.foreman-theme .nav-pf-vertical .list-group-item > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+body.foreman-theme .nav-pf-secondary-nav,
+body.foreman-theme .nav-pf-tertiary-nav {
+  background: var(--zs-sidebar-3) !important;
+}
+
+body.foreman-theme .pf-v5-c-page__main-breadcrumb,
+body.foreman-theme .pf-v5-c-page__main-section,
+body.foreman-theme .pf-v5-c-page__main-section.pf-m-light,
+body.foreman-theme .pf-v6-c-page__main-breadcrumb,
+body.foreman-theme .pf-v6-c-page__main-section,
+body.foreman-theme .pf-v6-c-page__main-section.pf-m-light,
+body.foreman-theme .rails-table-toolbar,
+body.foreman-theme .toolbar-pf,
+body.foreman-theme .title_filter,
+body.foreman-theme .page-table-toolbar {
+  background: var(--zs-bg) !important;
+  color: var(--zs-text) !important;
+  border-color: var(--zs-border-soft) !important;
+}
+
+body.foreman-theme .pf-v5-c-card,
+body.foreman-theme .pf-v6-c-card,
+body.foreman-theme .card-pf,
+body.foreman-theme .blank-slate-pf,
+body.foreman-theme .pf-v5-c-empty-state,
+body.foreman-theme .pf-v6-c-empty-state,
+body.foreman-theme .well,
+body.foreman-theme .panel,
+body.foreman-theme .panel-default,
+body.foreman-theme .list-view-pf,
+body.foreman-theme .pf-v5-c-table,
+body.foreman-theme .pf-v5-c-table__tbody,
+body.foreman-theme .pf-v6-c-table,
+body.foreman-theme .pf-v6-c-table__tbody,
+body.foreman-theme .pf-v5-c-toolbar,
+body.foreman-theme .pf-v6-c-toolbar,
+body.foreman-theme .pf-v5-c-menu,
+body.foreman-theme .pf-v5-c-dropdown__menu,
+body.foreman-theme .pf-v6-c-menu,
+body.foreman-theme .pf-v6-c-dropdown__menu,
+body.foreman-theme .modal-content,
+body.foreman-theme .popover,
+body.foreman-theme .dropdown-menu,
+body.foreman-theme .grid-stack-item-content,
+body.foreman-theme .dashboard-widget,
+body.foreman-theme #dashboard,
+body.foreman-theme #dashboard > ul,
+body.foreman-theme #dashboard > ul > li,
+body.foreman-theme #dashboard .widget,
+body.foreman-theme #dashboard .widget > div,
+body.foreman-theme #dashboard .widget_control,
+body.foreman-theme .dashboard.gridster,
+body.foreman-theme .dashboard.gridster > ul,
+body.foreman-theme .dashboard.gridster > ul > li,
+body.foreman-theme .dashboard .widget,
+body.foreman-theme .dashboard .widget > div,
+body.foreman-theme .widget,
+body.foreman-theme .widget > div,
+body.foreman-theme .widget .header,
+body.foreman-theme .widget h4.header,
+body.foreman-theme .widget ul,
+body.foreman-theme .widget li,
+body.foreman-theme .host-configuration-chart,
+body.foreman-theme .sync-status,
+body.foreman-theme .sync-status-container,
+body.foreman-theme .dashboard-card,
+body.foreman-theme .statistics-bar,
+body.foreman-theme .list-group-item,
+body.foreman-theme .pf-v5-c-data-list,
+body.foreman-theme .pf-v5-c-data-list__item,
+body.foreman-theme .pf-v6-c-data-list,
+body.foreman-theme .pf-v6-c-data-list__item,
+body.foreman-theme .pf-v5-c-tabs,
+body.foreman-theme .pf-v5-c-tab-content,
+body.foreman-theme .pf-v6-c-tabs,
+body.foreman-theme .pf-v6-c-tab-content,
+body.foreman-theme .react-select__menu,
+body.foreman-theme .select2-drop,
+body.foreman-theme .select2-dropdown,
+body.foreman-theme .tt-menu {
+  background: var(--zs-panel) !important;
+  color: var(--zs-text) !important;
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme #dashboard,
+body.foreman-theme .dashboard.gridster {
+  padding-top: 6px;
+}
+
+body.foreman-theme #dashboard > ul,
+body.foreman-theme .dashboard.gridster > ul,
+body.foreman-theme #dashboard .widget ul,
+body.foreman-theme .dashboard .widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.foreman-theme #dashboard > ul > li,
+body.foreman-theme .dashboard.gridster > ul > li {
+  background: var(--zs-panel) !important;
+  border: 1px solid var(--zs-border) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 10px 22px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.foreman-theme #dashboard .widget,
+body.foreman-theme .dashboard .widget {
+  min-height: 100%;
+}
+
+body.foreman-theme #dashboard .widget .header,
+body.foreman-theme .dashboard .widget .header,
+body.foreman-theme .widget h4.header {
+  background: var(--zs-panel-2) !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  color: var(--zs-text) !important;
+  margin: 0 0 8px;
+  padding: 8px 10px;
+}
+
+body.foreman-theme #dashboard .widget p,
+body.foreman-theme .dashboard .widget p,
+body.foreman-theme #dashboard .widget .total,
+body.foreman-theme .dashboard .widget .total,
+body.foreman-theme .empty-widget-content,
+body.foreman-theme .no-content {
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme #dashboard .remove,
+body.foreman-theme .dashboard .remove {
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme #dashboard .remove:hover,
+body.foreman-theme .dashboard .remove:hover {
+  color: #ffffff !important;
+}
+
+body.foreman-theme .panel-heading,
+body.foreman-theme .panel-footer,
+body.foreman-theme .card-pf-heading,
+body.foreman-theme .card-pf-footer,
+body.foreman-theme .modal-header,
+body.foreman-theme .modal-footer,
+body.foreman-theme .pf-v5-c-card__header,
+body.foreman-theme .pf-v5-c-card__footer,
+body.foreman-theme .pf-v6-c-card__header,
+body.foreman-theme .pf-v6-c-card__footer,
+body.foreman-theme .widget-pf-heading,
+body.foreman-theme .widget-pf-footer,
+body.foreman-theme .widget .header,
+body.foreman-theme .widget h4.header,
+body.foreman-theme .pf-v5-c-tabs__item,
+body.foreman-theme .pf-v5-c-data-list__item-row,
+body.foreman-theme .pf-v6-c-tabs__item,
+body.foreman-theme .pf-v6-c-data-list__item-row,
+body.foreman-theme .pf-v5-c-description-list,
+body.foreman-theme .pf-v6-c-description-list,
+body.foreman-theme .pf-v5-c-expandable-section,
+body.foreman-theme .pf-v6-c-expandable-section {
+  background: var(--zs-panel-2) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .table,
+body.foreman-theme table,
+body.foreman-theme .pf-v5-c-table,
+body.foreman-theme .pf-v6-c-table {
+  color: var(--zs-text) !important;
+  background: var(--zs-panel) !important;
+}
+
+body.foreman-theme .pf-v5-c-table__thead,
+body.foreman-theme .pf-v5-c-table__tbody,
+body.foreman-theme .pf-v5-c-table__tr,
+body.foreman-theme .pf-v5-c-table__td,
+body.foreman-theme .pf-v5-c-table__th,
+body.foreman-theme .pf-v6-c-table__thead,
+body.foreman-theme .pf-v6-c-table__tbody,
+body.foreman-theme .pf-v6-c-table__tr,
+body.foreman-theme .pf-v6-c-table__td,
+body.foreman-theme .pf-v6-c-table__th,
+body.foreman-theme .foreman-react-table,
+body.foreman-theme .foreman-react-table *,
+body.foreman-theme .react-table,
+body.foreman-theme .react-table *,
+body.foreman-theme .katello-table,
+body.foreman-theme .katello-table *,
+body.foreman-theme [class*="Repository"] [class*="Table"],
+body.foreman-theme [class*="repository"] [class*="table"],
+body.foreman-theme [class*="table"] [class*="row"],
+body.foreman-theme [class*="Table"] [class*="Row"],
+body.foreman-theme [class*="table"] [class*="cell"],
+body.foreman-theme [class*="Table"] [class*="Cell"] {
+  background-color: var(--zs-panel) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .available-repositories-container,
+body.foreman-theme .enabled-repositories-container,
+body.foreman-theme .repository-sets-container,
+body.foreman-theme .repositories-container,
+body.foreman-theme .available-repositories-container *,
+body.foreman-theme .enabled-repositories-container *,
+body.foreman-theme .repository-sets-container *,
+body.foreman-theme .repositories-container * {
+  background-color: var(--zs-panel) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .available-repositories-container .text-muted,
+body.foreman-theme .enabled-repositories-container .text-muted,
+body.foreman-theme .available-repositories-container .blank-slate-pf,
+body.foreman-theme .enabled-repositories-container .blank-slate-pf {
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .bootstrap-switch,
+body.foreman-theme .bootstrap-switch-container,
+body.foreman-theme .bootstrap-switch-label,
+body.foreman-theme .bootstrap-switch-handle-on,
+body.foreman-theme .bootstrap-switch-handle-off {
+  background-color: var(--zs-panel-2) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .bootstrap-switch-handle-on.bootstrap-switch-primary,
+body.foreman-theme .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  background-color: var(--zs-accent) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .bootstrap-switch-handle-off.bootstrap-switch-default,
+body.foreman-theme .bootstrap-switch-label {
+  background-color: #101720 !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .pf-v5-c-table__thead,
+body.foreman-theme .pf-v5-c-table__thead *,
+body.foreman-theme .pf-v6-c-table__thead,
+body.foreman-theme .pf-v6-c-table__thead *,
+body.foreman-theme [class*="Table"] [class*="Header"],
+body.foreman-theme [class*="table"] [class*="header"] {
+  background-color: #101720 !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .table > thead > tr > th,
+body.foreman-theme .table > tbody > tr > th,
+body.foreman-theme .table > tfoot > tr > th,
+body.foreman-theme .table > thead > tr > td,
+body.foreman-theme .table > tbody > tr > td,
+body.foreman-theme .table > tfoot > tr > td,
+body.foreman-theme .pf-v5-c-table th,
+body.foreman-theme .pf-v5-c-table td,
+body.foreman-theme .pf-v6-c-table th,
+body.foreman-theme .pf-v6-c-table td {
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme .table > thead > tr > th,
+body.foreman-theme .pf-v5-c-table thead th,
+body.foreman-theme .pf-v6-c-table thead th {
+  background: #101720 !important;
+  color: var(--zs-muted) !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  font-weight: 600;
+}
+
+body.foreman-theme .table-striped > tbody > tr:nth-of-type(odd),
+body.foreman-theme .pf-v5-c-table tr,
+body.foreman-theme .pf-v6-c-table tr {
+  background: var(--zs-panel) !important;
+}
+
+body.foreman-theme .table-striped > tbody > tr:nth-of-type(even),
+body.foreman-theme .table-hover > tbody > tr:hover,
+body.foreman-theme .table-hover > tbody > tr:hover > th,
+body.foreman-theme .table-hover > tbody > tr:hover > td,
+body.foreman-theme .table > tbody > tr.active,
+body.foreman-theme .table > tbody > tr.active > th,
+body.foreman-theme .table > tbody > tr.active > td,
+body.foreman-theme .table > tbody > tr.info,
+body.foreman-theme .table > tbody > tr.info > th,
+body.foreman-theme .table > tbody > tr.info > td,
+body.foreman-theme .table > tbody > tr.success,
+body.foreman-theme .table > tbody > tr.success > th,
+body.foreman-theme .table > tbody > tr.success > td,
+body.foreman-theme .table > tbody > tr.warning,
+body.foreman-theme .table > tbody > tr.warning > th,
+body.foreman-theme .table > tbody > tr.warning > td,
+body.foreman-theme .table > tbody > tr.danger,
+body.foreman-theme .table > tbody > tr.danger > th,
+body.foreman-theme .table > tbody > tr.danger > td,
+body.foreman-theme .table > tbody > tr.selected,
+body.foreman-theme .table > tbody > tr.selected > th,
+body.foreman-theme .table > tbody > tr.selected > td,
+body.foreman-theme .table > tbody > tr.highlight,
+body.foreman-theme .table > tbody > tr.highlight > th,
+body.foreman-theme .table > tbody > tr.highlight > td,
+body.foreman-theme .table > tbody > tr > td.active,
+body.foreman-theme .table > tbody > tr > td.info,
+body.foreman-theme .table > tbody > tr > td.success,
+body.foreman-theme .table > tbody > tr > td.warning,
+body.foreman-theme .table > tbody > tr > td.danger,
+body.foreman-theme .pf-v5-c-table tr:hover,
+body.foreman-theme .pf-v6-c-table tr:hover,
+body.foreman-theme .pf-v5-c-table tr.pf-m-selected,
+body.foreman-theme .pf-v6-c-table tr.pf-m-selected {
+  background: var(--zs-panel-2) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .form-control,
+body.foreman-theme .pf-v5-c-form-control,
+body.foreman-theme .pf-v6-c-form-control,
+body.foreman-theme .pf-v5-c-text-input-group,
+body.foreman-theme .pf-v6-c-text-input-group,
+body.foreman-theme .pf-v5-c-select__toggle,
+body.foreman-theme .pf-v6-c-select__toggle,
+body.foreman-theme .pf-v5-c-menu-toggle,
+body.foreman-theme .pf-v6-c-menu-toggle,
+body.foreman-theme .react-select__control,
+body.foreman-theme .select2-choice,
+body.foreman-theme .select2-choices,
+body.foreman-theme input,
+body.foreman-theme select,
+body.foreman-theme textarea {
+  background: #0f141a !important;
+  border-color: #3a4654 !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .form-control::placeholder,
+body.foreman-theme input::placeholder,
+body.foreman-theme textarea::placeholder {
+  color: var(--zs-dim) !important;
+}
+
+body.foreman-theme option,
+body.foreman-theme optgroup,
+body.foreman-theme .react-select__option,
+body.foreman-theme .select2-results,
+body.foreman-theme .select2-result,
+body.foreman-theme .tt-suggestion {
+  background: var(--zs-panel) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .react-select__option--is-focused,
+body.foreman-theme .react-select__option--is-selected,
+body.foreman-theme .select2-highlighted,
+body.foreman-theme .tt-suggestion:hover {
+  background: var(--zs-sidebar-2) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .btn,
+body.foreman-theme .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-button {
+  background: var(--zs-panel-3) !important;
+  border-color: #445164 !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .btn:hover,
+body.foreman-theme .pf-v5-c-button:hover,
+body.foreman-theme .pf-v6-c-button:hover {
+  background: #2a3442 !important;
+  border-color: var(--zs-accent) !important;
+}
+
+body.foreman-theme .btn-primary,
+body.foreman-theme .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-button.pf-m-primary {
+  background: #0f6f9f !important;
+  border-color: #1788c5 !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .btn-danger,
+body.foreman-theme .pf-v5-c-button.pf-m-danger,
+body.foreman-theme .pf-v6-c-button.pf-m-danger {
+  background: #8f2638 !important;
+  border-color: var(--zs-danger) !important;
+}
+
+body.foreman-theme .label-success,
+body.foreman-theme .pf-m-green,
+body.foreman-theme .pf-v5-c-label.pf-m-green,
+body.foreman-theme .pf-v6-c-label.pf-m-green {
+  background: #1f6f45 !important;
+  color: #dff8e1 !important;
+}
+
+body.foreman-theme .label-danger,
+body.foreman-theme .pf-m-red,
+body.foreman-theme .pf-v5-c-label.pf-m-red,
+body.foreman-theme .pf-v6-c-label.pf-m-red {
+  background: #7d2333 !important;
+  color: #ffe6ea !important;
+}
+
+body.foreman-theme .label-warning,
+body.foreman-theme .pf-m-orange,
+body.foreman-theme .pf-v5-c-label.pf-m-orange,
+body.foreman-theme .pf-v6-c-label.pf-m-orange {
+  background: #72511c !important;
+  color: #fff1cc !important;
+}
+
+body.foreman-theme h1,
+body.foreman-theme h2,
+body.foreman-theme h3,
+body.foreman-theme h4,
+body.foreman-theme h5,
+body.foreman-theme .breadcrumb,
+body.foreman-theme .breadcrumb a,
+body.foreman-theme .pf-v5-c-breadcrumb,
+body.foreman-theme .pf-v5-c-breadcrumb a,
+body.foreman-theme .help-block,
+body.foreman-theme .text-muted,
+body.foreman-theme .pf-v5-c-title,
+body.foreman-theme .pf-v5-c-content,
+body.foreman-theme .pf-v6-c-title,
+body.foreman-theme .pf-v6-c-content,
+body.foreman-theme .pf-v5-c-description-list__term,
+body.foreman-theme .pf-v6-c-description-list__term,
+body.foreman-theme .pf-v5-c-description-list__description,
+body.foreman-theme .pf-v6-c-description-list__description {
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .help-block,
+body.foreman-theme .text-muted,
+body.foreman-theme small,
+body.foreman-theme .breadcrumb,
+body.foreman-theme .pf-v5-c-breadcrumb {
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .pagination > li > a,
+body.foreman-theme .pagination > li > span,
+body.foreman-theme .pf-v5-c-pagination,
+body.foreman-theme .pf-v6-c-pagination {
+  background: var(--zs-panel) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pagination > .active > a,
+body.foreman-theme .pagination > .active > span,
+body.foreman-theme .pf-v5-c-pagination .pf-m-current,
+body.foreman-theme .pf-v6-c-pagination .pf-m-current {
+  background: var(--zs-accent) !important;
+  border-color: var(--zs-accent) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .alert {
+  background: var(--zs-panel-2) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .alert-success {
+  border-left: 3px solid var(--zs-green) !important;
+}
+
+body.foreman-theme .alert-warning {
+  border-left: 3px solid var(--zs-warning) !important;
+}
+
+body.foreman-theme .alert-danger {
+  border-left: 3px solid var(--zs-danger) !important;
+}
+
+body.foreman-theme .progress,
+body.foreman-theme .pf-v5-c-progress,
+body.foreman-theme .pf-v5-c-progress__bar,
+body.foreman-theme .pf-v6-c-progress,
+body.foreman-theme .pf-v6-c-progress__bar {
+  background: #101720 !important;
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-skeleton,
+body.foreman-theme .pf-v6-c-skeleton,
+body.foreman-theme .skeleton,
+body.foreman-theme [class*="Skeleton"],
+body.foreman-theme [class*="skeleton"],
+body.foreman-theme [class*="placeholder"],
+body.foreman-theme [class*="Placeholder"],
+body.foreman-theme [data-ouia-component-type*="Skeleton"] {
+  --pf-v5-c-skeleton--BackgroundColor: #1f2a36;
+  --pf-v5-c-skeleton--after--BackgroundColor: #2b3542;
+  --pf-v5-c-skeleton--after--LinearGradientColorStop1: #1f2a36;
+  --pf-v5-c-skeleton--after--LinearGradientColorStop2: #2b3542;
+  --pf-v5-c-skeleton--after--LinearGradientColorStop3: #1f2a36;
+  --pf-v6-c-skeleton--BackgroundColor: #1f2a36;
+  --pf-v6-c-skeleton--after--BackgroundColor: #2b3542;
+  --pf-v6-c-skeleton--after--LinearGradientColorStop1: #1f2a36;
+  --pf-v6-c-skeleton--after--LinearGradientColorStop2: #2b3542;
+  --pf-v6-c-skeleton--after--LinearGradientColorStop3: #1f2a36;
+  background-color: #1f2a36 !important;
+  background-image: linear-gradient(90deg, #1f2a36 0%, #2b3542 45%, #1f2a36 90%) !important;
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-skeleton::before,
+body.foreman-theme .pf-v5-c-skeleton::after,
+body.foreman-theme .pf-v6-c-skeleton::before,
+body.foreman-theme .pf-v6-c-skeleton::after,
+body.foreman-theme .skeleton::before,
+body.foreman-theme .skeleton::after,
+body.foreman-theme [class*="Skeleton"]::before,
+body.foreman-theme [class*="Skeleton"]::after,
+body.foreman-theme [class*="skeleton"]::before,
+body.foreman-theme [class*="skeleton"]::after,
+body.foreman-theme [class*="placeholder"]::before,
+body.foreman-theme [class*="placeholder"]::after,
+body.foreman-theme [class*="Placeholder"]::before,
+body.foreman-theme [class*="Placeholder"]::after {
+  background-color: #2b3542 !important;
+  background-image: linear-gradient(90deg, #1f2a36 0%, #2b3542 45%, #1f2a36 90%) !important;
+}
+
+body.foreman-theme .pf-v5-c-skeleton svg,
+body.foreman-theme .pf-v6-c-skeleton svg,
+body.foreman-theme .skeleton svg,
+body.foreman-theme [class*="Skeleton"] svg,
+body.foreman-theme [class*="skeleton"] svg {
+  fill: #1f2a36 !important;
+  stroke: #2b3542 !important;
+}
+
+body.foreman-theme .c3 text,
+body.foreman-theme .nv-axis text,
+body.foreman-theme svg text {
+  fill: #c7d0dc !important;
+}
+
+body.foreman-theme .c3 line,
+body.foreman-theme .c3 path,
+body.foreman-theme .nv-axis line,
+body.foreman-theme .nv-axis path {
+  stroke: #3a4654 !important;
+}
+
+body.foreman-theme .login-pf,
+body.foreman-theme .login-page,
+body.foreman-theme .login-pf-page,
+body.foreman-theme .login-pf-page .card-pf,
+body.foreman-theme .login-pf-page .login-pf-page-header,
+body.foreman-theme .login-pf-page .login-pf-page-footer,
+body.foreman-theme .login {
+  background: var(--zs-bg) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
