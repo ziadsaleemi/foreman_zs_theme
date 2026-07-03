@@ -1822,6 +1822,177 @@ body.foreman-theme .pf-v6-c-data-list__cell.pf-m-truncate * {
   white-space: nowrap !important;
 }
 
+body.foreman-theme .audits-data-list.pf-v5-c-data-list__item,
+body.foreman-theme .audits-data-list.pf-v6-c-data-list__item {
+  background: var(--zs-panel) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .audits-data-list.pf-m-expanded {
+  border-top: 1px solid var(--zs-border) !important;
+}
+
+body.foreman-theme .audits-data-list .audits-list-item-row {
+  background: var(--zs-panel) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-border-soft) !important;
+  box-shadow: none !important;
+  min-height: 38px;
+}
+
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__item-control,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__item-control {
+  align-items: stretch;
+  display: flex;
+}
+
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .audits-data-list button[aria-label="Details"] {
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v5-c-button--after--BorderWidth: 0;
+  --pf-v6-c-button--after--BorderColor: transparent;
+  --pf-v6-c-button--after--BorderWidth: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #d7d9dd !important;
+  min-height: 38px !important;
+}
+
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:hover,
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:focus,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:hover,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:focus,
+body.foreman-theme .audits-data-list button[aria-label="Details"]:hover,
+body.foreman-theme .audits-data-list button[aria-label="Details"]:focus {
+  background: var(--zs-panel-2) !important;
+  border-color: transparent !important;
+  color: var(--zs-text) !important;
+  outline: none !important;
+}
+
+body.foreman-theme .audits-data-list .data-list-content,
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__expandable-content,
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__expandable-content-body,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__expandable-content,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__expandable-content-body {
+  background: var(--zs-panel) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .audits-data-list .taxonomy-section {
+  border-bottom: 1px solid var(--zs-border-soft) !important;
+  margin: 0 24px 10px;
+  padding: 14px 0 12px;
+}
+
+body.foreman-theme .audits-data-list .taxonomy-section .pf-v5-l-grid,
+body.foreman-theme .audits-data-list .taxonomy-section .pf-v6-l-grid {
+  min-height: 22px;
+}
+
+body.foreman-theme .audits-data-list .taxonomy-section span {
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .audits-data-list .taxonomy-section strong,
+body.foreman-theme .audits-data-list .taxonomy-section .pf-v5-c-button.pf-m-link,
+body.foreman-theme .audits-data-list .taxonomy-section .pf-v6-c-button.pf-m-link {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-accent-2) !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes {
+  background: transparent !important;
+  border: 0 !important;
+  border-collapse: collapse !important;
+  box-shadow: none !important;
+  margin: 0 24px 16px;
+  table-layout: fixed;
+  width: calc(100% - 48px) !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes > tbody > tr,
+body.foreman-theme .audits-data-list .table-changes > tbody > tr:hover {
+  background: transparent !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes > tbody > tr > td {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-border-soft) !important;
+  color: var(--zs-text) !important;
+  height: auto;
+  padding: 9px 12px !important;
+  vertical-align: top !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes > tbody > tr > td:first-child {
+  color: var(--zs-text) !important;
+  font-weight: 600;
+  width: 34%;
+}
+
+body.foreman-theme .audits-data-list .table-changes td.show-old,
+body.foreman-theme .audits-data-list .table-changes td.show-new {
+  background: transparent !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes td.show-old > .show-old,
+body.foreman-theme .audits-data-list .table-changes td.show-new > .show-new,
+body.foreman-theme .audits-data-list .table-changes div.show-old,
+body.foreman-theme .audits-data-list .table-changes div.show-new {
+  border-radius: 0 !important;
+  color: var(--zs-text) !important;
+  line-height: 1.35;
+  min-height: 24px;
+  overflow-wrap: anywhere;
+  padding: 3px 8px !important;
+  white-space: normal !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes td.show-old > .show-old,
+body.foreman-theme .audits-data-list .table-changes div.show-old {
+  background: rgba(198, 83, 74, 0.22) !important;
+  box-shadow: inset 3px 0 0 #c6534a !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes td.show-new > .show-new,
+body.foreman-theme .audits-data-list .table-changes div.show-new {
+  background: rgba(91, 163, 82, 0.22) !important;
+  box-shadow: inset 3px 0 0 var(--zs-green) !important;
+}
+
+body.foreman-theme .audits-data-list .table-changes p {
+  color: inherit !important;
+  margin: 0 !important;
+}
+
+body.foreman-theme .audits-data-list [class*="comment"],
+body.foreman-theme .audits-data-list pre,
+body.foreman-theme .audits-data-list code {
+  background: var(--zs-panel) !important;
+  border-color: var(--zs-border-soft) !important;
+  color: var(--zs-text) !important;
+}
+
 body.foreman-theme .breadcrumb-line {
   max-width: calc(100vw - var(--zs-sidebar-width) - 48px) !important;
 }
@@ -2591,4 +2762,23 @@ body.foreman-theme .login {
   background: var(--zs-bg) !important;
   border-color: var(--zs-border) !important;
   color: var(--zs-text) !important;
+}
+
+body.foreman-theme .audits-data-list table.table-changes.table.table-bordered {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .audits-data-list table.table-changes.table.table-bordered > tbody > tr,
+body.foreman-theme .audits-data-list table.table-changes.table.table-bordered > tbody > tr:hover {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+body.foreman-theme .audits-data-list table.table-changes.table.table-bordered > tbody > tr > td,
+body.foreman-theme .audits-data-list table.table-changes.table.table-hover > tbody > tr:hover > td {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-border-soft) !important;
 }

@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.71
+Version: 0.1.74
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,15 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.74-1
+- Remove legacy row borders from Audits change tables.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.73-1
+- Ensure Audits change tables keep the flattened dark row styling late in the cascade.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.72-1
+- Restyle Audits expanded rows and diff values for the dark theme.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.71-1
 - Normalize PatternFly current sidebar link borders during focus.
 
