@@ -4,7 +4,11 @@
   var config = window.ZsForemanTheme || {};
   var logoUrl = typeof config.logoUrl === 'string' ? config.logoUrl.trim() : '';
   var hideForemanText = config.hideForemanHeaderText === true;
+  var sidebarStateKey = 'zsForemanTheme.sidebarState';
+  var restoreSidebarTimer = null;
+  var sidebarToggleInFlight = false;
   var sidebarSyncTimer = null;
+  var lastRestoreUrl = null;
 
   function applyLogo() {
     if (!logoUrl) return;
@@ -52,6 +56,7 @@
     applyLogo();
     hideWordmarkText();
     scheduleSidebarSync();
+    restoreSidebarState();
   }
 
   function findSidebar() {
@@ -60,26 +65,48 @@
     );
   }
 
+  function findSidebarToggle() {
+    return document.querySelector(
+      '.pf-v5-c-masthead__toggle button, .pf-v6-c-masthead__toggle button, .navbar-toggle'
+    );
+  }
+
+  function getSavedSidebarState() {
+    try {
+      return window.localStorage.getItem(sidebarStateKey);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveSidebarState(state) {
+    try {
+      window.localStorage.setItem(sidebarStateKey, state);
+    } catch (error) {
+      // localStorage can be unavailable in hardened browser contexts.
+    }
+  }
+
   function sidebarIsCollapsed(sidebar) {
     if (!sidebar) return false;
 
     if (
-      sidebar.classList.contains('pf-m-expanded') ||
-      sidebar.getAttribute('aria-hidden') === 'false' ||
-      document.body.classList.contains('pf-m-expanded')
-    ) {
-      return false;
-    }
-
-    if (
       sidebar.classList.contains('pf-m-collapsed') ||
-      sidebar.getAttribute('aria-hidden') === 'true' ||
-      document.body.classList.contains('pf-m-collapsed')
+      sidebar.getAttribute('aria-hidden') === 'true'
     ) {
       return true;
     }
 
+    if (
+      sidebar.classList.contains('pf-m-expanded') ||
+      sidebar.getAttribute('aria-hidden') === 'false'
+    ) {
+      return false;
+    }
+
     if (sidebar.getBoundingClientRect().width <= 2) return true;
+    if (document.body.classList.contains('pf-m-collapsed')) return true;
+    if (document.body.classList.contains('pf-m-expanded')) return false;
 
     // Legacy PatternFly navigation exposes collapse through body state.
     return (
@@ -104,11 +131,62 @@
     return collapsed;
   }
 
+  function persistCurrentSidebarState() {
+    var collapsed = syncSidebarBodyClass();
+
+    if (collapsed === null) return;
+
+    saveSidebarState(collapsed ? 'collapsed' : 'expanded');
+  }
+
   function scheduleSidebarSync(delay) {
     window.clearTimeout(sidebarSyncTimer);
     sidebarSyncTimer = window.setTimeout(function () {
       syncSidebarBodyClass();
     }, delay || 0);
+  }
+
+  function restoreSidebarState() {
+    if (sidebarToggleInFlight) return;
+
+    var savedState = getSavedSidebarState();
+    if (savedState !== 'collapsed') return;
+
+    var currentUrl = window.location.href;
+    if (lastRestoreUrl === currentUrl) return;
+    lastRestoreUrl = currentUrl;
+
+    window.clearTimeout(restoreSidebarTimer);
+    restoreSidebarTimer = window.setTimeout(function () {
+      var sidebar = findSidebar();
+
+      if (!sidebar) {
+        lastRestoreUrl = null;
+        return;
+      }
+
+      if (sidebarIsCollapsed(sidebar)) {
+        syncSidebarBodyClass();
+        return;
+      }
+
+      var toggle = findSidebarToggle();
+
+      if (toggle) {
+        sidebarToggleInFlight = true;
+        toggle.click();
+        [50, 250, 650].forEach(function (delay) {
+          window.setTimeout(function () {
+            syncSidebarBodyClass();
+            if (delay === 650) sidebarToggleInFlight = false;
+          }, delay);
+        });
+      } else {
+        document.body.classList.add('collapsed-nav', 'zs-sidebar-collapsed');
+        document.body.classList.remove('zs-sidebar-expanded');
+        syncSidebarBodyClass();
+      }
+    }, 0);
   }
 
   function bindSidebarStateSync() {
@@ -123,8 +201,17 @@
 
         if (!toggle) return;
 
+        sidebarToggleInFlight = true;
         [0, 50, 250, 650].forEach(function (delay) {
-          window.setTimeout(syncSidebarBodyClass, delay);
+          window.setTimeout(function () {
+            if (delay === 0 || delay === 50) {
+              syncSidebarBodyClass();
+              return;
+            }
+
+            persistCurrentSidebarState();
+            if (delay === 650) sidebarToggleInFlight = false;
+          }, delay);
         });
       },
       true
