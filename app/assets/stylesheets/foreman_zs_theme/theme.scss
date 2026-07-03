@@ -557,6 +557,72 @@ body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__link {
   width: calc(var(--zs-sidebar-width) - 1px) !important;
 }
 
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__item.pf-m-expandable > .pf-v5-c-nav__link.zs-theme-nav-annotated,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__item.pf-m-expandable > .pf-v6-c-nav__link.zs-theme-nav-annotated {
+  align-items: center !important;
+  height: auto !important;
+  min-height: 68px !important;
+  padding-bottom: 11px !important;
+  padding-top: 11px !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__item.pf-m-expandable > .pf-v5-c-nav__link.zs-theme-nav-annotated,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__item.pf-m-expandable > .pf-v6-c-nav__link.zs-theme-nav-annotated {
+  min-height: 62px !important;
+  padding-bottom: 8px !important;
+  padding-top: 8px !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar .zs-theme-nav-annotated > .pf-v5-c-nav__link-text,
+body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-annotated > .pf-v6-c-nav__link-text,
+body.foreman-theme .pf-v5-c-page__sidebar .zs-theme-nav-annotated > .zs-theme-nav-label-wrap,
+body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-annotated > .zs-theme-nav-label-wrap {
+  align-items: flex-start !important;
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar .zs-theme-nav-annotated .nav-title-icon,
+body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-annotated .nav-title-icon {
+  align-items: center !important;
+  display: flex !important;
+  min-width: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar .zs-theme-nav-annotated .nav-title,
+body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-annotated .nav-title {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar .zs-theme-nav-description,
+body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-description {
+  color: var(--zs-muted) !important;
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.28 !important;
+  margin-top: 4px !important;
+  max-width: 205px !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+}
+
+body.foreman-theme.collapsed-nav .pf-v5-c-page__sidebar .zs-theme-nav-description,
+body.foreman-theme.collapsed-nav .pf-v6-c-page__sidebar .zs-theme-nav-description,
+body.foreman-theme.zs-sidebar-collapsed .pf-v5-c-page__sidebar .zs-theme-nav-description,
+body.foreman-theme.zs-sidebar-collapsed .pf-v6-c-page__sidebar .zs-theme-nav-description,
+body.foreman-theme.pf-m-collapsed .pf-v5-c-page__sidebar .zs-theme-nav-description,
+body.foreman-theme.pf-m-collapsed .pf-v6-c-page__sidebar .zs-theme-nav-description {
+  display: none !important;
+}
+
 body.foreman-theme #content {
   margin-left: 0 !important;
   width: 100% !important;

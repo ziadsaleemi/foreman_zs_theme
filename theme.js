@@ -12,6 +12,24 @@
   var sidebarToggleInFlight = false;
   var sidebarSyncTimer = null;
   var lastRestoreUrl = null;
+  var sidebarDescriptionByLabel = {
+    Monitor: 'Status, facts, jobs, and reports',
+    Reports: 'Configuration reports and templates',
+    'Foreman Tasks': 'Tasks and recurring work',
+    Content: 'Subscriptions, repositories, and sync',
+    Lifecycle: 'Environments, views, and keys',
+    'Content Types': 'Packages, errata, and collections',
+    Hosts: 'Inventory and provisioning',
+    'Provisioning Setup': 'Operating systems and install media',
+    Templates: 'Provisioning, jobs, and partitions',
+    Configure: 'Host groups, parameters, and automation',
+    Ansible: 'Roles and variables',
+    Infrastructure: 'Proxies, compute, and networks',
+    'ZS Theme': 'Branding, login, and theme assets',
+    Organizations: 'Business units and scoped resources',
+    Locations: 'Sites, datacenters, and scoped resources',
+    Administer: 'Users, settings, and access'
+  };
   var sidebarToggleSelector = [
     '.pf-v5-c-masthead__toggle button:not([disabled])',
     '.pf-v6-c-masthead__toggle button:not([disabled])',
@@ -187,6 +205,7 @@
     hideWordmarkText();
     markTopbarPresence();
     markCancelActions();
+    applySidebarDescriptions();
     scheduleSidebarSync();
     restoreSidebarState();
   }
@@ -232,6 +251,82 @@
     document.querySelectorAll(selector).forEach(function (button) {
       if (buttonText(button).toLowerCase() === 'cancel') {
         button.classList.add('zs-theme-cancel-action');
+      }
+    });
+  }
+
+  function compactText(value) {
+    return (value || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function directNavLabel(link) {
+    var clone = link.cloneNode(true);
+
+    clone.querySelectorAll('.pf-v5-c-nav__toggle, .pf-v6-c-nav__toggle, .zs-theme-nav-description').forEach(function (node) {
+      node.parentNode.removeChild(node);
+    });
+
+    return compactText(clone.textContent);
+  }
+
+  function findNavTextContainer(link) {
+    var linkText = link.querySelector(':scope > .pf-v5-c-nav__link-text, :scope > .pf-v6-c-nav__link-text');
+    if (linkText) return linkText;
+
+    var wrapper = link.querySelector(':scope > .zs-theme-nav-label-wrap');
+    if (wrapper) return wrapper;
+
+    var toggle = link.querySelector(':scope > .pf-v5-c-nav__toggle, :scope > .pf-v6-c-nav__toggle');
+    wrapper = document.createElement('span');
+    wrapper.className = 'zs-theme-nav-label-wrap';
+
+    while (link.firstChild && link.firstChild !== toggle) {
+      wrapper.appendChild(link.firstChild);
+    }
+
+    link.insertBefore(wrapper, toggle || link.firstChild);
+    return wrapper;
+  }
+
+  function clearNavDescription(link) {
+    link.classList.remove('zs-theme-nav-annotated');
+    var description = link.querySelector(':scope .zs-theme-nav-description');
+    if (description) description.parentNode.removeChild(description);
+  }
+
+  function applySidebarDescriptions() {
+    if (!bodyIsReady()) return;
+
+    var sidebar = findSidebar();
+    if (!sidebar) return;
+
+    var selector = [
+      '.pf-v5-c-nav__item.pf-m-expandable > .pf-v5-c-nav__link',
+      '.pf-v6-c-nav__item.pf-m-expandable > .pf-v6-c-nav__link'
+    ].join(', ');
+
+    sidebar.querySelectorAll(selector).forEach(function (link) {
+      var label = directNavLabel(link);
+      var descriptionText = sidebarDescriptionByLabel[label];
+
+      if (!descriptionText) {
+        clearNavDescription(link);
+        return;
+      }
+
+      var container = findNavTextContainer(link);
+      var description = container.querySelector(':scope > .zs-theme-nav-description');
+
+      link.classList.add('zs-theme-nav-annotated');
+
+      if (!description) {
+        description = document.createElement('span');
+        description.className = 'zs-theme-nav-description';
+        container.appendChild(description);
+      }
+
+      if (description.textContent !== descriptionText) {
+        description.textContent = descriptionText;
       }
     });
   }

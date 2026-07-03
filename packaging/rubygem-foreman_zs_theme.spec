@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.100
+Version: 0.1.103
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,15 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.103-1
+- Add sidebar descriptions for theme, organization, and location submenus.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.102-1
+- Use muted AWX-style text color for sidebar menu descriptions.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.101-1
+- Add AWX-style descriptions to expandable sidebar menu items.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.100-1
 - Add configurable plain-text login page info under the logo.
 
