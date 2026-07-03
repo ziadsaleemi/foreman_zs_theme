@@ -141,7 +141,6 @@ body.foreman-theme:not(.zs-custom-logo) img[src*="header_logo"],
 body.foreman-theme:not(.zs-custom-logo) img[src*="login_logo"],
 body:not(.foreman-theme):not(.zs-custom-logo) img[src*="login_logo"] {
   content: url("/assets/foreman_zs_theme/redhat-satellite-logo.svg");
-  width: 150px !important;
   height: 64px !important;
   object-fit: contain !important;
   background: transparent !important;
@@ -152,7 +151,6 @@ body:not(.foreman-theme):not(.zs-custom-logo) img[src*="login_logo"] {
 
 body.foreman-theme img.zs-theme-logo,
 body:not(.foreman-theme) img.zs-theme-logo {
-  width: 150px !important;
   max-width: 180px !important;
   height: 64px !important;
   object-fit: contain !important;
