@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.78
+Version: 0.1.88
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,36 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.88-1
+- Override high-specificity new-action buttons with compact AWX spacing.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.87-1
+- Keep page actions compact while preserving large form footer buttons.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.86-1
+- Normalize compact action-button spacing and secondary PatternFly buttons.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.85-1
+- Compact top action buttons and remove excess icon/text spacing.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.84-1
+- Add AWX primary, secondary, and cancel button taxonomy.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.83-1
+- Restore filled action-button styling while keeping AWX search/filter controls.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.82-1
+- Treat top-page create actions as AWX primary buttons.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.81-1
+- Match AWX toolbar search, dropdown menus, and primary action buttons.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.80-1
+- Stretch sidebar search to the full rail and remove nested menu dividers.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.79-1
+- Normalize Bootstrap and PatternFly buttons to the AWX dark action style.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.78-1
 - Hide nested sidebar divider rows inside expanded menu sections.
 

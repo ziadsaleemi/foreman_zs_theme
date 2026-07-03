@@ -31,6 +31,24 @@
   --zs-green: #5ba352;
   --zs-danger: #fe5142;
   --zs-warning: #f0ab00;
+  --zs-button-bg: #2d2f33;
+  --zs-button-hover-bg: #35373c;
+  --zs-button-active-bg: #3d4046;
+  --zs-button-border: #444548;
+  --zs-button-border-hover: #6f7277;
+  --zs-button-primary-bg: #0066cc;
+  --zs-button-primary-hover-bg: #0078d4;
+  --zs-button-primary-border: #1fa7f8;
+  --zs-button-secondary-bg: transparent;
+  --zs-button-secondary-hover-bg: rgba(31, 167, 248, 0.08);
+  --zs-button-secondary-border: #1fa7f8;
+  --zs-button-secondary-text: #1fa7f8;
+  --zs-toolbar-control-bg: #383a3f;
+  --zs-toolbar-control-hover-bg: #43464c;
+  --zs-toolbar-control-border: #a7a9ac;
+  --zs-menu-bg: #24272b;
+  --zs-menu-hover-bg: #30333a;
+  --zs-focus-ring: #73bcf7;
 }
 
 html,
@@ -1170,6 +1188,86 @@ body.foreman-theme .pf-v6-c-page__sidebar .foreman-search-bar {
   box-sizing: border-box !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) #foreman-nav #navigation-search,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) #foreman-nav .foreman-search-bar,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) #vertical-nav .search,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) #vertical-nav .search-pf,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) .sidebar-pf .search,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) .sidebar-pf .search-pf,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) .pf-v5-c-page__sidebar #navigation-search,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) .pf-v6-c-page__sidebar #navigation-search,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) .pf-v5-c-page__sidebar .foreman-search-bar,
+body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) .pf-v6-c-page__sidebar .foreman-search-bar {
+  box-sizing: border-box !important;
+  display: flex !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: var(--zs-sidebar-width) !important;
+  min-width: var(--zs-sidebar-width) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: var(--zs-sidebar-width) !important;
+}
+
+body.foreman-theme #foreman-nav .nav-pf-secondary-nav .divider,
+body.foreman-theme #foreman-nav .nav-pf-secondary-nav li.divider,
+body.foreman-theme #foreman-nav .nav-pf-secondary-nav hr,
+body.foreman-theme #foreman-nav .nav-pf-tertiary-nav .divider,
+body.foreman-theme #foreman-nav .nav-pf-tertiary-nav li.divider,
+body.foreman-theme #foreman-nav .nav-pf-tertiary-nav hr,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .divider,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav li.divider,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav hr,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .divider,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav li.divider,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav hr,
+body.foreman-theme .nav-pf-secondary-nav .divider,
+body.foreman-theme .nav-pf-secondary-nav li.divider,
+body.foreman-theme .nav-pf-secondary-nav hr,
+body.foreman-theme .nav-pf-tertiary-nav .divider,
+body.foreman-theme .nav-pf-tertiary-nav li.divider,
+body.foreman-theme .nav-pf-tertiary-nav hr {
+  border: 0 !important;
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+body.foreman-theme #foreman-nav .nav-pf-secondary-nav .list-group-item,
+body.foreman-theme #foreman-nav .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme #foreman-nav .nav-pf-tertiary-nav .list-group-item,
+body.foreman-theme #foreman-nav .nav-pf-tertiary-nav .list-group-item > a,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+body.foreman-theme #foreman-nav .nav-pf-secondary-nav .list-group-item > a:focus,
+body.foreman-theme #foreman-nav .nav-pf-secondary-nav .list-group-item > a:active,
+body.foreman-theme #foreman-nav .nav-pf-tertiary-nav .list-group-item > a:focus,
+body.foreman-theme #foreman-nav .nav-pf-tertiary-nav .list-group-item > a:active,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item > a:focus,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item > a:active,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item > a:focus,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item > a:active,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a:focus,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a:active,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a:focus,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a:active {
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  outline: 0 !important;
 }
 
 body.foreman-theme .pf-v5-c-page__main-breadcrumb,
@@ -2423,6 +2521,1151 @@ body.foreman-theme .btn-primary[disabled] {
   border-color: var(--zs-border) !important;
   color: var(--zs-muted) !important;
   opacity: 1 !important;
+}
+
+body.foreman-theme .btn,
+body.foreman-theme a.btn,
+body.foreman-theme input[type="button"],
+body.foreman-theme input[type="submit"],
+body.foreman-theme .pf-v5-c-button:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
+body.foreman-theme .pf-v6-c-button:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
+body.foreman-theme .pf-v5-c-menu-toggle,
+body.foreman-theme .pf-v6-c-menu-toggle,
+body.foreman-theme .pf-v5-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary),
+body.foreman-theme .pf-v6-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary),
+body.foreman-theme .pf-v5-c-dropdown__toggle-button,
+body.foreman-theme .pf-v6-c-dropdown__toggle-button,
+body.foreman-theme .pf-v5-c-context-selector__toggle,
+body.foreman-theme .pf-v6-c-context-selector__toggle,
+body.foreman-theme .bootstrap-select > .dropdown-toggle {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-bg);
+  --pf-v5-c-button--Color: var(--zs-text);
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-border);
+  --pf-v5-c-button--after--BorderRadius: 2px;
+  --pf-v5-c-button--after--BorderWidth: 1px;
+  --pf-v5-c-menu-toggle--BackgroundColor: var(--zs-button-bg);
+  --pf-v5-c-menu-toggle--Color: var(--zs-text);
+  --pf-v5-c-menu-toggle--after--BorderColor: var(--zs-button-border);
+  --pf-v5-c-menu-toggle--after--BorderRadius: 2px;
+  --pf-v5-c-menu-toggle--after--BorderWidth: 1px;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-bg);
+  --pf-v6-c-button--Color: var(--zs-text);
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-border);
+  --pf-v6-c-button--after--BorderRadius: 2px;
+  --pf-v6-c-button--after--BorderWidth: 1px;
+  --pf-v6-c-menu-toggle--BackgroundColor: var(--zs-button-bg);
+  --pf-v6-c-menu-toggle--Color: var(--zs-text);
+  --pf-v6-c-menu-toggle--after--BorderColor: var(--zs-button-border);
+  --pf-v6-c-menu-toggle--after--BorderRadius: 2px;
+  --pf-v6-c-menu-toggle--after--BorderWidth: 1px;
+  background: var(--zs-button-bg) !important;
+  background-image: none !important;
+  border: 1px solid var(--zs-button-border) !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  font-weight: 600 !important;
+  min-height: 34px;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .btn:hover,
+body.foreman-theme .btn:focus,
+body.foreman-theme a.btn:hover,
+body.foreman-theme a.btn:focus,
+body.foreman-theme input[type="button"]:hover,
+body.foreman-theme input[type="button"]:focus,
+body.foreman-theme input[type="submit"]:hover,
+body.foreman-theme input[type="submit"]:focus,
+body.foreman-theme .pf-v5-c-button:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):hover,
+body.foreman-theme .pf-v5-c-button:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):focus,
+body.foreman-theme .pf-v6-c-button:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):hover,
+body.foreman-theme .pf-v6-c-button:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):focus,
+body.foreman-theme .pf-v5-c-menu-toggle:hover,
+body.foreman-theme .pf-v5-c-menu-toggle:focus,
+body.foreman-theme .pf-v6-c-menu-toggle:hover,
+body.foreman-theme .pf-v6-c-menu-toggle:focus,
+body.foreman-theme .pf-v5-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary):hover,
+body.foreman-theme .pf-v5-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary):focus,
+body.foreman-theme .pf-v6-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary):hover,
+body.foreman-theme .pf-v6-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary):focus,
+body.foreman-theme .pf-v5-c-dropdown__toggle-button:hover,
+body.foreman-theme .pf-v5-c-dropdown__toggle-button:focus,
+body.foreman-theme .pf-v6-c-dropdown__toggle-button:hover,
+body.foreman-theme .pf-v6-c-dropdown__toggle-button:focus,
+body.foreman-theme .pf-v5-c-context-selector__toggle:hover,
+body.foreman-theme .pf-v5-c-context-selector__toggle:focus,
+body.foreman-theme .pf-v6-c-context-selector__toggle:hover,
+body.foreman-theme .pf-v6-c-context-selector__toggle:focus,
+body.foreman-theme .bootstrap-select > .dropdown-toggle:hover,
+body.foreman-theme .bootstrap-select > .dropdown-toggle:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-hover-bg);
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-border-hover);
+  --pf-v5-c-menu-toggle--BackgroundColor: var(--zs-button-hover-bg);
+  --pf-v5-c-menu-toggle--after--BorderColor: var(--zs-button-border-hover);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-hover-bg);
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-border-hover);
+  --pf-v6-c-menu-toggle--BackgroundColor: var(--zs-button-hover-bg);
+  --pf-v6-c-menu-toggle--after--BorderColor: var(--zs-button-border-hover);
+  background: var(--zs-button-hover-bg) !important;
+  border-color: var(--zs-button-border-hover) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .btn-primary,
+body.foreman-theme a.btn-primary,
+body.foreman-theme input.btn-primary,
+body.foreman-theme #title_action a.btn[href$="/new"],
+body.foreman-theme #title_action a.btn[href*="/new?"],
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"],
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"],
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"],
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"],
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"],
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"],
+body.foreman-theme .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-button.pf-m-primary {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg);
+  --pf-v5-c-button--Color: #ffffff;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-border);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg);
+  --pf-v6-c-button--Color: #ffffff;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-border);
+  background: var(--zs-button-primary-bg) !important;
+  border-color: var(--zs-button-primary-border) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .btn-primary:hover,
+body.foreman-theme .btn-primary:focus,
+body.foreman-theme a.btn-primary:hover,
+body.foreman-theme a.btn-primary:focus,
+body.foreman-theme input.btn-primary:hover,
+body.foreman-theme input.btn-primary:focus,
+body.foreman-theme #title_action a.btn[href$="/new"]:hover,
+body.foreman-theme #title_action a.btn[href$="/new"]:focus,
+body.foreman-theme #title_action a.btn[href*="/new?"]:hover,
+body.foreman-theme #title_action a.btn[href*="/new?"]:focus,
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"]:hover,
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"]:focus,
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"]:hover,
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"]:focus,
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"]:hover,
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"]:focus,
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"]:hover,
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"]:focus,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"]:hover,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"]:focus,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"]:hover,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"]:focus,
+body.foreman-theme .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-hover-bg);
+  --pf-v5-c-button--after--BorderColor: #73bcf7;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-hover-bg);
+  --pf-v6-c-button--after--BorderColor: #73bcf7;
+  background: var(--zs-button-primary-hover-bg) !important;
+  border-color: #73bcf7 !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .btn.active,
+body.foreman-theme .btn:active,
+body.foreman-theme .btn-group.open > .dropdown-toggle,
+body.foreman-theme .open > .dropdown-toggle.btn-default,
+body.foreman-theme .pf-v5-c-button.pf-m-selected,
+body.foreman-theme .pf-v6-c-button.pf-m-selected,
+body.foreman-theme .pf-v5-c-toggle-group__button.pf-m-selected .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-toggle-group__button.pf-m-selected .pf-v6-c-button {
+  background: var(--zs-button-active-bg) !important;
+  border-color: var(--zs-button-primary-border) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .btn-link,
+body.foreman-theme .pf-v5-c-button.pf-m-link,
+body.foreman-theme .pf-v6-c-button.pf-m-link {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: var(--zs-link) !important;
+  min-height: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.foreman-theme .btn-group,
+body.foreman-theme .pf-v5-c-input-group,
+body.foreman-theme .pf-v6-c-input-group {
+  box-shadow: none !important;
+}
+
+body.foreman-theme .btn-group > .btn,
+body.foreman-theme .btn-group > a.btn,
+body.foreman-theme table.table .btn-group > .btn,
+body.foreman-theme table.table .btn-group > a.btn,
+body.foreman-theme table.table .dropdown > .btn,
+body.foreman-theme table.table .dropdown-kebab-pf > .btn {
+  margin-left: 0 !important;
+}
+
+body.foreman-theme .btn-group > .btn:not(:last-child),
+body.foreman-theme .btn-group > a.btn:not(:last-child) {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+body.foreman-theme .btn-group > .btn + .btn,
+body.foreman-theme .btn-group > .btn + .dropdown-toggle,
+body.foreman-theme .btn-group > a.btn + .btn,
+body.foreman-theme table.table .btn-group > .btn + .dropdown-toggle {
+  border-left-color: var(--zs-border-soft) !important;
+}
+
+body.foreman-theme .btn-group > .dropdown-toggle,
+body.foreman-theme table.table .btn-group > .dropdown-toggle {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  min-width: 32px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+body.foreman-theme table.table .btn,
+body.foreman-theme table.table .btn-sm,
+body.foreman-theme table.table .btn-xs,
+body.foreman-theme table.table .btn-group > .btn {
+  font-size: 13px !important;
+  min-height: 30px !important;
+  padding-bottom: 4px !important;
+  padding-top: 4px !important;
+}
+
+body.foreman-theme .btn-danger,
+body.foreman-theme a.btn-danger,
+body.foreman-theme .pf-v5-c-button.pf-m-danger,
+body.foreman-theme .pf-v6-c-button.pf-m-danger {
+  background: #8f2638 !important;
+  border-color: var(--zs-danger) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .btn.disabled,
+body.foreman-theme .btn[disabled],
+body.foreman-theme fieldset[disabled] .btn,
+body.foreman-theme .pf-v5-c-button:disabled,
+body.foreman-theme .pf-v6-c-button:disabled,
+body.foreman-theme .pf-v5-c-menu-toggle:disabled,
+body.foreman-theme .pf-v6-c-menu-toggle:disabled {
+  background: var(--zs-panel) !important;
+  border-color: var(--zs-border-soft) !important;
+  color: var(--zs-dim) !important;
+  opacity: 1 !important;
+}
+
+body.foreman-theme .rails-table-toolbar,
+body.foreman-theme .toolbar-pf,
+body.foreman-theme .title_filter,
+body.foreman-theme .page-table-toolbar,
+body.foreman-theme .pf-v5-c-toolbar,
+body.foreman-theme .pf-v6-c-toolbar {
+  background: var(--zs-bg) !important;
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme .foreman-search-bar,
+body.foreman-theme .autocomplete-search,
+body.foreman-theme .search-query,
+body.foreman-theme .search-pf,
+body.foreman-theme .toolbar-pf .input-group,
+body.foreman-theme .title_filter .input-group,
+body.foreman-theme .rails-table-toolbar .input-group {
+  align-items: stretch !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-height: 42px !important;
+}
+
+body.foreman-theme .foreman-search-bar .form-control,
+body.foreman-theme .foreman-search-bar input,
+body.foreman-theme .foreman-search-bar .pf-v5-c-text-input-group,
+body.foreman-theme .foreman-search-bar .pf-v6-c-text-input-group,
+body.foreman-theme .foreman-search-bar .pf-v5-c-text-input-group__text-input,
+body.foreman-theme .foreman-search-bar .pf-v6-c-text-input-group__text-input,
+body.foreman-theme .autocomplete-search .form-control,
+body.foreman-theme .autocomplete-search input,
+body.foreman-theme .search-query .form-control,
+body.foreman-theme .search-query input,
+body.foreman-theme .toolbar-pf .input-group .form-control,
+body.foreman-theme .title_filter .input-group .form-control,
+body.foreman-theme .rails-table-toolbar .input-group .form-control {
+  background: var(--zs-toolbar-control-bg) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  font-size: 15px;
+  min-height: 42px !important;
+}
+
+body.foreman-theme .foreman-search-bar .form-control:focus,
+body.foreman-theme .foreman-search-bar input:focus,
+body.foreman-theme .foreman-search-bar .pf-v5-c-text-input-group:focus-within,
+body.foreman-theme .foreman-search-bar .pf-v6-c-text-input-group:focus-within,
+body.foreman-theme .autocomplete-search .form-control:focus,
+body.foreman-theme .autocomplete-search input:focus,
+body.foreman-theme .toolbar-pf .input-group .form-control:focus,
+body.foreman-theme .title_filter .input-group .form-control:focus,
+body.foreman-theme .rails-table-toolbar .input-group .form-control:focus {
+  background: var(--zs-toolbar-control-hover-bg) !important;
+  border-bottom-color: var(--zs-focus-ring) !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .foreman-search-bar .btn,
+body.foreman-theme .foreman-search-bar .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .foreman-search-bar .pf-v6-c-button:not(.pf-m-plain),
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle,
+body.foreman-theme .autocomplete-search .btn,
+body.foreman-theme .toolbar-pf .input-group .btn,
+body.foreman-theme .toolbar-pf .input-group-btn .btn,
+body.foreman-theme .title_filter .input-group .btn,
+body.foreman-theme .title_filter .input-group-btn .btn,
+body.foreman-theme .rails-table-toolbar .input-group .btn,
+body.foreman-theme .rails-table-toolbar .input-group-btn .btn,
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain),
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle,
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain),
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle {
+  --pf-v5-c-button--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v5-c-menu-toggle--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v5-c-menu-toggle--after--BorderColor: transparent;
+  --pf-v6-c-button--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v6-c-button--after--BorderColor: transparent;
+  --pf-v6-c-menu-toggle--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v6-c-menu-toggle--after--BorderColor: transparent;
+  background: var(--zs-toolbar-control-bg) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  min-height: 42px !important;
+}
+
+body.foreman-theme .foreman-search-bar .btn:hover,
+body.foreman-theme .foreman-search-bar .btn:focus,
+body.foreman-theme .foreman-search-bar .pf-v5-c-button:not(.pf-m-plain):hover,
+body.foreman-theme .foreman-search-bar .pf-v5-c-button:not(.pf-m-plain):focus,
+body.foreman-theme .foreman-search-bar .pf-v6-c-button:not(.pf-m-plain):hover,
+body.foreman-theme .foreman-search-bar .pf-v6-c-button:not(.pf-m-plain):focus,
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle:hover,
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle:focus,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle:hover,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle:focus,
+body.foreman-theme .autocomplete-search .btn:hover,
+body.foreman-theme .autocomplete-search .btn:focus,
+body.foreman-theme .toolbar-pf .input-group .btn:hover,
+body.foreman-theme .toolbar-pf .input-group .btn:focus,
+body.foreman-theme .toolbar-pf .input-group-btn .btn:hover,
+body.foreman-theme .toolbar-pf .input-group-btn .btn:focus,
+body.foreman-theme .title_filter .input-group .btn:hover,
+body.foreman-theme .title_filter .input-group .btn:focus,
+body.foreman-theme .title_filter .input-group-btn .btn:hover,
+body.foreman-theme .title_filter .input-group-btn .btn:focus,
+body.foreman-theme .rails-table-toolbar .input-group .btn:hover,
+body.foreman-theme .rails-table-toolbar .input-group .btn:focus,
+body.foreman-theme .rails-table-toolbar .input-group-btn .btn:hover,
+body.foreman-theme .rails-table-toolbar .input-group-btn .btn:focus,
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain):hover,
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain):focus,
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain):hover,
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain):focus,
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle:hover,
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle:focus,
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle:hover,
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle:focus,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain):hover,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain):focus,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle:hover,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle:focus,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain):hover,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain):focus,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle:hover,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-toolbar-control-hover-bg);
+  --pf-v5-c-menu-toggle--BackgroundColor: var(--zs-toolbar-control-hover-bg);
+  --pf-v6-c-button--BackgroundColor: var(--zs-toolbar-control-hover-bg);
+  --pf-v6-c-menu-toggle--BackgroundColor: var(--zs-toolbar-control-hover-bg);
+  background: var(--zs-toolbar-control-hover-bg) !important;
+  border-bottom-color: var(--zs-focus-ring) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .foreman-search-bar .btn-primary,
+body.foreman-theme .toolbar-pf .btn-primary,
+body.foreman-theme .title_filter .btn-primary,
+body.foreman-theme .rails-table-toolbar .btn-primary,
+body.foreman-theme #title_action a.btn[href$="/new"],
+body.foreman-theme #title_action a.btn[href*="/new?"],
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"],
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"],
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"],
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"],
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"],
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"],
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-button.pf-m-primary,
+body.foreman-theme .pf-v5-c-dropdown__toggle.pf-m-primary,
+body.foreman-theme .pf-v6-c-dropdown__toggle.pf-m-primary {
+  background: var(--zs-button-primary-bg) !important;
+  border-color: var(--zs-button-primary-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .foreman-search-bar .btn-primary:hover,
+body.foreman-theme .foreman-search-bar .btn-primary:focus,
+body.foreman-theme .toolbar-pf .btn-primary:hover,
+body.foreman-theme .toolbar-pf .btn-primary:focus,
+body.foreman-theme .title_filter .btn-primary:hover,
+body.foreman-theme .title_filter .btn-primary:focus,
+body.foreman-theme .rails-table-toolbar .btn-primary:hover,
+body.foreman-theme .rails-table-toolbar .btn-primary:focus,
+body.foreman-theme #title_action a.btn[href$="/new"]:hover,
+body.foreman-theme #title_action a.btn[href$="/new"]:focus,
+body.foreman-theme #title_action a.btn[href*="/new?"]:hover,
+body.foreman-theme #title_action a.btn[href*="/new?"]:focus,
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"]:hover,
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"]:focus,
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"]:hover,
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"]:focus,
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"]:hover,
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"]:focus,
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"]:hover,
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"]:focus,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"]:hover,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"]:focus,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"]:hover,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"]:focus,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-button.pf-m-primary:focus,
+body.foreman-theme .pf-v5-c-dropdown__toggle.pf-m-primary:hover,
+body.foreman-theme .pf-v5-c-dropdown__toggle.pf-m-primary:focus,
+body.foreman-theme .pf-v6-c-dropdown__toggle.pf-m-primary:hover,
+body.foreman-theme .pf-v6-c-dropdown__toggle.pf-m-primary:focus {
+  background: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .pf-v5-c-dropdown__menu,
+body.foreman-theme .pf-v6-c-dropdown__menu,
+body.foreman-theme .pf-v5-c-menu,
+body.foreman-theme .pf-v6-c-menu,
+body.foreman-theme .pf-v5-c-context-selector__menu,
+body.foreman-theme .pf-v6-c-context-selector__menu,
+body.foreman-theme .dropdown-menu,
+body.foreman-theme .bootstrap-select .dropdown-menu,
+body.foreman-theme .select2-drop,
+body.foreman-theme .select2-dropdown,
+body.foreman-theme .react-select__menu,
+body.foreman-theme .tt-menu {
+  background: var(--zs-menu-bg) !important;
+  border: 1px solid #16191d !important;
+  border-radius: 0 !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .dropdown-menu > li > a,
+body.foreman-theme .dropdown-menu > .active > a,
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a,
+body.foreman-theme .pf-v5-c-dropdown__menu-item,
+body.foreman-theme .pf-v6-c-dropdown__menu-item,
+body.foreman-theme .pf-v5-c-menu__item,
+body.foreman-theme .pf-v6-c-menu__item,
+body.foreman-theme .pf-v5-c-menu__item-main,
+body.foreman-theme .pf-v6-c-menu__item-main,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item,
+body.foreman-theme .select2-results__option,
+body.foreman-theme .select2-result-label,
+body.foreman-theme .tt-suggestion {
+  background: transparent !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .dropdown-menu > li > a:hover,
+body.foreman-theme .dropdown-menu > li > a:focus,
+body.foreman-theme .dropdown-menu > .active > a,
+body.foreman-theme .dropdown-menu > .active > a:hover,
+body.foreman-theme .dropdown-menu > .active > a:focus,
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a:hover,
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a:focus,
+body.foreman-theme .pf-v5-c-dropdown__menu-item:hover,
+body.foreman-theme .pf-v5-c-dropdown__menu-item:focus,
+body.foreman-theme .pf-v6-c-dropdown__menu-item:hover,
+body.foreman-theme .pf-v6-c-dropdown__menu-item:focus,
+body.foreman-theme .pf-v5-c-menu__item:hover,
+body.foreman-theme .pf-v5-c-menu__item:focus,
+body.foreman-theme .pf-v6-c-menu__item:hover,
+body.foreman-theme .pf-v6-c-menu__item:focus,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item:hover,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item:focus,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item:hover,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item:focus,
+body.foreman-theme .select2-results__option--highlighted,
+body.foreman-theme .select2-highlighted,
+body.foreman-theme .tt-suggestion:hover,
+body.foreman-theme .tt-suggestion:focus {
+  background: var(--zs-menu-hover-bg) !important;
+  box-shadow: inset 0 0 0 2px var(--zs-focus-ring) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .modal-footer .btn-primary,
+body.foreman-theme form .form-actions .btn-primary,
+body.foreman-theme .pf-v5-c-form .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-form .pf-v6-c-button.pf-m-primary {
+  min-height: 44px !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+}
+
+body.foreman-theme .modal-footer .btn-link,
+body.foreman-theme form .form-actions .btn-link,
+body.foreman-theme .pf-v5-c-form .pf-v5-c-button.pf-m-link,
+body.foreman-theme .pf-v6-c-form .pf-v6-c-button.pf-m-link {
+  color: var(--zs-link) !important;
+  font-size: 16px;
+  min-height: 44px !important;
+}
+
+body.foreman-theme .btn-primary,
+body.foreman-theme a.btn-primary,
+body.foreman-theme input.btn-primary,
+body.foreman-theme .form-actions input[type="submit"],
+body.foreman-theme .modal-footer input[type="submit"],
+body.foreman-theme .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-button.pf-m-primary,
+body.foreman-theme #title_action a.btn[href$="/new"],
+body.foreman-theme #title_action a.btn[href*="/new?"],
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"],
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"],
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"],
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"],
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"],
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"] {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg);
+  --pf-v5-c-button--Color: #ffffff;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-bg);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg);
+  --pf-v6-c-button--Color: #ffffff;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-bg);
+  background: var(--zs-button-primary-bg) !important;
+  border: 1px solid var(--zs-button-primary-bg) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  min-height: 44px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .btn-primary:hover,
+body.foreman-theme .btn-primary:focus,
+body.foreman-theme a.btn-primary:hover,
+body.foreman-theme a.btn-primary:focus,
+body.foreman-theme input.btn-primary:hover,
+body.foreman-theme input.btn-primary:focus,
+body.foreman-theme .form-actions input[type="submit"]:hover,
+body.foreman-theme .form-actions input[type="submit"]:focus,
+body.foreman-theme .modal-footer input[type="submit"]:hover,
+body.foreman-theme .modal-footer input[type="submit"]:focus,
+body.foreman-theme .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:focus,
+body.foreman-theme #title_action a.btn[href$="/new"]:hover,
+body.foreman-theme #title_action a.btn[href$="/new"]:focus,
+body.foreman-theme #title_action a.btn[href*="/new?"]:hover,
+body.foreman-theme #title_action a.btn[href*="/new?"]:focus,
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"]:hover,
+body.foreman-theme #title_action a.pf-v5-c-button[href$="/new"]:focus,
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"]:hover,
+body.foreman-theme #title_action a.pf-v5-c-button[href*="/new?"]:focus,
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"]:hover,
+body.foreman-theme #title_action a.pf-v6-c-button[href$="/new"]:focus,
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"]:hover,
+body.foreman-theme #title_action a.pf-v6-c-button[href*="/new?"]:focus,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"]:hover,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href$="/new"]:focus,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"]:hover,
+body.foreman-theme .btn-toolbar.pull-right a.btn[href*="/new?"]:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-hover-bg);
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-hover-bg);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-hover-bg);
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-hover-bg);
+  background: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .btn-default,
+body.foreman-theme a.btn-default,
+body.foreman-theme .btn-secondary,
+body.foreman-theme a.btn-secondary,
+body.foreman-theme .pf-v5-c-button.pf-m-secondary,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary,
+body.foreman-theme .btn-toolbar.pull-right .btn-default,
+body.foreman-theme .btn-toolbar.pull-right a.btn-default,
+body.foreman-theme #title_action .btn-default,
+body.foreman-theme #title_action a.btn-default,
+body.foreman-theme .form-actions .btn-default,
+body.foreman-theme .modal-footer .btn-default {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-secondary-bg);
+  --pf-v5-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-secondary-border);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-secondary-bg);
+  --pf-v6-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-secondary-border);
+  background: var(--zs-button-secondary-bg) !important;
+  border: 1px solid var(--zs-button-secondary-border) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: var(--zs-button-secondary-text) !important;
+  min-height: 44px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .btn-default:hover,
+body.foreman-theme .btn-default:focus,
+body.foreman-theme a.btn-default:hover,
+body.foreman-theme a.btn-default:focus,
+body.foreman-theme .btn-secondary:hover,
+body.foreman-theme .btn-secondary:focus,
+body.foreman-theme a.btn-secondary:hover,
+body.foreman-theme a.btn-secondary:focus,
+body.foreman-theme .pf-v5-c-button.pf-m-secondary:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-secondary:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary:focus,
+body.foreman-theme .btn-toolbar.pull-right .btn-default:hover,
+body.foreman-theme .btn-toolbar.pull-right .btn-default:focus,
+body.foreman-theme #title_action .btn-default:hover,
+body.foreman-theme #title_action .btn-default:focus,
+body.foreman-theme .form-actions .btn-default:hover,
+body.foreman-theme .form-actions .btn-default:focus,
+body.foreman-theme .modal-footer .btn-default:hover,
+body.foreman-theme .modal-footer .btn-default:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-secondary-hover-bg);
+  --pf-v5-c-button--after--BorderColor: var(--zs-focus-ring);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-secondary-hover-bg);
+  --pf-v6-c-button--after--BorderColor: var(--zs-focus-ring);
+  background: var(--zs-button-secondary-hover-bg) !important;
+  border-color: var(--zs-focus-ring) !important;
+  color: var(--zs-focus-ring) !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .btn-link,
+body.foreman-theme a.btn-link,
+body.foreman-theme .pf-v5-c-button.pf-m-link,
+body.foreman-theme .pf-v6-c-button.pf-m-link,
+body.foreman-theme .form-actions a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button),
+body.foreman-theme .modal-footer a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button) {
+  --pf-v5-c-button--BackgroundColor: transparent;
+  --pf-v5-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v6-c-button--BackgroundColor: transparent;
+  --pf-v6-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v6-c-button--after--BorderColor: transparent;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  color: var(--zs-button-secondary-text) !important;
+  min-height: 44px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  text-decoration: none !important;
+}
+
+body.foreman-theme .btn-link:hover,
+body.foreman-theme .btn-link:focus,
+body.foreman-theme a.btn-link:hover,
+body.foreman-theme a.btn-link:focus,
+body.foreman-theme .pf-v5-c-button.pf-m-link:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-link:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-link:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-link:focus,
+body.foreman-theme .form-actions a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):hover,
+body.foreman-theme .form-actions a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):focus,
+body.foreman-theme .modal-footer a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):hover,
+body.foreman-theme .modal-footer a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):focus {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--zs-focus-ring) !important;
+  outline: 0 !important;
+  text-decoration: none !important;
+}
+
+body.foreman-theme #title_action .btn,
+body.foreman-theme #title_action a.btn,
+body.foreman-theme #title_action button.btn,
+body.foreman-theme #title_action .pf-v5-c-button,
+body.foreman-theme #title_action .pf-v6-c-button,
+body.foreman-theme .btn-toolbar.pull-right .btn,
+body.foreman-theme .btn-toolbar.pull-right a.btn,
+body.foreman-theme .btn-toolbar.pull-right button.btn,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button,
+body.foreman-theme .btn-toolbar.pull-right .pf-v6-c-button,
+body.foreman-theme .title-actions .btn,
+body.foreman-theme .title-actions .pf-v5-c-button,
+body.foreman-theme .title-actions .pf-v6-c-button,
+body.foreman-theme .btn-docs,
+body.foreman-theme a.btn-docs,
+body.foreman-theme .pf-v5-c-button.btn-docs,
+body.foreman-theme .pf-v6-c-button.btn-docs {
+  align-items: center !important;
+  display: inline-flex !important;
+  gap: 7px !important;
+  justify-content: center !important;
+  line-height: 20px !important;
+  min-height: 36px !important;
+  padding: 7px 14px !important;
+  white-space: nowrap !important;
+}
+
+body.foreman-theme #title_action .btn-primary,
+body.foreman-theme #title_action a.btn-primary,
+body.foreman-theme #title_action .pf-v5-c-button.pf-m-primary,
+body.foreman-theme #title_action .pf-v6-c-button.pf-m-primary,
+body.foreman-theme .btn-toolbar.pull-right .btn-primary,
+body.foreman-theme .btn-toolbar.pull-right a.btn-primary,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .btn-toolbar.pull-right .pf-v6-c-button.pf-m-primary,
+body.foreman-theme .title-actions .btn-primary,
+body.foreman-theme .title-actions .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .title-actions .pf-v6-c-button.pf-m-primary {
+  background: var(--zs-button-primary-bg) !important;
+  border: 1px solid var(--zs-button-primary-bg) !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme #title_action .btn-primary:hover,
+body.foreman-theme #title_action .btn-primary:focus,
+body.foreman-theme #title_action .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme #title_action .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme #title_action .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme #title_action .pf-v6-c-button.pf-m-primary:focus,
+body.foreman-theme .btn-toolbar.pull-right .btn-primary:hover,
+body.foreman-theme .btn-toolbar.pull-right .btn-primary:focus,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme .btn-toolbar.pull-right .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme .btn-toolbar.pull-right .pf-v6-c-button.pf-m-primary:focus,
+body.foreman-theme .title-actions .btn-primary:hover,
+body.foreman-theme .title-actions .btn-primary:focus,
+body.foreman-theme .title-actions .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme .title-actions .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme .title-actions .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme .title-actions .pf-v6-c-button.pf-m-primary:focus {
+  background: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme a.pf-v5-c-button.pf-m-secondary,
+body.foreman-theme button.pf-v5-c-button.pf-m-secondary,
+body.foreman-theme a.pf-v6-c-button.pf-m-secondary,
+body.foreman-theme button.pf-v6-c-button.pf-m-secondary,
+body.foreman-theme #title_action .btn-default,
+body.foreman-theme #title_action a.btn-default,
+body.foreman-theme #title_action .pf-v5-c-button.pf-m-secondary,
+body.foreman-theme #title_action .pf-v6-c-button.pf-m-secondary,
+body.foreman-theme .btn-toolbar.pull-right .btn-default,
+body.foreman-theme .btn-toolbar.pull-right a.btn-default,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button.pf-m-secondary,
+body.foreman-theme .btn-toolbar.pull-right .pf-v6-c-button.pf-m-secondary,
+body.foreman-theme .title-actions .btn-default,
+body.foreman-theme .title-actions .pf-v5-c-button.pf-m-secondary,
+body.foreman-theme .title-actions .pf-v6-c-button.pf-m-secondary,
+body.foreman-theme .btn-docs,
+body.foreman-theme a.btn-docs,
+body.foreman-theme .pf-v5-c-button.btn-docs,
+body.foreman-theme .pf-v6-c-button.btn-docs {
+  background: transparent !important;
+  border: 1px solid var(--zs-button-secondary-border) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: var(--zs-button-secondary-text) !important;
+}
+
+body.foreman-theme a.pf-v5-c-button.pf-m-secondary:hover,
+body.foreman-theme a.pf-v5-c-button.pf-m-secondary:focus,
+body.foreman-theme button.pf-v5-c-button.pf-m-secondary:hover,
+body.foreman-theme button.pf-v5-c-button.pf-m-secondary:focus,
+body.foreman-theme a.pf-v6-c-button.pf-m-secondary:hover,
+body.foreman-theme a.pf-v6-c-button.pf-m-secondary:focus,
+body.foreman-theme button.pf-v6-c-button.pf-m-secondary:hover,
+body.foreman-theme button.pf-v6-c-button.pf-m-secondary:focus,
+body.foreman-theme #title_action .btn-default:hover,
+body.foreman-theme #title_action .btn-default:focus,
+body.foreman-theme #title_action .pf-v5-c-button.pf-m-secondary:hover,
+body.foreman-theme #title_action .pf-v5-c-button.pf-m-secondary:focus,
+body.foreman-theme #title_action .pf-v6-c-button.pf-m-secondary:hover,
+body.foreman-theme #title_action .pf-v6-c-button.pf-m-secondary:focus,
+body.foreman-theme .btn-toolbar.pull-right .btn-default:hover,
+body.foreman-theme .btn-toolbar.pull-right .btn-default:focus,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button.pf-m-secondary:hover,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button.pf-m-secondary:focus,
+body.foreman-theme .btn-toolbar.pull-right .pf-v6-c-button.pf-m-secondary:hover,
+body.foreman-theme .btn-toolbar.pull-right .pf-v6-c-button.pf-m-secondary:focus,
+body.foreman-theme .title-actions .btn-default:hover,
+body.foreman-theme .title-actions .btn-default:focus,
+body.foreman-theme .title-actions .pf-v5-c-button.pf-m-secondary:hover,
+body.foreman-theme .title-actions .pf-v5-c-button.pf-m-secondary:focus,
+body.foreman-theme .title-actions .pf-v6-c-button.pf-m-secondary:hover,
+body.foreman-theme .title-actions .pf-v6-c-button.pf-m-secondary:focus,
+body.foreman-theme .btn-docs:hover,
+body.foreman-theme .btn-docs:focus {
+  background: var(--zs-button-secondary-hover-bg) !important;
+  border-color: var(--zs-focus-ring) !important;
+  color: var(--zs-focus-ring) !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme #title_action .btn .fa,
+body.foreman-theme #title_action .btn .glyphicon,
+body.foreman-theme #title_action .pf-v5-c-button .fa,
+body.foreman-theme #title_action .pf-v5-c-button .glyphicon,
+body.foreman-theme .btn-toolbar.pull-right .btn .fa,
+body.foreman-theme .btn-toolbar.pull-right .btn .glyphicon,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button .fa,
+body.foreman-theme .btn-toolbar.pull-right .pf-v5-c-button .glyphicon,
+body.foreman-theme .btn-docs .fa,
+body.foreman-theme .btn-docs .glyphicon {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body.foreman-theme .foreman-search-bar .btn,
+body.foreman-theme .foreman-search-bar .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .foreman-search-bar .pf-v6-c-button:not(.pf-m-plain),
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle,
+body.foreman-theme .autocomplete-search .btn,
+body.foreman-theme .toolbar-pf .input-group .btn,
+body.foreman-theme .toolbar-pf .input-group-btn .btn,
+body.foreman-theme .title_filter .input-group .btn,
+body.foreman-theme .title_filter .input-group-btn .btn,
+body.foreman-theme .rails-table-toolbar .input-group .btn,
+body.foreman-theme .rails-table-toolbar .input-group-btn .btn,
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain),
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle,
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle {
+  background: var(--zs-toolbar-control-bg) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  color: var(--zs-text) !important;
+  min-height: 42px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+body.foreman-theme .btn,
+body.foreman-theme a.btn,
+body.foreman-theme button.btn,
+body.foreman-theme .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .pf-v6-c-button:not(.pf-m-plain) {
+  --pf-v5-c-button--PaddingTop: 7px;
+  --pf-v5-c-button--PaddingRight: 14px;
+  --pf-v5-c-button--PaddingBottom: 7px;
+  --pf-v5-c-button--PaddingLeft: 14px;
+  --pf-v6-c-button--PaddingTop: 7px;
+  --pf-v6-c-button--PaddingRight: 14px;
+  --pf-v6-c-button--PaddingBottom: 7px;
+  --pf-v6-c-button--PaddingLeft: 14px;
+  align-items: center !important;
+  display: inline-flex !important;
+  gap: 7px !important;
+  justify-content: center !important;
+  line-height: 20px !important;
+  min-height: 36px !important;
+  min-width: 0 !important;
+  padding: 7px 14px !important;
+  white-space: nowrap !important;
+}
+
+body.foreman-theme .btn-primary,
+body.foreman-theme a.btn-primary,
+body.foreman-theme input.btn-primary,
+body.foreman-theme button.btn-primary,
+body.foreman-theme .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-button.pf-m-primary {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg);
+  --pf-v5-c-button--Color: #ffffff;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-bg);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg);
+  --pf-v6-c-button--Color: #ffffff;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-bg);
+  background: var(--zs-button-primary-bg) !important;
+  border: 1px solid var(--zs-button-primary-bg) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .btn-primary:hover,
+body.foreman-theme .btn-primary:focus,
+body.foreman-theme a.btn-primary:hover,
+body.foreman-theme a.btn-primary:focus,
+body.foreman-theme input.btn-primary:hover,
+body.foreman-theme input.btn-primary:focus,
+body.foreman-theme button.btn-primary:hover,
+body.foreman-theme button.btn-primary:focus,
+body.foreman-theme .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-hover-bg);
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-hover-bg);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-hover-bg);
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-hover-bg);
+  background: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme #title_action a.btn.btn-primary[href$="/new"],
+body.foreman-theme #title_action a.btn.btn-primary[href*="/new?"],
+body.foreman-theme #title_action a.pf-v5-c-button.pf-m-primary[href$="/new"],
+body.foreman-theme #title_action a.pf-v5-c-button.pf-m-primary[href*="/new?"],
+body.foreman-theme #title_action a.pf-v6-c-button.pf-m-primary[href$="/new"],
+body.foreman-theme #title_action a.pf-v6-c-button.pf-m-primary[href*="/new?"],
+body.foreman-theme .btn-toolbar.pull-right a.btn.btn-primary[href$="/new"],
+body.foreman-theme .btn-toolbar.pull-right a.btn.btn-primary[href*="/new?"],
+body.foreman-theme .btn-toolbar.pull-right a.pf-v5-c-button.pf-m-primary[href$="/new"],
+body.foreman-theme .btn-toolbar.pull-right a.pf-v5-c-button.pf-m-primary[href*="/new?"],
+body.foreman-theme .btn-toolbar.pull-right a.pf-v6-c-button.pf-m-primary[href$="/new"],
+body.foreman-theme .btn-toolbar.pull-right a.pf-v6-c-button.pf-m-primary[href*="/new?"] {
+  min-height: 36px !important;
+  padding: 7px 14px !important;
+}
+
+body.foreman-theme .btn-default,
+body.foreman-theme a.btn-default,
+body.foreman-theme button.btn-default,
+body.foreman-theme .btn-secondary,
+body.foreman-theme a.btn-secondary,
+body.foreman-theme button.btn-secondary,
+body.foreman-theme .btn-docs,
+body.foreman-theme a.btn-docs,
+body.foreman-theme .pf-v5-c-button.pf-m-secondary,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary {
+  --pf-v5-c-button--BackgroundColor: transparent;
+  --pf-v5-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-secondary-border);
+  --pf-v6-c-button--BackgroundColor: transparent;
+  --pf-v6-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-secondary-border);
+  background: transparent !important;
+  border: 1px solid var(--zs-button-secondary-border) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: var(--zs-button-secondary-text) !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .btn-default:hover,
+body.foreman-theme .btn-default:focus,
+body.foreman-theme a.btn-default:hover,
+body.foreman-theme a.btn-default:focus,
+body.foreman-theme button.btn-default:hover,
+body.foreman-theme button.btn-default:focus,
+body.foreman-theme .btn-secondary:hover,
+body.foreman-theme .btn-secondary:focus,
+body.foreman-theme a.btn-secondary:hover,
+body.foreman-theme a.btn-secondary:focus,
+body.foreman-theme button.btn-secondary:hover,
+body.foreman-theme button.btn-secondary:focus,
+body.foreman-theme .btn-docs:hover,
+body.foreman-theme .btn-docs:focus,
+body.foreman-theme .pf-v5-c-button.pf-m-secondary:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-secondary:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-secondary-hover-bg);
+  --pf-v5-c-button--after--BorderColor: var(--zs-focus-ring);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-secondary-hover-bg);
+  --pf-v6-c-button--after--BorderColor: var(--zs-focus-ring);
+  background: var(--zs-button-secondary-hover-bg) !important;
+  border-color: var(--zs-focus-ring) !important;
+  color: var(--zs-focus-ring) !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .btn-link,
+body.foreman-theme a.btn-link,
+body.foreman-theme button.btn-link,
+body.foreman-theme .pf-v5-c-button.pf-m-link,
+body.foreman-theme .pf-v6-c-button.pf-m-link,
+body.foreman-theme .form-actions a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button),
+body.foreman-theme .modal-footer a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button) {
+  --pf-v5-c-button--BackgroundColor: transparent;
+  --pf-v5-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v6-c-button--BackgroundColor: transparent;
+  --pf-v6-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v6-c-button--after--BorderColor: transparent;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  color: var(--zs-button-secondary-text) !important;
+  text-decoration: none !important;
+}
+
+body.foreman-theme .btn-link:hover,
+body.foreman-theme .btn-link:focus,
+body.foreman-theme a.btn-link:hover,
+body.foreman-theme a.btn-link:focus,
+body.foreman-theme button.btn-link:hover,
+body.foreman-theme button.btn-link:focus,
+body.foreman-theme .pf-v5-c-button.pf-m-link:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-link:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-link:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-link:focus,
+body.foreman-theme .form-actions a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):hover,
+body.foreman-theme .form-actions a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):focus,
+body.foreman-theme .modal-footer a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):hover,
+body.foreman-theme .modal-footer a:not(.btn):not(.pf-v5-c-button):not(.pf-v6-c-button):focus {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--zs-focus-ring) !important;
+  outline: 0 !important;
+  text-decoration: none !important;
+}
+
+body.foreman-theme form .form-actions .btn,
+body.foreman-theme .modal-footer .btn,
+body.foreman-theme form .form-actions input[type="submit"],
+body.foreman-theme .modal-footer input[type="submit"],
+body.foreman-theme .pf-v5-c-form .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .pf-v6-c-form .pf-v6-c-button:not(.pf-m-plain) {
+  --pf-v5-c-button--PaddingTop: 9px;
+  --pf-v5-c-button--PaddingRight: 28px;
+  --pf-v5-c-button--PaddingBottom: 9px;
+  --pf-v5-c-button--PaddingLeft: 28px;
+  --pf-v6-c-button--PaddingTop: 9px;
+  --pf-v6-c-button--PaddingRight: 28px;
+  --pf-v6-c-button--PaddingBottom: 9px;
+  --pf-v6-c-button--PaddingLeft: 28px;
+  min-height: 44px !important;
+  padding: 9px 28px !important;
+}
+
+body.foreman-theme a.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
+body.foreman-theme button.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
+body.foreman-theme a.pf-v6-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
+body.foreman-theme button.pf-v6-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary) {
+  --pf-v5-c-button--BackgroundColor: transparent;
+  --pf-v5-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-secondary-border);
+  --pf-v6-c-button--BackgroundColor: transparent;
+  --pf-v6-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-secondary-border);
+  background: transparent !important;
+  border: 1px solid var(--zs-button-secondary-border) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  color: var(--zs-button-secondary-text) !important;
+  min-height: 36px !important;
+  padding: 7px 14px !important;
+}
+
+body.foreman-theme a.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):hover,
+body.foreman-theme a.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):focus,
+body.foreman-theme button.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):hover,
+body.foreman-theme button.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):focus,
+body.foreman-theme a.pf-v6-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):hover,
+body.foreman-theme a.pf-v6-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):focus,
+body.foreman-theme button.pf-v6-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):hover,
+body.foreman-theme button.pf-v6-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary):focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-secondary-hover-bg);
+  --pf-v5-c-button--after--BorderColor: var(--zs-focus-ring);
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-secondary-hover-bg);
+  --pf-v6-c-button--after--BorderColor: var(--zs-focus-ring);
+  background: var(--zs-button-secondary-hover-bg) !important;
+  border-color: var(--zs-focus-ring) !important;
+  color: var(--zs-focus-ring) !important;
+}
+
+body.foreman-theme .btn .fa,
+body.foreman-theme .btn .glyphicon,
+body.foreman-theme .pf-v5-c-button .fa,
+body.foreman-theme .pf-v5-c-button .glyphicon,
+body.foreman-theme .pf-v6-c-button .fa,
+body.foreman-theme .pf-v6-c-button .glyphicon {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body.foreman-theme .foreman-search-bar .btn,
+body.foreman-theme .foreman-search-bar .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .foreman-search-bar .pf-v6-c-button:not(.pf-m-plain),
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle,
+body.foreman-theme .autocomplete-search .btn,
+body.foreman-theme .toolbar-pf .input-group .btn,
+body.foreman-theme .toolbar-pf .input-group-btn .btn,
+body.foreman-theme .title_filter .input-group .btn,
+body.foreman-theme .title_filter .input-group-btn .btn,
+body.foreman-theme .rails-table-toolbar .input-group .btn,
+body.foreman-theme .rails-table-toolbar .input-group-btn .btn,
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-button:not(.pf-m-plain),
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-button:not(.pf-m-plain),
+body.foreman-theme .rails-table-toolbar .pf-v5-c-input-group .pf-v5-c-menu-toggle,
+body.foreman-theme .rails-table-toolbar .pf-v6-c-input-group .pf-v6-c-menu-toggle {
+  --pf-v5-c-button--PaddingTop: 10px;
+  --pf-v5-c-button--PaddingRight: 12px;
+  --pf-v5-c-button--PaddingBottom: 10px;
+  --pf-v5-c-button--PaddingLeft: 12px;
+  --pf-v6-c-button--PaddingTop: 10px;
+  --pf-v6-c-button--PaddingRight: 12px;
+  --pf-v6-c-button--PaddingBottom: 10px;
+  --pf-v6-c-button--PaddingLeft: 12px;
+  background: var(--zs-toolbar-control-bg) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  min-height: 42px !important;
+  padding: 10px 12px !important;
 }
 
 body.foreman-theme .ReactPasswordStrength,
