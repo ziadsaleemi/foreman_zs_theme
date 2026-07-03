@@ -98,6 +98,26 @@
     if (!sidebar) return false;
 
     if (
+      sidebar.classList.contains('pf-m-collapsed') ||
+      sidebar.getAttribute('aria-hidden') === 'true'
+    ) {
+      return true;
+    }
+
+    var sidebarWidth = sidebar.getBoundingClientRect().width;
+
+    if (sidebarWidth <= 2) return true;
+
+    if (
+      sidebar.classList.contains('pf-m-expanded') ||
+      sidebar.getAttribute('aria-hidden') === 'false'
+    ) {
+      return false;
+    }
+
+    if (sidebarWidth > 40) return false;
+
+    if (
       document.body.classList.contains('collapsed-nav') ||
       document.body.classList.contains('zs-sidebar-collapsed') ||
       document.body.classList.contains('pf-m-collapsed')
@@ -111,22 +131,6 @@
     ) {
       return false;
     }
-
-    if (
-      sidebar.classList.contains('pf-m-collapsed') ||
-      sidebar.getAttribute('aria-hidden') === 'true'
-    ) {
-      return true;
-    }
-
-    if (
-      sidebar.classList.contains('pf-m-expanded') ||
-      sidebar.getAttribute('aria-hidden') === 'false'
-    ) {
-      return false;
-    }
-
-    if (sidebar.getBoundingClientRect().width <= 2) return true;
 
     // Legacy PatternFly navigation exposes collapse through body state.
     return (
@@ -164,10 +168,10 @@
     document.body.classList.toggle('zs-sidebar-collapsed', collapsed);
     document.body.classList.toggle('zs-sidebar-expanded', !collapsed);
 
-    if (sidebar && !collapsed) {
-      sidebar.classList.remove('pf-m-collapsed');
-      sidebar.classList.add('pf-m-expanded');
-      sidebar.setAttribute('aria-hidden', 'false');
+    if (sidebar) {
+      sidebar.classList.toggle('pf-m-collapsed', collapsed);
+      sidebar.classList.toggle('pf-m-expanded', !collapsed);
+      sidebar.setAttribute('aria-hidden', collapsed ? 'true' : 'false');
     }
 
     saveSidebarState(state);
