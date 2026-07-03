@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.69
+Version: 0.1.71
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.71-1
+- Normalize PatternFly current sidebar link borders during focus.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.70-1
+- Remove light rectangular focus borders from sidebar links and tab controls.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.69-1
 - Make sidebar collapse clicks deterministic by immediately applying the intended plugin state.
 

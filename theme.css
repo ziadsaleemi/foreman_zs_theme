@@ -891,6 +891,59 @@ body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a {
   background: var(--zs-sidebar-active-bg) !important;
   color: #ffffff !important;
+  border-top-color: var(--zs-sidebar-border) !important;
+  border-right-color: var(--zs-sidebar-border) !important;
+  border-bottom-color: var(--zs-sidebar-border) !important;
+  border-left-color: var(--zs-sidebar-active-border) !important;
+  box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-nav__link:focus,
+body.foreman-theme .pf-v5-c-nav__link:active,
+body.foreman-theme .pf-v6-c-nav__link:focus,
+body.foreman-theme .pf-v6-c-nav__link:active,
+body.foreman-theme .nav-pf-vertical a:focus,
+body.foreman-theme .nav-pf-vertical a:active,
+body.foreman-theme .nav-pf-vertical .list-group-item > a:focus,
+body.foreman-theme .nav-pf-vertical .list-group-item > a:active,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a:focus,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a:active,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a:focus,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a:active,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item > a:focus,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item > a:active,
+body.foreman-theme .sidebar-pf a:focus,
+body.foreman-theme .sidebar-pf a:active,
+body.foreman-theme #vertical-nav a:focus,
+body.foreman-theme #vertical-nav a:active {
+  border-top-color: var(--zs-sidebar-border) !important;
+  border-right-color: var(--zs-sidebar-border) !important;
+  border-bottom-color: var(--zs-sidebar-border) !important;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  text-decoration: none !important;
+}
+
+body.foreman-theme .nav-pf-vertical .list-group-item > a:focus,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a:focus,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a:focus,
+body.foreman-theme .nav-pf-vertical-alt .list-group-item > a:focus,
+body.foreman-theme .sidebar-pf .list-group-item > a:focus,
+body.foreman-theme #vertical-nav .list-group-item > a:focus {
+  border-top-color: var(--zs-sidebar-border) !important;
+  border-right-color: var(--zs-sidebar-border) !important;
+  border-bottom-color: var(--zs-sidebar-border) !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .nav-pf-vertical .list-group-item.active > a:focus,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a:focus,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a:focus,
+body.foreman-theme #vertical-nav .list-group-item.active > a:focus {
+  background: var(--zs-sidebar-active-bg) !important;
+  border-top-color: var(--zs-sidebar-border) !important;
+  border-right-color: var(--zs-sidebar-border) !important;
+  border-bottom-color: var(--zs-sidebar-border) !important;
   border-left-color: var(--zs-sidebar-active-border) !important;
   box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;
 }
@@ -2303,6 +2356,41 @@ body.foreman-theme .nav-tabs > li > a:hover,
 body.foreman-theme .nav-tabs > li > a:focus {
   border-color: transparent !important;
   border-top-color: var(--zs-accent-2) !important;
+}
+
+body.foreman-theme .pf-v5-c-tabs__item:focus,
+body.foreman-theme .pf-v5-c-tabs__item:active,
+body.foreman-theme .pf-v5-c-tabs__link:focus,
+body.foreman-theme .pf-v5-c-tabs__link:active,
+body.foreman-theme .pf-v6-c-tabs__item:focus,
+body.foreman-theme .pf-v6-c-tabs__item:active,
+body.foreman-theme .pf-v6-c-tabs__link:focus,
+body.foreman-theme .pf-v6-c-tabs__link:active,
+body.foreman-theme .nav-tabs > li > a:focus,
+body.foreman-theme .nav-tabs > li > a:active {
+  box-shadow: none !important;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  text-decoration: none !important;
+}
+
+body.foreman-theme .pf-v5-c-tabs__item:focus,
+body.foreman-theme .pf-v5-c-tabs__link:focus,
+body.foreman-theme .pf-v6-c-tabs__item:focus,
+body.foreman-theme .pf-v6-c-tabs__link:focus,
+body.foreman-theme .nav-tabs > li > a:focus {
+  border-color: transparent !important;
+  border-top-color: transparent !important;
+}
+
+body.foreman-theme .pf-v5-c-tabs__item.pf-m-current:focus,
+body.foreman-theme .pf-v5-c-tabs__item.pf-m-current .pf-v5-c-tabs__link:focus,
+body.foreman-theme .pf-v6-c-tabs__item.pf-m-current:focus,
+body.foreman-theme .pf-v6-c-tabs__item.pf-m-current .pf-v6-c-tabs__link:focus,
+body.foreman-theme .nav-tabs > li.active > a:focus {
+  background: var(--zs-panel) !important;
+  border-top-color: var(--zs-accent) !important;
+  color: var(--zs-text) !important;
 }
 
 body.foreman-theme .pf-v5-c-tabs svg,
