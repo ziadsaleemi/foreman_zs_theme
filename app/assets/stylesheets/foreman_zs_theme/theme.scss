@@ -16,6 +16,7 @@
   --zs-sidebar-active-bg: #26292d;
   --zs-sidebar-active-border: #1fa7f8;
   --zs-sidebar-active-bar-width: 4px;
+  --zs-sidebar-search-height: 40px;
   --zs-sidebar-width: 290px;
   --zs-panel: #1b1d21;
   --zs-panel-2: #222428;
@@ -1379,6 +1380,40 @@ body.foreman-theme:not(.zs-sidebar-collapsed):not(.collapsed-nav) .pf-v6-c-page_
   padding-left: 0 !important;
   padding-right: 0 !important;
   width: var(--zs-sidebar-width) !important;
+}
+
+body.foreman-theme #foreman-nav > .pf-v5-c-nav__list,
+body.foreman-theme #foreman-nav > .pf-v6-c-nav__list {
+  padding-top: 0 !important;
+}
+
+body.foreman-theme #foreman-nav #navigation-search,
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-input-group__item,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-input-group__item,
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-text-input-group,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-text-input-group,
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-text-input-group__main,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-text-input-group__main,
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-text-input-group__text,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-text-input-group__text,
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-text-input-group__text-input,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-text-input-group__text-input {
+  height: var(--zs-sidebar-search-height) !important;
+  min-height: var(--zs-sidebar-search-height) !important;
+}
+
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-text-input-group__main,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-text-input-group__main,
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-text-input-group__text,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-text-input-group__text {
+  align-items: center !important;
+  display: flex !important;
+}
+
+body.foreman-theme #foreman-nav #navigation-search .pf-v5-c-text-input-group__text-input,
+body.foreman-theme #foreman-nav #navigation-search .pf-v6-c-text-input-group__text-input {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 body.foreman-theme #foreman-nav .nav-pf-secondary-nav .divider,
