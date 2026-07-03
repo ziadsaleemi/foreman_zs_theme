@@ -195,12 +195,30 @@ body.foreman-theme .pf-v5-c-masthead .pf-v5-c-notification-badge,
 body.foreman-theme .pf-v5-c-masthead .pf-v5-c-notification-badge.pf-m-unread,
 body.foreman-theme .pf-v6-c-masthead .pf-v6-c-notification-badge,
 body.foreman-theme .pf-v6-c-masthead .pf-v6-c-notification-badge.pf-m-unread {
-  --pf-v5-c-notification-badge--m-unread--BackgroundColor: var(--zs-control);
-  --pf-v6-c-notification-badge--m-unread--BackgroundColor: var(--zs-control);
-  background: var(--zs-control) !important;
-  background-color: var(--zs-control) !important;
-  border: 1px solid var(--zs-border) !important;
+  --pf-v5-c-notification-badge--m-unread--BackgroundColor: transparent;
+  --pf-v6-c-notification-badge--m-unread--BackgroundColor: transparent;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
   box-shadow: none !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .pf-v5-c-masthead #notification-badge,
+body.foreman-theme .pf-v6-c-masthead #notification-badge {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .pf-v5-c-masthead #notification-badge:hover,
+body.foreman-theme .pf-v5-c-masthead #notification-badge:focus,
+body.foreman-theme .pf-v6-c-masthead #notification-badge:hover,
+body.foreman-theme .pf-v6-c-masthead #notification-badge:focus {
+  background: var(--zs-panel-2) !important;
+  background-color: var(--zs-panel-2) !important;
   color: var(--zs-text) !important;
 }
 
@@ -2272,8 +2290,22 @@ body.foreman-theme .tab-content,
 body.foreman-theme .pf-v5-c-tab-content,
 body.foreman-theme .pf-v6-c-tab-content {
   background: var(--zs-panel) !important;
-  border-color: var(--zs-border) !important;
+  border: 0 !important;
+  border-top: 1px solid var(--zs-border) !important;
+  box-shadow: none !important;
   color: var(--zs-text) !important;
+}
+
+body.foreman-theme .tab-content > .tab-pane,
+body.foreman-theme .tab-content > .active {
+  background: var(--zs-panel) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme form .tab-content,
+body.foreman-theme .form-horizontal .tab-content {
+  padding-top: 24px !important;
 }
 
 body.foreman-theme .message-box-content,

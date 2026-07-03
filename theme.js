@@ -9,6 +9,13 @@
   var sidebarToggleInFlight = false;
   var sidebarSyncTimer = null;
   var lastRestoreUrl = null;
+  var sidebarToggleSelector = [
+    '.pf-v5-c-masthead__toggle button:not([disabled])',
+    '.pf-v6-c-masthead__toggle button:not([disabled])',
+    '.pf-v5-c-masthead__toggle .pf-v5-c-button:not([disabled])',
+    '.pf-v6-c-masthead__toggle .pf-v6-c-button:not([disabled])',
+    '.navbar-toggle:not([disabled])'
+  ].join(', ');
 
   function bodyIsReady() {
     return !!document.body;
@@ -72,9 +79,7 @@
   }
 
   function findSidebarToggle() {
-    return document.querySelector(
-      '.pf-v5-c-masthead__toggle button:not([disabled]), .pf-v6-c-masthead__toggle button:not([disabled]), .navbar-toggle:not([disabled])'
-    );
+    return document.querySelector(sidebarToggleSelector);
   }
 
   function getSavedSidebarState() {
@@ -191,6 +196,16 @@
     saveSidebarState(targetState);
   }
 
+  function forceSidebarStateIfNeeded(targetState) {
+    var collapsed = syncSidebarBodyClass();
+    var expectedCollapsed = targetState === 'collapsed';
+
+    if (collapsed === null) return;
+    if (collapsed !== expectedCollapsed) {
+      applySidebarStateFallback(targetState);
+    }
+  }
+
   function scheduleSidebarSync(delay) {
     window.clearTimeout(sidebarSyncTimer);
     sidebarSyncTimer = window.setTimeout(function () {
@@ -250,9 +265,7 @@
       function (event) {
         if (!event.target || !event.target.closest) return;
 
-        var toggle = event.target.closest(
-          '.pf-v5-c-masthead__toggle button, .pf-v6-c-masthead__toggle button, .navbar-toggle'
-        );
+        var toggle = event.target.closest(sidebarToggleSelector);
 
         if (!toggle) return;
 
@@ -260,8 +273,13 @@
         var targetState = sidebarIsCollapsed(sidebar) ? 'expanded' : 'collapsed';
 
         sidebarToggleInFlight = true;
-        [0, 50, 250, 650, 1000].forEach(function (delay) {
+        [0, 50, 250, 450, 1000].forEach(function (delay) {
           window.setTimeout(function () {
+            if (delay === 450) {
+              forceSidebarStateIfNeeded(targetState);
+              return;
+            }
+
             if (delay < 1000) {
               syncSidebarBodyClass();
               return;
