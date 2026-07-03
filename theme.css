@@ -927,13 +927,13 @@ body.foreman-theme .navbar a {
   color: var(--zs-text) !important;
   --pf-v5-c-nav__link--BackgroundColor: transparent;
   --pf-v5-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-active-bg);
-  --pf-v5-c-nav__link--hover--BackgroundColor: transparent;
+  --pf-v5-c-nav__link--hover--BackgroundColor: var(--zs-sidebar-active-bg);
   --pf-v5-c-nav__link--before--BorderColor: transparent;
   --pf-v5-c-nav__link--m-current--before--BorderColor: var(--zs-sidebar-active-border);
   --pf-v5-c-nav__link--after--BorderColor: var(--zs-sidebar-border);
   --pf-v6-c-nav__link--BackgroundColor: transparent;
   --pf-v6-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-active-bg);
-  --pf-v6-c-nav__link--hover--BackgroundColor: transparent;
+  --pf-v6-c-nav__link--hover--BackgroundColor: var(--zs-sidebar-active-bg);
   --pf-v6-c-nav__link--before--BorderColor: transparent;
   --pf-v6-c-nav__link--m-current--before--BorderColor: var(--zs-sidebar-active-border);
   --pf-v6-c-nav__link--after--BorderColor: var(--zs-sidebar-border);
@@ -979,7 +979,9 @@ body.foreman-theme .pf-v6-c-nav__item:not(.pf-m-current) > .pf-v6-c-nav__link:no
 }
 
 body.foreman-theme .pf-v5-c-nav__link:hover,
+body.foreman-theme .pf-v5-c-nav__item:hover > .pf-v5-c-nav__link,
 body.foreman-theme .pf-v6-c-nav__link:hover,
+body.foreman-theme .pf-v6-c-nav__item:hover > .pf-v6-c-nav__link,
 body.foreman-theme .nav-pf-vertical .active > a,
 body.foreman-theme .nav-pf-vertical a:hover,
 body.foreman-theme .nav-pf-vertical .list-group-item.active > a,
@@ -992,9 +994,12 @@ body.foreman-theme .nav-pf-tertiary-nav .list-group-item:hover > a,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a:focus,
 body.foreman-theme .sidebar-pf a:hover,
 body.foreman-theme #vertical-nav a:hover {
-  background: transparent !important;
+  background: var(--zs-sidebar-active-bg) !important;
+  background-color: var(--zs-sidebar-active-bg) !important;
+  background-image: none !important;
   color: #ffffff !important;
   border-left-color: transparent !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme .pf-v5-c-nav__subnav .pf-v5-c-nav__link:not(.pf-m-current),
@@ -1008,17 +1013,19 @@ body.foreman-theme .pf-v6-c-nav__item.pf-m-expanded > .pf-v6-c-nav__link:not(.pf
 }
 
 body.foreman-theme .pf-v5-c-nav__link.pf-m-current,
+body.foreman-theme .pf-v5-c-nav__item.pf-m-current > .pf-v5-c-nav__link,
 body.foreman-theme .pf-v6-c-nav__link.pf-m-current,
+body.foreman-theme .pf-v6-c-nav__item.pf-m-current > .pf-v6-c-nav__link,
 body.foreman-theme .nav-pf-vertical .active > a,
 body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a {
-  background: var(--zs-sidebar-active-bg) !important;
+  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 4px, var(--zs-sidebar-active-bg) 4px) !important;
   color: #ffffff !important;
   border-top-color: var(--zs-sidebar-border) !important;
   border-right-color: var(--zs-sidebar-border) !important;
   border-bottom-color: var(--zs-sidebar-border) !important;
   border-left-color: var(--zs-sidebar-active-border) !important;
-  box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme .pf-v5-c-nav__link:focus,
@@ -1063,16 +1070,18 @@ body.foreman-theme .nav-pf-vertical .list-group-item.active > a:focus,
 body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a:focus,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a:focus,
 body.foreman-theme #vertical-nav .list-group-item.active > a:focus {
-  background: var(--zs-sidebar-active-bg) !important;
+  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 4px, var(--zs-sidebar-active-bg) 4px) !important;
   border-top-color: var(--zs-sidebar-border) !important;
   border-right-color: var(--zs-sidebar-border) !important;
   border-bottom-color: var(--zs-sidebar-border) !important;
   border-left-color: var(--zs-sidebar-active-border) !important;
-  box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme .pf-v5-c-nav__link.pf-m-current::before,
-body.foreman-theme .pf-v6-c-nav__link.pf-m-current::before {
+body.foreman-theme .pf-v5-c-nav__item.pf-m-current > .pf-v5-c-nav__link::before,
+body.foreman-theme .pf-v6-c-nav__link.pf-m-current::before,
+body.foreman-theme .pf-v6-c-nav__item.pf-m-current > .pf-v6-c-nav__link::before {
   border-left-color: var(--zs-sidebar-active-border) !important;
   border-left-width: 3px !important;
 }
@@ -1211,9 +1220,12 @@ body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item.active > 
 body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a,
 body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__link.pf-m-current,
-body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__link.pf-m-current {
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__item.pf-m-current > .pf-v5-c-nav__link,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__link.pf-m-current,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__item.pf-m-current > .pf-v6-c-nav__link {
+  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 4px, var(--zs-sidebar-active-bg) 4px) !important;
   border-left-color: var(--zs-sidebar-active-border) !important;
-  box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme #vertical-nav .search,
