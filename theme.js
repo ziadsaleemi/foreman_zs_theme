@@ -6,6 +6,8 @@
   var faviconUrl = typeof config.faviconUrl === 'string' ? config.faviconUrl.trim() : '';
   var faviconType = typeof config.faviconType === 'string' ? config.faviconType.trim() : '';
   var loginInfoText = typeof config.loginInfoText === 'string' ? config.loginInfoText.trim() : '';
+  var siteFontSize = normalizedFontSize(config.siteFontSize, 14);
+  var sidebarFontSize = normalizedFontSize(config.sidebarFontSize, 14);
   var hideForemanText = config.hideForemanHeaderText === true;
   var sidebarStateKey = 'zsForemanTheme.sidebarState';
   var restoreSidebarTimer = null;
@@ -40,6 +42,24 @@
 
   function bodyIsReady() {
     return !!document.body;
+  }
+
+  function normalizedFontSize(value, fallback) {
+    var size = parseInt(value, 10);
+
+    if (!isFinite(size)) return fallback;
+    if (size < 11) return 11;
+    if (size > 20) return 20;
+
+    return size;
+  }
+
+  function applyFontSizes() {
+    if (!bodyIsReady()) return;
+
+    document.body.style.setProperty('--zs-site-font-size', siteFontSize + 'px');
+    document.body.style.setProperty('--zs-sidebar-font-size', sidebarFontSize + 'px');
+    document.body.style.setProperty('--zs-sidebar-description-font-size', Math.max(10, sidebarFontSize - 2) + 'px');
   }
 
   function applyLogo() {
@@ -199,6 +219,7 @@
   function applyThemeSettings() {
     if (!bodyIsReady()) return;
 
+    applyFontSizes();
     applyFavicon();
     applyLogo();
     applyLoginInfo();

@@ -11,6 +11,8 @@ ForemanZsTheme::Engine.routes.draw do
       delete 'reset/:kind', to: 'settings#reset', as: :reset_theme_asset, constraints: { kind: /logo|favicon/ }
       post 'login_info', to: 'settings#update_login_info', as: :update_login_info
       delete 'login_info', to: 'settings#reset_login_info', as: :reset_login_info
+      post 'font_sizes', to: 'settings#update_font_sizes', as: :update_font_sizes
+      delete 'font_sizes', to: 'settings#reset_font_sizes', as: :reset_font_sizes
     end
   end
 end

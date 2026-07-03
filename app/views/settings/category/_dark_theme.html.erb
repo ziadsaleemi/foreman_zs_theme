@@ -1,6 +1,8 @@
 <% logo_url = Setting[:zs_theme_header_logo_url].presence || ForemanZsTheme::UploadedAsset.default_url('logo') %>
 <% favicon_url = Setting[:zs_theme_favicon_url].presence || ForemanZsTheme::UploadedAsset.default_url('favicon') %>
 <% login_info_text = Setting[:zs_theme_login_info_text].to_s %>
+<% site_font_size = ForemanZsTheme::FontSize.normalize(Setting[:zs_theme_site_font_size], ForemanZsTheme::FontSize::DEFAULT_SITE) %>
+<% sidebar_font_size = ForemanZsTheme::FontSize.normalize(Setting[:zs_theme_sidebar_font_size], ForemanZsTheme::FontSize::DEFAULT_SIDEBAR) %>
 
 <div class="zs-theme-settings-upload">
   <h3><%= _('ZS theme assets') %></h3>
@@ -62,6 +64,44 @@
       <%= form_tag foreman_zs_theme.reset_login_info_path, method: :delete, class: 'zs-theme-reset-form' do %>
         <%= submit_tag _('Clear login info'), class: 'btn btn-default' %>
       <% end %>
+    <% end %>
+  </div>
+
+  <div class="zs-theme-settings-card zs-theme-font-size-card">
+    <h4><%= _('Font sizes') %></h4>
+    <%= form_tag foreman_zs_theme.update_font_sizes_path, class: 'zs-theme-font-size-form' do %>
+      <div class="zs-theme-font-size-grid">
+        <div class="zs-theme-font-size-field">
+          <%= label_tag :zs_theme_site_font_size, _('Site font size') %>
+          <div class="zs-theme-number-input">
+            <%= number_field_tag :zs_theme_site_font_size,
+              site_font_size,
+              min: ForemanZsTheme::FontSize::MIN,
+              max: ForemanZsTheme::FontSize::MAX,
+              step: 1,
+              required: true %>
+            <span><%= _('px') %></span>
+          </div>
+        </div>
+        <div class="zs-theme-font-size-field">
+          <%= label_tag :zs_theme_sidebar_font_size, _('Sidebar font size') %>
+          <div class="zs-theme-number-input">
+            <%= number_field_tag :zs_theme_sidebar_font_size,
+              sidebar_font_size,
+              min: ForemanZsTheme::FontSize::MIN,
+              max: ForemanZsTheme::FontSize::MAX,
+              step: 1,
+              required: true %>
+            <span><%= _('px') %></span>
+          </div>
+        </div>
+      </div>
+      <div class="zs-theme-upload-actions">
+        <%= submit_tag _('Save font sizes'), class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    <%= form_tag foreman_zs_theme.reset_font_sizes_path, method: :delete, class: 'zs-theme-reset-form' do %>
+      <%= submit_tag _('Reset font sizes'), class: 'btn btn-default' %>
     <% end %>
   </div>
 </div>

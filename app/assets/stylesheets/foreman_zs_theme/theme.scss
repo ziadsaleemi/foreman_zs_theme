@@ -50,6 +50,9 @@
   --zs-menu-bg: #24272b;
   --zs-menu-hover-bg: #30333a;
   --zs-focus-ring: #73bcf7;
+  --zs-site-font-size: 14px;
+  --zs-sidebar-font-size: 14px;
+  --zs-sidebar-description-font-size: 12px;
 }
 
 html,
@@ -70,6 +73,24 @@ body.foreman-theme .row,
 body.foreman-theme .ca {
   background: var(--zs-bg) !important;
   color: var(--zs-text) !important;
+  font-size: var(--zs-site-font-size) !important;
+}
+
+body.foreman-theme input,
+body.foreman-theme select,
+body.foreman-theme textarea,
+body.foreman-theme button,
+body.foreman-theme .btn,
+body.foreman-theme .form-control,
+body.foreman-theme .dropdown-menu,
+body.foreman-theme .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-button,
+body.foreman-theme .pf-v5-c-form-control,
+body.foreman-theme .pf-v6-c-form-control,
+body.foreman-theme .pf-v5-c-table,
+body.foreman-theme .pf-v6-c-table,
+body.foreman-theme table {
+  font-size: var(--zs-site-font-size) !important;
 }
 
 body.foreman-theme.zs-dark-theme {
@@ -185,7 +206,7 @@ body.foreman-theme .navbar-inverse {
   background-image: none !important;
   border-color: var(--zs-topbar) !important;
   box-shadow: none !important;
-  font-size: 16px !important;
+  font-size: var(--zs-site-font-size) !important;
   height: var(--zs-topbar-height) !important;
   min-height: var(--zs-topbar-height) !important;
 }
@@ -446,7 +467,7 @@ body.foreman-theme .sidebar-pf,
 body.foreman-theme #vertical-nav {
   background: var(--zs-sidebar) !important;
   border-right: 1px solid var(--zs-sidebar-border) !important;
-  font-size: 16px !important;
+  font-size: var(--zs-sidebar-font-size) !important;
 }
 
 body.foreman-theme .pf-v5-c-page,
@@ -553,7 +574,7 @@ body.foreman-theme.pf-m-collapsed .nav-pf-tertiary-nav {
 
 body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__link,
 body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__link {
-  font-size: 16px !important;
+  font-size: var(--zs-sidebar-font-size) !important;
   width: calc(var(--zs-sidebar-width) - 1px) !important;
 }
 
@@ -610,7 +631,7 @@ body.foreman-theme .pf-v5-c-page__sidebar .zs-theme-nav-description,
 body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-description {
   color: var(--zs-muted) !important;
   display: block !important;
-  font-size: 13px !important;
+  font-size: var(--zs-sidebar-description-font-size) !important;
   font-weight: 400 !important;
   line-height: 1.28 !important;
   margin-top: 4px !important;
@@ -4322,6 +4343,49 @@ body.foreman-theme .zs-theme-settings-card h4 {
   font-weight: 600 !important;
   line-height: 1.35 !important;
   margin: 0 0 12px !important;
+}
+
+body.foreman-theme .zs-theme-font-size-card {
+  margin-top: 16px !important;
+}
+
+body.foreman-theme .zs-theme-font-size-grid {
+  display: grid !important;
+  gap: 16px !important;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+  margin-bottom: 14px !important;
+}
+
+body.foreman-theme .zs-theme-font-size-field label {
+  color: var(--zs-text) !important;
+  display: block !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+body.foreman-theme .zs-theme-number-input {
+  align-items: stretch !important;
+  display: flex !important;
+  max-width: 180px !important;
+}
+
+body.foreman-theme .zs-theme-number-input input {
+  background: var(--zs-toolbar-control-bg) !important;
+  border: 1px solid var(--zs-toolbar-control-border) !important;
+  color: var(--zs-text) !important;
+  min-width: 0 !important;
+  padding: 6px 10px !important;
+  width: 100% !important;
+}
+
+body.foreman-theme .zs-theme-number-input span {
+  align-items: center !important;
+  background: var(--zs-panel-3) !important;
+  border: 1px solid var(--zs-toolbar-control-border) !important;
+  border-left: 0 !important;
+  color: var(--zs-muted) !important;
+  display: flex !important;
+  padding: 0 10px !important;
 }
 
 body.foreman-theme .zs-theme-asset-preview {

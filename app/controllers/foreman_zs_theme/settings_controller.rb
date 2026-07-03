@@ -2,6 +2,8 @@
 
 module ForemanZsTheme
   class SettingsController < ::ApplicationController
+    class SettingsError < StandardError; end
+
     MAX_LOGIN_INFO_LENGTH = 1000
 
     before_action :require_edit_settings
@@ -42,6 +44,23 @@ module ForemanZsTheme
       redirect_to_settings
     end
 
+    def update_font_sizes
+      update_setting('zs_theme_site_font_size', normalized_font_size(:zs_theme_site_font_size, FontSize::DEFAULT_SITE))
+      update_setting('zs_theme_sidebar_font_size', normalized_font_size(:zs_theme_sidebar_font_size, FontSize::DEFAULT_SIDEBAR))
+      success(_('Font sizes updated.'))
+      redirect_to_settings
+    rescue SettingsError => e
+      error(_(e.message))
+      redirect_to_settings
+    end
+
+    def reset_font_sizes
+      update_setting('zs_theme_site_font_size', FontSize::DEFAULT_SITE)
+      update_setting('zs_theme_sidebar_font_size', FontSize::DEFAULT_SIDEBAR)
+      success(_('Font sizes reset to default.'))
+      redirect_to_settings
+    end
+
     def redirect_to_settings_page
       redirect_to_settings
     end
@@ -63,6 +82,17 @@ module ForemanZsTheme
       end
 
       value
+    end
+
+    def normalized_font_size(name, default)
+      value = params[name].presence || default
+      size = Integer(value, exception: false)
+
+      unless size && size.between?(FontSize::MIN, FontSize::MAX)
+        raise SettingsError, N_('Font sizes must be whole numbers from 11 to 20 pixels.')
+      end
+
+      size
     end
 
     def update_setting(name, value)

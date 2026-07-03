@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'foreman_zs_theme/version'
+require 'foreman_zs_theme/font_size'
 
 Foreman::Plugin.register :foreman_zs_theme do
   requires_foreman '>= 3.19.0'
@@ -36,6 +37,18 @@ Foreman::Plugin.register :foreman_zs_theme do
         default: '',
         description: N_('Optional plain text shown under the logo on the login page.'),
         full_name: N_('ZS theme login page info'))
+
+      setting(:zs_theme_site_font_size,
+        type: :integer,
+        default: ForemanZsTheme::FontSize::DEFAULT_SITE,
+        description: N_('Base ZS theme font size in pixels for Foreman page content and controls.'),
+        full_name: N_('ZS theme site font size'))
+
+      setting(:zs_theme_sidebar_font_size,
+        type: :integer,
+        default: ForemanZsTheme::FontSize::DEFAULT_SIDEBAR,
+        description: N_('ZS theme sidebar menu font size in pixels. Sidebar description text is derived from this value.'),
+        full_name: N_('ZS theme sidebar font size'))
     end
   end
 
@@ -47,6 +60,8 @@ Foreman::Plugin.register :foreman_zs_theme do
       foreman_zs_theme/settings/reset
       foreman_zs_theme/settings/update_login_info
       foreman_zs_theme/settings/reset_login_info
+      foreman_zs_theme/settings/update_font_sizes
+      foreman_zs_theme/settings/reset_font_sizes
     ].each do |action|
       edit_settings_permission.actions << action unless edit_settings_permission.actions.include?(action)
     end
