@@ -7,13 +7,13 @@
   --zs-bg: #222428;
   --zs-topbar: #000000;
   --zs-shell: #1b1d21;
-  --zs-sidebar: #222428;
+  --zs-sidebar: #1b1d21;
   --zs-sidebar-2: #2d2f33;
-  --zs-sidebar-3: #222428;
+  --zs-sidebar-3: #1b1d21;
   --zs-sidebar-border: #444548;
   --zs-sidebar-accent: #aaabac;
   --zs-sidebar-active-border: #1fa7f8;
-  --zs-sidebar-width: 289px;
+  --zs-sidebar-width: 290px;
   --zs-panel: #1b1d21;
   --zs-panel-2: #222428;
   --zs-panel-3: #2d2f33;
@@ -166,6 +166,9 @@ body.foreman-theme .navbar-inverse {
   background-image: none !important;
   border-color: var(--zs-border) !important;
   box-shadow: inset 0 -1px 0 var(--zs-border);
+  font-size: 16px !important;
+  height: 71px !important;
+  min-height: 71px !important;
 }
 
 body.foreman-theme #data-toolbar,
@@ -369,6 +372,7 @@ body.foreman-theme .sidebar-pf,
 body.foreman-theme #vertical-nav {
   background: var(--zs-sidebar) !important;
   border-right: 1px solid var(--zs-sidebar-border) !important;
+  font-size: 16px !important;
 }
 
 body.foreman-theme .pf-v5-c-page,
@@ -412,12 +416,13 @@ body.foreman-theme .pf-v6-c-page__sidebar.pf-m-collapsed .pf-v6-c-page__sidebar-
 
 body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__link,
 body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__link {
+  font-size: 16px !important;
   width: calc(var(--zs-sidebar-width) - 1px) !important;
 }
 
 body.foreman-theme #content {
-  margin-left: calc(var(--zs-sidebar-width) - 250px) !important;
-  width: calc(100% - (var(--zs-sidebar-width) - 250px)) !important;
+  margin-left: 0 !important;
+  width: 100% !important;
 }
 
 body.foreman-theme #rails-app-content {
@@ -693,6 +698,19 @@ body.foreman-theme .pf-v6-c-page__main-section.pf-m-light {
   background: var(--zs-bg) !important;
   color: var(--zs-text) !important;
   border-color: var(--zs-border-soft) !important;
+}
+
+body.foreman-theme #rails-app-content .pf-v5-c-page__main-section.pf-m-light,
+body.foreman-theme #rails-app-content .pf-v6-c-page__main-section.pf-m-light {
+  padding-bottom: 16px !important;
+  padding-top: 16px !important;
+}
+
+body.foreman-theme #rails-app-content .pf-v5-c-page__main-section.pf-m-light > h1,
+body.foreman-theme #rails-app-content .pf-v6-c-page__main-section.pf-m-light > h1,
+body.foreman-theme #rails-app-content .pf-v5-c-page__main-section.pf-m-light > .pf-v5-c-title.pf-m-2xl,
+body.foreman-theme #rails-app-content .pf-v6-c-page__main-section.pf-m-light > .pf-v6-c-title.pf-m-2xl {
+  margin-top: 0 !important;
 }
 
 body.foreman-theme .rails-table-toolbar,
@@ -1168,7 +1186,7 @@ body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__th {
   color: var(--zs-muted) !important;
   font-size: 14px;
   font-weight: 600;
-  height: 56px;
+  height: 42px;
   padding: 0 10px !important;
   vertical-align: middle !important;
 }
@@ -1179,7 +1197,7 @@ body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__tr,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__tr {
   background: var(--zs-panel) !important;
   border-bottom: 1px solid var(--zs-border) !important;
-  min-height: 56px;
+  min-height: 42px;
 }
 
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view > tbody > tr:hover,
@@ -1201,7 +1219,7 @@ body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__td {
   border-right: 0 !important;
   border-bottom: 1px solid var(--zs-border) !important;
   color: var(--zs-text) !important;
-  height: 56px;
+  height: 42px;
   padding: 0 10px !important;
   vertical-align: middle !important;
 }
@@ -1699,8 +1717,8 @@ body.foreman-theme .table.table-fixed > thead > tr > th {
   border-bottom: 1px solid var(--zs-border) !important;
   color: var(--zs-muted) !important;
   font-weight: 600;
-  height: 46px;
-  padding: 10px 12px !important;
+  height: 42px;
+  padding: 8px 12px !important;
   vertical-align: middle !important;
 }
 
@@ -1716,8 +1734,8 @@ body.foreman-theme .table.table-fixed > tbody > tr > td {
   background: transparent !important;
   border-top: 1px solid var(--zs-border) !important;
   color: var(--zs-text) !important;
-  height: 48px;
-  padding: 10px 12px !important;
+  height: 42px;
+  padding: 8px 12px !important;
   vertical-align: middle !important;
 }
 

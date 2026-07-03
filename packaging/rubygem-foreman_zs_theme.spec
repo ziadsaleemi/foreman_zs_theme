@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.37
+Version: 0.1.39
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.39-1
+- Tighten React page title sections to remove excess top whitespace.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.38-1
+- Align sidebar sizing, shell typography, legacy content offset, page title spacing, and table row density with AWX.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.37-1
 - Guard sidebar persistence click handling for non-element event targets.
 
