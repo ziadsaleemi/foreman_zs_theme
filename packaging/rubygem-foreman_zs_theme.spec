@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.23
+Version: 0.1.24
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -56,6 +56,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.24-1
+- Keep dashboard widget tables contained, fix dark text leaks, and align tab bars with the AWX active-tab style.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.23-1
 - Align legacy Bootstrap tables, buttons, search controls, labels, and pagination with the AWX dark data-grid style.
 
