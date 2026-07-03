@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.files = Dir['app/**/*', 'lib/**/*', 'theme.css', 'theme.js', 'redhat-satellite-logo.svg', 'README.md']
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.7'
+  s.add_runtime_dependency 'deface', '>= 1.0'
 end

@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.28
+Version: 0.1.30
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -10,6 +10,7 @@ URL: https://foreman.corp.zs.us/
 Source0: %{gem_name}-%{version}.gem
 BuildArch: noarch
 Requires: foreman >= 3.19
+Requires: rubygem-deface
 Requires: rubygems
 Requires(post): systemd
 Requires(postun): systemd
@@ -56,6 +57,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.30-1
+- Add the explicit Deface runtime dependency and finalize AWX-style tree table controls.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.29-1
+- Match AWX tree-table row rhythm and make expand controls read as clear compact buttons.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.28-1
 - Align Sync Status treegrid parent controls and reduce child-row indentation to match AWX density.
 
