@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.54
+Version: 0.1.55
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.55-1
+- Improve Bootstrap switch active-state contrast with AWX-style filled control blue.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.54-1
 - Make sidebar collapse finish reliably and remove the collapsed border remnant.
 

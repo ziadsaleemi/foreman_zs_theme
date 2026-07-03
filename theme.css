@@ -26,6 +26,7 @@
   --zs-dim: #868789;
   --zs-accent: #1fa7f8;
   --zs-accent-2: #73bcf7;
+  --zs-control-active: #0066cc;
   --zs-link: #1fa7f8;
   --zs-green: #5ba352;
   --zs-danger: #fe5142;
@@ -1346,7 +1347,8 @@ body.foreman-theme .bootstrap-switch-handle-off {
 
 body.foreman-theme .bootstrap-switch-handle-on.bootstrap-switch-primary,
 body.foreman-theme .bootstrap-switch-handle-off.bootstrap-switch-primary {
-  background-color: var(--zs-accent) !important;
+  background-color: var(--zs-control-active) !important;
+  border-color: var(--zs-accent) !important;
   color: #ffffff !important;
 }
 
