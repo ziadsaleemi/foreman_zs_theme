@@ -7,6 +7,7 @@
   var sidebarStateKey = 'zsForemanTheme.sidebarState';
   var restoreSidebarTimer = null;
   var sidebarToggleInFlight = false;
+  var sidebarSyncTimer = null;
 
   function applyLogo() {
     if (!logoUrl) return;
@@ -87,42 +88,95 @@
   function sidebarIsCollapsed(sidebar) {
     if (!sidebar) return false;
 
-    var width = sidebar.getBoundingClientRect().width;
+    if (
+      document.body.classList.contains('pf-m-collapsed') ||
+      sidebar.classList.contains('pf-m-collapsed') ||
+      sidebar.getAttribute('aria-hidden') === 'true'
+    ) {
+      return true;
+    }
+
+    if (
+      document.body.classList.contains('pf-m-expanded') ||
+      sidebar.classList.contains('pf-m-expanded') ||
+      sidebar.getAttribute('aria-hidden') === 'false'
+    ) {
+      return false;
+    }
 
     return (
       document.body.classList.contains('collapsed-nav') ||
-      sidebar.classList.contains('pf-m-collapsed') ||
-      width <= 2
+      sidebar.getBoundingClientRect().width <= 2
     );
   }
 
-  function persistCurrentSidebarState() {
+  function syncSidebarBodyClass(persist) {
     var sidebar = findSidebar();
 
-    if (!sidebar) return;
+    if (!sidebar) return null;
 
-    saveSidebarState(sidebarIsCollapsed(sidebar) ? 'collapsed' : 'expanded');
+    var collapsed = sidebarIsCollapsed(sidebar);
+
+    document.body.classList.toggle('zs-sidebar-collapsed', collapsed);
+    document.body.classList.toggle('zs-sidebar-expanded', !collapsed);
+
+    if (collapsed) {
+      document.body.classList.add('collapsed-nav');
+    } else {
+      document.body.classList.remove('collapsed-nav');
+    }
+
+    if (persist) {
+      saveSidebarState(collapsed ? 'collapsed' : 'expanded');
+    }
+
+    return collapsed;
+  }
+
+  function persistCurrentSidebarState() {
+    syncSidebarBodyClass(true);
+  }
+
+  function scheduleSidebarSync(persist) {
+    window.clearTimeout(sidebarSyncTimer);
+    sidebarSyncTimer = window.setTimeout(function () {
+      syncSidebarBodyClass(persist);
+    }, 0);
   }
 
   function restoreSidebarState() {
     if (sidebarToggleInFlight) return;
-    if (getSavedSidebarState() !== 'collapsed') return;
+
+    var savedState = getSavedSidebarState();
+    if (savedState === 'expanded') {
+      syncSidebarBodyClass(false);
+      return;
+    }
+
+    if (savedState !== 'collapsed') return;
 
     window.clearTimeout(restoreSidebarTimer);
     restoreSidebarTimer = window.setTimeout(function () {
       var sidebar = findSidebar();
-      if (!sidebar || sidebarIsCollapsed(sidebar)) return;
+      if (!sidebar) return;
+
+      if (sidebarIsCollapsed(sidebar)) {
+        syncSidebarBodyClass(false);
+        return;
+      }
 
       var toggle = findSidebarToggle();
       if (toggle) {
         sidebarToggleInFlight = true;
         toggle.click();
         window.setTimeout(function () {
-          persistCurrentSidebarState();
+          syncSidebarBodyClass(false);
           sidebarToggleInFlight = false;
         }, 250);
       } else {
-        document.body.classList.add('collapsed-nav');
+        document.body.classList.add('collapsed-nav', 'zs-sidebar-collapsed');
+        document.body.classList.remove('zs-sidebar-expanded');
+        syncSidebarBodyClass(false);
       }
     }, 0);
   }
@@ -141,9 +195,15 @@
 
         sidebarToggleInFlight = true;
         window.setTimeout(function () {
+          syncSidebarBodyClass(false);
+        }, 50);
+        window.setTimeout(function () {
           persistCurrentSidebarState();
           sidebarToggleInFlight = false;
         }, 250);
+        window.setTimeout(function () {
+          persistCurrentSidebarState();
+        }, 650);
       },
       true
     );
@@ -160,6 +220,7 @@
     );
   } else {
     bindSidebarPersistence();
+    scheduleSidebarSync(false);
     applyThemeSettings();
   }
 

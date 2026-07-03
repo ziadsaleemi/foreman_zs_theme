@@ -383,10 +383,10 @@ body.foreman-theme .pf-v6-c-page {
 
 body.foreman-theme .pf-v5-c-masthead__main,
 body.foreman-theme .pf-v6-c-masthead__main,
-body.foreman-theme .pf-v5-c-page__sidebar:not(.pf-m-collapsed),
-body.foreman-theme .pf-v5-c-page__sidebar:not(.pf-m-collapsed) .pf-v5-c-page__sidebar-body,
-body.foreman-theme .pf-v6-c-page__sidebar:not(.pf-m-collapsed),
-body.foreman-theme .pf-v6-c-page__sidebar:not(.pf-m-collapsed) .pf-v6-c-page__sidebar-body {
+body.foreman-theme:not(.collapsed-nav):not(.zs-sidebar-collapsed):not(.pf-m-collapsed) .pf-v5-c-page__sidebar:not(.pf-m-collapsed):not([aria-hidden="true"]),
+body.foreman-theme:not(.collapsed-nav):not(.zs-sidebar-collapsed):not(.pf-m-collapsed) .pf-v5-c-page__sidebar:not(.pf-m-collapsed):not([aria-hidden="true"]) .pf-v5-c-page__sidebar-body,
+body.foreman-theme:not(.collapsed-nav):not(.zs-sidebar-collapsed):not(.pf-m-collapsed) .pf-v6-c-page__sidebar:not(.pf-m-collapsed):not([aria-hidden="true"]),
+body.foreman-theme:not(.collapsed-nav):not(.zs-sidebar-collapsed):not(.pf-m-collapsed) .pf-v6-c-page__sidebar:not(.pf-m-collapsed):not([aria-hidden="true"]) .pf-v6-c-page__sidebar-body {
   flex-basis: var(--zs-sidebar-width) !important;
   max-width: var(--zs-sidebar-width) !important;
   min-width: var(--zs-sidebar-width) !important;
@@ -394,19 +394,35 @@ body.foreman-theme .pf-v6-c-page__sidebar:not(.pf-m-collapsed) .pf-v6-c-page__si
 }
 
 body.foreman-theme.collapsed-nav .pf-v5-c-page,
-body.foreman-theme.collapsed-nav .pf-v6-c-page {
+body.foreman-theme.collapsed-nav .pf-v6-c-page,
+body.foreman-theme.zs-sidebar-collapsed .pf-v5-c-page,
+body.foreman-theme.zs-sidebar-collapsed .pf-v6-c-page,
+body.foreman-theme.pf-m-collapsed .pf-v5-c-page,
+body.foreman-theme.pf-m-collapsed .pf-v6-c-page {
   --pf-v5-c-page__sidebar--Width: 0;
   --pf-v6-c-page__sidebar--Width: 0;
 }
 
 body.foreman-theme.collapsed-nav .pf-v5-c-page__sidebar,
+body.foreman-theme.zs-sidebar-collapsed .pf-v5-c-page__sidebar,
+body.foreman-theme.pf-m-collapsed .pf-v5-c-page__sidebar,
 body.foreman-theme .pf-v5-c-page__sidebar.pf-m-collapsed,
+body.foreman-theme .pf-v5-c-page__sidebar[aria-hidden="true"],
 body.foreman-theme.collapsed-nav .pf-v5-c-page__sidebar-body,
+body.foreman-theme.zs-sidebar-collapsed .pf-v5-c-page__sidebar-body,
+body.foreman-theme.pf-m-collapsed .pf-v5-c-page__sidebar-body,
 body.foreman-theme .pf-v5-c-page__sidebar.pf-m-collapsed .pf-v5-c-page__sidebar-body,
+body.foreman-theme .pf-v5-c-page__sidebar[aria-hidden="true"] .pf-v5-c-page__sidebar-body,
 body.foreman-theme.collapsed-nav .pf-v6-c-page__sidebar,
+body.foreman-theme.zs-sidebar-collapsed .pf-v6-c-page__sidebar,
+body.foreman-theme.pf-m-collapsed .pf-v6-c-page__sidebar,
 body.foreman-theme .pf-v6-c-page__sidebar.pf-m-collapsed,
+body.foreman-theme .pf-v6-c-page__sidebar[aria-hidden="true"],
 body.foreman-theme.collapsed-nav .pf-v6-c-page__sidebar-body,
-body.foreman-theme .pf-v6-c-page__sidebar.pf-m-collapsed .pf-v6-c-page__sidebar-body {
+body.foreman-theme.zs-sidebar-collapsed .pf-v6-c-page__sidebar-body,
+body.foreman-theme.pf-m-collapsed .pf-v6-c-page__sidebar-body,
+body.foreman-theme .pf-v6-c-page__sidebar.pf-m-collapsed .pf-v6-c-page__sidebar-body,
+body.foreman-theme .pf-v6-c-page__sidebar[aria-hidden="true"] .pf-v6-c-page__sidebar-body {
   flex-basis: 0 !important;
   max-width: 0 !important;
   min-width: 0 !important;
@@ -431,7 +447,11 @@ body.foreman-theme #rails-app-content {
 }
 
 body.foreman-theme.collapsed-nav #content,
-body.foreman-theme.collapsed-nav #rails-app-content {
+body.foreman-theme.collapsed-nav #rails-app-content,
+body.foreman-theme.zs-sidebar-collapsed #content,
+body.foreman-theme.zs-sidebar-collapsed #rails-app-content,
+body.foreman-theme.pf-m-collapsed #content,
+body.foreman-theme.pf-m-collapsed #rails-app-content {
   margin-left: 0 !important;
   width: 100% !important;
 }
