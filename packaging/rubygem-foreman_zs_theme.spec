@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.26
+Version: 0.1.28
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -56,6 +56,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.28-1
+- Align Sync Status treegrid parent controls and reduce child-row indentation to match AWX density.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.27-1
+- Make Sync Status treegrid controls flatter and denser to better match AWX data tables.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.26-1
 - Preserve sticky treegrid header layout while styling expandable row controls.
 
