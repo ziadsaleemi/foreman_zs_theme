@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.96
+Version: 0.1.97
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.97-1
+- Increase header and login logo height to 64px.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.96-1
 - Redirect direct GET requests to theme upload/reset endpoints back to Settings.
 
