@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.35
+Version: 0.1.37
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.37-1
+- Guard sidebar persistence click handling for non-element event targets.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.36-1
+- Persist Foreman sidebar collapse state across reloads and page navigation.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.35-1
 - Darken legacy table headers, pagination bars, Select2 controls, disabled buttons, and long data-list rows.
 
