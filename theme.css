@@ -705,6 +705,18 @@ body.foreman-theme .tt-menu {
   box-shadow: none !important;
 }
 
+body.foreman-theme .pf-v5-c-card,
+body.foreman-theme .pf-v6-c-card,
+body.foreman-theme .card-pf,
+body.foreman-theme .panel,
+body.foreman-theme .dashboard-widget,
+body.foreman-theme .dashboard-card {
+  border: 1px solid var(--zs-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
 body.foreman-theme #dashboard,
 body.foreman-theme .dashboard.gridster {
   padding-top: 6px;
@@ -785,6 +797,110 @@ body.foreman-theme .pf-v6-c-expandable-section {
   background: var(--zs-panel-2) !important;
   border-color: var(--zs-border) !important;
   color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-card__title,
+body.foreman-theme .pf-v6-c-card__title,
+body.foreman-theme .pf-v5-c-card__header,
+body.foreman-theme .pf-v6-c-card__header,
+body.foreman-theme .panel-heading,
+body.foreman-theme .card-pf-heading {
+  background: var(--zs-bg) !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-card__body,
+body.foreman-theme .pf-v6-c-card__body,
+body.foreman-theme .panel-body,
+body.foreman-theme .card-pf-body {
+  background: var(--zs-panel) !important;
+  border-color: transparent !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-card__footer,
+body.foreman-theme .pf-v6-c-card__footer,
+body.foreman-theme .panel-footer,
+body.foreman-theme .card-pf-footer {
+  background: var(--zs-panel) !important;
+  border-top: 1px solid var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-card .pf-v5-c-card,
+body.foreman-theme .pf-v5-c-card .pf-v6-c-card,
+body.foreman-theme .pf-v5-c-card .card-pf,
+body.foreman-theme .pf-v5-c-card .panel,
+body.foreman-theme .pf-v5-c-card .pf-v5-c-empty-state,
+body.foreman-theme .pf-v5-c-card .pf-v6-c-empty-state,
+body.foreman-theme .pf-v5-c-card .pf-v5-c-description-list,
+body.foreman-theme .pf-v5-c-card .pf-v6-c-description-list,
+body.foreman-theme .pf-v5-c-card .pf-v5-c-data-list,
+body.foreman-theme .pf-v5-c-card .pf-v6-c-data-list,
+body.foreman-theme .pf-v5-c-card .list-group,
+body.foreman-theme .pf-v5-c-card .list-group-item,
+body.foreman-theme .pf-v6-c-card .pf-v5-c-card,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-card,
+body.foreman-theme .pf-v6-c-card .card-pf,
+body.foreman-theme .pf-v6-c-card .panel,
+body.foreman-theme .pf-v6-c-card .pf-v5-c-empty-state,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-empty-state,
+body.foreman-theme .pf-v6-c-card .pf-v5-c-description-list,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-description-list,
+body.foreman-theme .pf-v6-c-card .pf-v5-c-data-list,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-data-list,
+body.foreman-theme .pf-v6-c-card .list-group,
+body.foreman-theme .pf-v6-c-card .list-group-item {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-card .pf-v5-c-description-list__group,
+body.foreman-theme .pf-v5-c-card .pf-v6-c-description-list__group,
+body.foreman-theme .pf-v6-c-card .pf-v5-c-description-list__group,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-description-list__group {
+  background: transparent !important;
+  border-bottom: 1px solid var(--zs-border-soft) !important;
+  padding: 8px 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-card .pf-v5-c-description-list__group:last-child,
+body.foreman-theme .pf-v5-c-card .pf-v6-c-description-list__group:last-child,
+body.foreman-theme .pf-v6-c-card .pf-v5-c-description-list__group:last-child,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-description-list__group:last-child {
+  border-bottom-color: transparent !important;
+}
+
+body.foreman-theme .pf-v5-c-card table,
+body.foreman-theme .pf-v5-c-card .table,
+body.foreman-theme .pf-v5-c-card .pf-v5-c-table,
+body.foreman-theme .pf-v5-c-card .pf-v6-c-table,
+body.foreman-theme .pf-v6-c-card table,
+body.foreman-theme .pf-v6-c-card .table,
+body.foreman-theme .pf-v6-c-card .pf-v5-c-table,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-table {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+body.foreman-theme .pf-v5-c-card table tr,
+body.foreman-theme .pf-v5-c-card table th,
+body.foreman-theme .pf-v5-c-card table td,
+body.foreman-theme .pf-v5-c-card .pf-v5-c-table__tr,
+body.foreman-theme .pf-v5-c-card .pf-v5-c-table__th,
+body.foreman-theme .pf-v5-c-card .pf-v5-c-table__td,
+body.foreman-theme .pf-v6-c-card table tr,
+body.foreman-theme .pf-v6-c-card table th,
+body.foreman-theme .pf-v6-c-card table td,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-table__tr,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-table__th,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-table__td {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: var(--zs-border-soft) !important;
 }
 
 body.foreman-theme .table,
@@ -1161,6 +1277,16 @@ body.foreman-theme [class*="Skeleton"] svg,
 body.foreman-theme [class*="skeleton"] svg {
   fill: #202327 !important;
   stroke: #2d2f33 !important;
+}
+
+body.foreman-theme .hostname-skeleton-rapper,
+body.foreman-theme .hostname-skeleton-rapper::before,
+body.foreman-theme .hostname-skeleton-rapper::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme .c3 text,

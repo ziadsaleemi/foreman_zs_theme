@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.21
+Version: 0.1.22
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -56,6 +56,10 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.22-1
+- Flatten nested host overview cards, description lists, empty states, and tables.
+- Prevent the host title grid from matching broad skeleton loader selectors.
+
 * Thu Jul 02 2026 ZS Operations <ops@zs.us> - 0.1.21-1
 - Align sidebar, content, table, toolbar, form, and skeleton colors with AWX dark surfaces.
 
