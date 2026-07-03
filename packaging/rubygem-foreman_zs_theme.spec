@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.67
+Version: 0.1.68
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.68-1
+- Flatten legacy Bootstrap well panels and include table-view-pf in the cleanup list.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.67-1
 - Ensure the About stats-well side-border override wins the final cascade.
 

@@ -1013,6 +1013,7 @@ body.foreman-theme .pf-v5-c-table,
 body.foreman-theme .pf-v5-c-table__tbody,
 body.foreman-theme .pf-v6-c-table,
 body.foreman-theme .pf-v6-c-table__tbody,
+body.foreman-theme .table-view-pf,
 body.foreman-theme .pf-v5-c-toolbar,
 body.foreman-theme .pf-v6-c-toolbar,
 body.foreman-theme .pf-v5-c-menu,
@@ -1080,6 +1081,7 @@ body.foreman-theme .pf-v6-c-card,
 body.foreman-theme .card-pf,
 body.foreman-theme .panel,
 body.foreman-theme .stats-well,
+body.foreman-theme .well,
 body.foreman-theme .dashboard-widget,
 body.foreman-theme .dashboard-card {
   border: 1px solid var(--zs-border) !important;
@@ -1093,6 +1095,7 @@ body.foreman-theme .pf-v6-c-card,
 body.foreman-theme .card-pf,
 body.foreman-theme .panel,
 body.foreman-theme .stats-well,
+body.foreman-theme .well,
 body.foreman-theme .dashboard-widget,
 body.foreman-theme .dashboard-card {
   border-left-width: 0 !important;
@@ -2443,6 +2446,15 @@ body.foreman-theme .hostname-skeleton-rapper::after {
 }
 
 body.foreman-theme .stats-well {
+  background: var(--zs-panel) !important;
+  border: 1px solid var(--zs-border) !important;
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .well {
   background: var(--zs-panel) !important;
   border: 1px solid var(--zs-border) !important;
   border-left-width: 0 !important;
