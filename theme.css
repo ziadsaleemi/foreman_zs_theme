@@ -1569,6 +1569,25 @@ body.foreman-theme .pf-v6-c-label.pf-m-orange {
   color: #fff1cc !important;
 }
 
+body.foreman-theme .text-success {
+  color: #6ec664 !important;
+}
+
+body.foreman-theme .text-info {
+  color: var(--zs-accent-2) !important;
+}
+
+body.foreman-theme .text-warning {
+  color: #ffcc17 !important;
+}
+
+body.foreman-theme .text-danger,
+body.foreman-theme tr.text-danger,
+body.foreman-theme tr.text-danger > th,
+body.foreman-theme tr.text-danger > td {
+  color: var(--zs-danger) !important;
+}
+
 body.foreman-theme h1,
 body.foreman-theme h2,
 body.foreman-theme h3,
@@ -2062,10 +2081,21 @@ body.foreman-theme .hostname-skeleton-rapper::after {
   box-shadow: none !important;
 }
 
+body.foreman-theme .stats-well {
+  background: var(--zs-panel) !important;
+  border: 1px solid var(--zs-border) !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
 body.foreman-theme .c3 text,
 body.foreman-theme .nv-axis text,
-body.foreman-theme svg text {
+body.foreman-theme svg text,
+body.foreman-theme svg tspan,
+body.foreman-theme svg .area-chart-legend-label,
+body.foreman-theme svg .area-chart-legend-label tspan {
   fill: #c7d0dc !important;
+  color: #c7d0dc !important;
 }
 
 body.foreman-theme #dashboard .host-configuration-chart svg text,
@@ -2082,7 +2112,9 @@ body.foreman-theme #dashboard [class*="Donut"] svg text {
 body.foreman-theme .c3 line,
 body.foreman-theme .c3 path,
 body.foreman-theme .nv-axis line,
-body.foreman-theme .nv-axis path {
+body.foreman-theme .nv-axis path,
+body.foreman-theme svg .domain,
+body.foreman-theme svg .tick line {
   stroke: var(--zs-border) !important;
 }
 

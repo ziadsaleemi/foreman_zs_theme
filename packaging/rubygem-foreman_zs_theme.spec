@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.41
+Version: 0.1.42
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.42-1
+- Improve legacy status text contrast and darken host detail chart labels and frames.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.41-1
 - Keep plugin collapse fallback synchronized with Foreman's real expanded and collapsed state.
 
