@@ -68,8 +68,44 @@
 
     applyLogo();
     hideWordmarkText();
+    markCancelActions();
     scheduleSidebarSync();
     restoreSidebarState();
+  }
+
+  function buttonText(button) {
+    return (button.value || button.textContent || button.getAttribute('aria-label') || '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function markCancelActions() {
+    if (!bodyIsReady()) return;
+
+    var selector = [
+      'form .form-actions a',
+      'form .form-actions button',
+      'form .form-actions input[type="button"]',
+      'form .form-actions input[type="reset"]',
+      '.pf-v5-c-form a',
+      '.pf-v5-c-form button',
+      '.pf-v5-c-form input[type="button"]',
+      '.pf-v5-c-form input[type="reset"]',
+      '.pf-v6-c-form a',
+      '.pf-v6-c-form button',
+      '.pf-v6-c-form input[type="button"]',
+      '.pf-v6-c-form input[type="reset"]',
+      '.modal-footer a',
+      '.modal-footer button',
+      '.modal-footer input[type="button"]',
+      '.modal-footer input[type="reset"]'
+    ].join(', ');
+
+    document.querySelectorAll(selector).forEach(function (button) {
+      if (buttonText(button).toLowerCase() === 'cancel') {
+        button.classList.add('zs-theme-cancel-action');
+      }
+    });
   }
 
   function findSidebar() {

@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.88
+Version: 0.1.90
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.90-1
+- Apply AWX cancel text styling to PatternFly form cancel buttons.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.89-1
+- Render form and modal Cancel actions as AWX text buttons.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.88-1
 - Override high-specificity new-action buttons with compact AWX spacing.
 

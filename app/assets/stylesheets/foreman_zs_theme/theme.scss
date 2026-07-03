@@ -3588,6 +3588,37 @@ body.foreman-theme .pf-v6-c-form .pf-v6-c-button:not(.pf-m-plain) {
   padding: 9px 28px !important;
 }
 
+body.foreman-theme .zs-theme-cancel-action,
+body.foreman-theme form .form-actions .zs-theme-cancel-action,
+body.foreman-theme .modal-footer .zs-theme-cancel-action {
+  --pf-v5-c-button--BackgroundColor: transparent;
+  --pf-v5-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v6-c-button--BackgroundColor: transparent;
+  --pf-v6-c-button--Color: var(--zs-button-secondary-text);
+  --pf-v6-c-button--after--BorderColor: transparent;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  color: var(--zs-button-secondary-text) !important;
+  min-height: 44px !important;
+  padding: 9px 14px !important;
+  text-decoration: none !important;
+}
+
+body.foreman-theme .zs-theme-cancel-action:hover,
+body.foreman-theme .zs-theme-cancel-action:focus,
+body.foreman-theme form .form-actions .zs-theme-cancel-action:hover,
+body.foreman-theme form .form-actions .zs-theme-cancel-action:focus,
+body.foreman-theme .modal-footer .zs-theme-cancel-action:hover,
+body.foreman-theme .modal-footer .zs-theme-cancel-action:focus {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--zs-focus-ring) !important;
+  outline: 0 !important;
+  text-decoration: none !important;
+}
+
 body.foreman-theme a.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
 body.foreman-theme button.pf-v5-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
 body.foreman-theme a.pf-v6-c-button.pf-m-secondary.btn-docs:not(.pf-m-plain):not(.pf-m-link):not(.pf-m-primary),
