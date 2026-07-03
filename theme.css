@@ -456,6 +456,23 @@ body.foreman-theme .pf-v6-c-page__sidebar[aria-hidden="true"] .pf-v6-c-page__sid
   width: 0 !important;
 }
 
+body.foreman-theme.collapsed-nav .pf-v5-c-page__sidebar,
+body.foreman-theme.zs-sidebar-collapsed .pf-v5-c-page__sidebar,
+body.foreman-theme.pf-m-collapsed .pf-v5-c-page__sidebar,
+body.foreman-theme .pf-v5-c-page__sidebar.pf-m-collapsed,
+body.foreman-theme .pf-v5-c-page__sidebar[aria-hidden="true"],
+body.foreman-theme.collapsed-nav .pf-v6-c-page__sidebar,
+body.foreman-theme.zs-sidebar-collapsed .pf-v6-c-page__sidebar,
+body.foreman-theme.pf-m-collapsed .pf-v6-c-page__sidebar,
+body.foreman-theme .pf-v6-c-page__sidebar.pf-m-collapsed,
+body.foreman-theme .pf-v6-c-page__sidebar[aria-hidden="true"] {
+  border-right: 0 !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
 body.foreman-theme.collapsed-nav #vertical-nav,
 body.foreman-theme.zs-sidebar-collapsed #vertical-nav,
 body.foreman-theme.pf-m-collapsed #vertical-nav,
@@ -474,10 +491,15 @@ body.foreman-theme.pf-m-collapsed .nav-pf-secondary-nav,
 body.foreman-theme.collapsed-nav .nav-pf-tertiary-nav,
 body.foreman-theme.zs-sidebar-collapsed .nav-pf-tertiary-nav,
 body.foreman-theme.pf-m-collapsed .nav-pf-tertiary-nav {
+  border-right: 0 !important;
+  box-shadow: none !important;
   flex-basis: 0 !important;
   max-width: 0 !important;
   min-width: 0 !important;
+  opacity: 0 !important;
   overflow: hidden !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
   width: 0 !important;
 }
 
@@ -554,6 +576,121 @@ body.foreman-theme.pf-m-collapsed #rails-app-content {
 
   body.foreman-theme .breadcrumb-line {
     max-width: calc(100vw - 32px) !important;
+  }
+
+  body.foreman-theme .row,
+  body.foreman-theme #about.row,
+  body.foreman-theme #dashboard.row,
+  body.foreman-theme .dashboard.gridster.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body.foreman-theme #title_action,
+  body.foreman-theme #title_action .btn-toolbar,
+  body.foreman-theme .btn-toolbar.pull-right {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    float: none !important;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+    margin: 0 0 12px 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body.foreman-theme #title_action .btn-group,
+  body.foreman-theme .btn-toolbar.pull-right .btn-group {
+    display: inline-flex !important;
+    float: none !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.foreman-theme #title_action .btn,
+  body.foreman-theme #title_action a.btn,
+  body.foreman-theme .btn-toolbar.pull-right .btn,
+  body.foreman-theme .btn-toolbar.pull-right a.btn {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  body.foreman-theme .table-responsive,
+  body.foreman-theme .dataTables_wrapper,
+  body.foreman-theme .pf-v5-c-table__outer-wrap,
+  body.foreman-theme .pf-v6-c-table__outer-wrap {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+
+  body.foreman-theme table.table,
+  body.foreman-theme table.table-fixed,
+  body.foreman-theme table.table-bordered {
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    table-layout: auto !important;
+    width: 100% !important;
+  }
+
+  body.foreman-theme table.table > thead > tr > th,
+  body.foreman-theme table.table > tbody > tr > th,
+  body.foreman-theme table.table > tbody > tr > td {
+    min-width: 0 !important;
+    overflow-wrap: normal !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+  }
+
+  body.foreman-theme .pf-v5-c-table,
+  body.foreman-theme .pf-v6-c-table {
+    max-width: 100% !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  body.foreman-theme .pf-v5-c-table th,
+  body.foreman-theme .pf-v5-c-table td,
+  body.foreman-theme .pf-v6-c-table th,
+  body.foreman-theme .pf-v6-c-table td {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  body.foreman-theme table.table > thead > tr > th:last-child,
+  body.foreman-theme table.table > tbody > tr > td:last-child {
+    min-width: 78px !important;
+  }
+
+  body.foreman-theme table.table .btn-group,
+  body.foreman-theme table.table .dropdown,
+  body.foreman-theme table.table .dropdown-kebab-pf {
+    display: inline-flex !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.foreman-theme table.table .btn-group > .btn,
+  body.foreman-theme table.table .dropdown > .btn,
+  body.foreman-theme table.table .dropdown-kebab-pf > .btn {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  body.foreman-theme table.table .btn-group > .dropdown-toggle,
+  body.foreman-theme table.table .dropdown > .dropdown-toggle {
+    flex: 0 0 30px !important;
+    min-width: 30px !important;
   }
 }
 
