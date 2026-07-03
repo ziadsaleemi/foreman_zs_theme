@@ -557,6 +557,11 @@ body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__link {
   width: calc(var(--zs-sidebar-width) - 1px) !important;
 }
 
+body.foreman-theme .pf-v5-c-page__sidebar .nav-icon,
+body.foreman-theme .pf-v6-c-page__sidebar .nav-icon {
+  display: none !important;
+}
+
 body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__item.pf-m-expandable > .pf-v5-c-nav__link.zs-theme-nav-annotated,
 body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__item.pf-m-expandable > .pf-v6-c-nav__link.zs-theme-nav-annotated {
   align-items: center !important;
@@ -609,9 +614,11 @@ body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-description {
   font-weight: 400 !important;
   line-height: 1.28 !important;
   margin-top: 4px !important;
-  max-width: 205px !important;
-  overflow-wrap: anywhere !important;
-  white-space: normal !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  overflow-wrap: normal !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 
 body.foreman-theme.collapsed-nav .pf-v5-c-page__sidebar .zs-theme-nav-description,

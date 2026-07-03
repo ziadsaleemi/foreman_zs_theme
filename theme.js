@@ -13,21 +13,21 @@
   var sidebarSyncTimer = null;
   var lastRestoreUrl = null;
   var sidebarDescriptionByLabel = {
-    Monitor: 'Status, facts, jobs, and reports',
-    Reports: 'Configuration reports and templates',
+    Monitor: 'Status, facts, jobs, reports',
+    Reports: 'Reports and templates',
     'Foreman Tasks': 'Tasks and recurring work',
-    Content: 'Subscriptions, repositories, and sync',
-    Lifecycle: 'Environments, views, and keys',
-    'Content Types': 'Packages, errata, and collections',
+    Content: 'Subscriptions and repositories',
+    Lifecycle: 'Environments and content views',
+    'Content Types': 'Packages, errata, collections',
     Hosts: 'Inventory and provisioning',
-    'Provisioning Setup': 'Operating systems and install media',
+    'Provisioning Setup': 'OS, media, and provisioning',
     Templates: 'Provisioning, jobs, and partitions',
-    Configure: 'Host groups, parameters, and automation',
+    Configure: 'Host groups and parameters',
     Ansible: 'Roles and variables',
-    Infrastructure: 'Proxies, compute, and networks',
-    'ZS Theme': 'Branding, login, and theme assets',
-    Organizations: 'Business units and scoped resources',
-    Locations: 'Sites, datacenters, and scoped resources',
+    Infrastructure: 'Proxies, compute, networks',
+    'ZS Theme': 'Branding and theme assets',
+    Organizations: 'Business units and resources',
+    Locations: 'Sites and scoped resources',
     Administer: 'Users, settings, and access'
   };
   var sidebarToggleSelector = [

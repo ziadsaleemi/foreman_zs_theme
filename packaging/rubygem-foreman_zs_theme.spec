@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.103
+Version: 0.1.105
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,12 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.105-1
+- Shorten sidebar descriptions so they fit on one line without clipping.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.104-1
+- Hide sidebar category icons and keep menu descriptions on one line.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.103-1
 - Add sidebar descriptions for theme, organization, and location submenus.
 
