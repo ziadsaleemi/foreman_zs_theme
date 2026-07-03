@@ -15,7 +15,7 @@
   --zs-sidebar-accent: #aaabac;
   --zs-sidebar-active-bg: #26292d;
   --zs-sidebar-active-border: #1fa7f8;
-  --zs-sidebar-active-bar-width: 8px;
+  --zs-sidebar-active-bar-width: 4px;
   --zs-sidebar-width: 290px;
   --zs-panel: #1b1d21;
   --zs-panel-2: #222428;
@@ -475,6 +475,35 @@ body.foreman-theme .pf-v5-c-page,
 body.foreman-theme .pf-v6-c-page {
   --pf-v5-c-page__sidebar--Width: var(--zs-sidebar-width);
   --pf-v6-c-page__sidebar--Width: var(--zs-sidebar-width);
+}
+
+body.foreman-theme .pf-v5-c-page,
+body.foreman-theme .pf-v6-c-page,
+body.foreman-theme .pf-v5-c-page__sidebar,
+body.foreman-theme .pf-v5-c-page__sidebar *,
+body.foreman-theme .pf-v5-c-page__sidebar-body,
+body.foreman-theme .pf-v6-c-page__sidebar,
+body.foreman-theme .pf-v6-c-page__sidebar *,
+body.foreman-theme .pf-v6-c-page__sidebar-body,
+body.foreman-theme .nav-pf-vertical,
+body.foreman-theme .nav-pf-vertical *,
+body.foreman-theme .nav-pf-vertical-alt,
+body.foreman-theme .nav-pf-vertical-alt *,
+body.foreman-theme .nav-pf-secondary-nav,
+body.foreman-theme .nav-pf-secondary-nav *,
+body.foreman-theme .nav-pf-tertiary-nav,
+body.foreman-theme .nav-pf-tertiary-nav *,
+body.foreman-theme .sidebar-pf,
+body.foreman-theme .sidebar-pf *,
+body.foreman-theme #vertical-nav,
+body.foreman-theme #vertical-nav *,
+body.foreman-theme #content,
+body.foreman-theme #rails-app-content {
+  animation: none !important;
+  animation-duration: 0s !important;
+  transition: none !important;
+  transition-delay: 0s !important;
+  transition-duration: 0s !important;
 }
 
 body.foreman-theme .pf-v5-c-masthead__main,
