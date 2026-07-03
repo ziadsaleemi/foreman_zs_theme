@@ -2308,6 +2308,15 @@ body.foreman-theme .form-horizontal .tab-content {
   padding-top: 24px !important;
 }
 
+body.foreman-theme form.well,
+body.foreman-theme form.form-horizontal.well,
+body.foreman-theme form.host-form.well,
+body.foreman-theme form.hostresource-form.well {
+  background: var(--zs-panel) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 body.foreman-theme .message-box-content,
 body.foreman-theme .message-box-message,
 body.foreman-theme .empty-state-description,

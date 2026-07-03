@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.60
+Version: 0.1.61
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.61-1
+- Flatten legacy Bootstrap form well wrappers on tabbed Foreman forms.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.60-1
 - Harden sidebar collapse fallback when Foreman's native toggle handler misses a click.
 
