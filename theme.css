@@ -1936,11 +1936,11 @@ body.foreman-theme #dashboard .widget .table > tbody > tr > td,
 body.foreman-theme .dashboard .widget .table > thead > tr > th,
 body.foreman-theme .dashboard .widget .table > tbody > tr > th,
 body.foreman-theme .dashboard .widget .table > tbody > tr > td {
-  height: 26px;
+  height: 41px;
   line-height: 1.35;
   max-width: 1px;
   overflow: hidden;
-  padding: 4px 8px !important;
+  padding: 8px 12px !important;
   text-overflow: ellipsis;
   vertical-align: middle !important;
   white-space: nowrap;
@@ -1948,9 +1948,7 @@ body.foreman-theme .dashboard .widget .table > tbody > tr > td {
 
 body.foreman-theme #dashboard .widget .table > thead > tr > th,
 body.foreman-theme .dashboard .widget .table > thead > tr > th {
-  height: 28px;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+  height: 42px;
 }
 
 body.foreman-theme #dashboard .widget .message-box-content,
