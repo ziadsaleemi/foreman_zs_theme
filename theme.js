@@ -10,8 +10,12 @@
   var sidebarSyncTimer = null;
   var lastRestoreUrl = null;
 
+  function bodyIsReady() {
+    return !!document.body;
+  }
+
   function applyLogo() {
-    if (!logoUrl) return;
+    if (!bodyIsReady() || !logoUrl) return;
 
     document.body.classList.add('zs-custom-logo');
     document
@@ -23,7 +27,7 @@
   }
 
   function hideWordmarkText() {
-    if (!hideForemanText) return;
+    if (!bodyIsReady() || !hideForemanText) return;
 
     var brandSelectors = [
       '.navbar-brand',
@@ -53,6 +57,8 @@
   }
 
   function applyThemeSettings() {
+    if (!bodyIsReady()) return;
+
     applyLogo();
     hideWordmarkText();
     scheduleSidebarSync();
@@ -88,7 +94,23 @@
   }
 
   function sidebarIsCollapsed(sidebar) {
+    if (!bodyIsReady()) return false;
     if (!sidebar) return false;
+
+    if (
+      document.body.classList.contains('collapsed-nav') ||
+      document.body.classList.contains('zs-sidebar-collapsed') ||
+      document.body.classList.contains('pf-m-collapsed')
+    ) {
+      return true;
+    }
+
+    if (
+      document.body.classList.contains('zs-sidebar-expanded') ||
+      document.body.classList.contains('pf-m-expanded')
+    ) {
+      return false;
+    }
 
     if (
       sidebar.classList.contains('pf-m-collapsed') ||
@@ -105,8 +127,6 @@
     }
 
     if (sidebar.getBoundingClientRect().width <= 2) return true;
-    if (document.body.classList.contains('pf-m-collapsed')) return true;
-    if (document.body.classList.contains('pf-m-expanded')) return false;
 
     // Legacy PatternFly navigation exposes collapse through body state.
     return (
@@ -116,6 +136,8 @@
   }
 
   function syncSidebarBodyClass() {
+    if (!bodyIsReady()) return null;
+
     var sidebar = findSidebar();
 
     if (!sidebar) {
@@ -132,19 +154,20 @@
   }
 
   function applySidebarStateFallback(state) {
+    if (!bodyIsReady()) return;
+
     var sidebar = findSidebar();
     var collapsed = state === 'collapsed';
 
     document.body.classList.toggle('collapsed-nav', collapsed);
-    document.body.classList.toggle('pf-m-collapsed', collapsed);
-    document.body.classList.toggle('pf-m-expanded', !collapsed);
+    document.body.classList.remove(collapsed ? 'pf-m-expanded' : 'pf-m-collapsed');
     document.body.classList.toggle('zs-sidebar-collapsed', collapsed);
     document.body.classList.toggle('zs-sidebar-expanded', !collapsed);
 
-    if (sidebar) {
-      sidebar.classList.toggle('pf-m-collapsed', collapsed);
-      sidebar.classList.toggle('pf-m-expanded', !collapsed);
-      sidebar.setAttribute('aria-hidden', collapsed ? 'true' : 'false');
+    if (sidebar && !collapsed) {
+      sidebar.classList.remove('pf-m-collapsed');
+      sidebar.classList.add('pf-m-expanded');
+      sidebar.setAttribute('aria-hidden', 'false');
     }
 
     saveSidebarState(state);

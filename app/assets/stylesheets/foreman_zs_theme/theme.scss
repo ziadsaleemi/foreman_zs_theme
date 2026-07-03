@@ -1069,6 +1069,42 @@ body.foreman-theme .dashboard-card {
   overflow: hidden;
 }
 
+body.foreman-theme .popover-title,
+body.foreman-theme .popover-content,
+body.foreman-theme .tooltip-inner {
+  background: var(--zs-panel) !important;
+  color: var(--zs-text) !important;
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme .popover.top > .arrow::after,
+body.foreman-theme .popover.top > .arrow:after,
+body.foreman-theme .tooltip.top .tooltip-arrow,
+body.foreman-theme .tooltip.top-left .tooltip-arrow,
+body.foreman-theme .tooltip.top-right .tooltip-arrow {
+  border-top-color: var(--zs-panel) !important;
+}
+
+body.foreman-theme .popover.bottom > .arrow::after,
+body.foreman-theme .popover.bottom > .arrow:after,
+body.foreman-theme .tooltip.bottom .tooltip-arrow,
+body.foreman-theme .tooltip.bottom-left .tooltip-arrow,
+body.foreman-theme .tooltip.bottom-right .tooltip-arrow {
+  border-bottom-color: var(--zs-panel) !important;
+}
+
+body.foreman-theme .popover.left > .arrow::after,
+body.foreman-theme .popover.left > .arrow:after,
+body.foreman-theme .tooltip.left .tooltip-arrow {
+  border-left-color: var(--zs-panel) !important;
+}
+
+body.foreman-theme .popover.right > .arrow::after,
+body.foreman-theme .popover.right > .arrow:after,
+body.foreman-theme .tooltip.right .tooltip-arrow {
+  border-right-color: var(--zs-panel) !important;
+}
+
 body.foreman-theme #dashboard,
 body.foreman-theme .dashboard.gridster {
   padding-top: 6px;
