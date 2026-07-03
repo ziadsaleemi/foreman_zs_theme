@@ -1,0 +1,47 @@
+<% logo_url = Setting[:zs_theme_header_logo_url].presence || ForemanZsTheme::UploadedAsset.default_url('logo') %>
+<% favicon_url = Setting[:zs_theme_favicon_url].presence || ForemanZsTheme::UploadedAsset.default_url('favicon') %>
+
+<div class="zs-theme-settings-upload">
+  <h3><%= _('ZS theme assets') %></h3>
+  <div class="zs-theme-settings-grid">
+    <div class="zs-theme-settings-card">
+      <h4><%= _('Header logo') %></h4>
+      <div class="zs-theme-asset-preview zs-theme-logo-preview">
+        <%= image_tag logo_url, alt: _('Current header logo') %>
+      </div>
+      <%= form_tag foreman_zs_theme.upload_theme_asset_path('logo'), multipart: true, class: 'zs-theme-upload-form' do %>
+        <%= file_field_tag :file, id: 'zs_theme_logo_file', accept: 'image/png,image/jpeg,image/gif,image/webp,image/x-icon,image/vnd.microsoft.icon', required: true %>
+        <div class="zs-theme-upload-actions">
+          <%= submit_tag _('Upload logo'), class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+      <% if ForemanZsTheme::UploadedAsset.uploaded?('logo') %>
+        <%= form_tag foreman_zs_theme.reset_theme_asset_path('logo'), method: :delete, class: 'zs-theme-reset-form' do %>
+          <%= submit_tag _('Reset logo'), class: 'btn btn-default' %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="zs-theme-settings-card">
+      <h4><%= _('Favicon') %></h4>
+      <div class="zs-theme-asset-preview zs-theme-favicon-preview">
+        <% if favicon_url.present? %>
+          <%= image_tag favicon_url, alt: _('Current favicon') %>
+        <% else %>
+          <span><%= _('No custom favicon uploaded') %></span>
+        <% end %>
+      </div>
+      <%= form_tag foreman_zs_theme.upload_theme_asset_path('favicon'), multipart: true, class: 'zs-theme-upload-form' do %>
+        <%= file_field_tag :file, id: 'zs_theme_favicon_file', accept: 'image/png,image/jpeg,image/gif,image/webp,image/x-icon,image/vnd.microsoft.icon', required: true %>
+        <div class="zs-theme-upload-actions">
+          <%= submit_tag _('Upload favicon'), class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+      <% if ForemanZsTheme::UploadedAsset.uploaded?('favicon') %>
+        <%= form_tag foreman_zs_theme.reset_theme_asset_path('favicon'), method: :delete, class: 'zs-theme-reset-form' do %>
+          <%= submit_tag _('Reset favicon'), class: 'btn btn-default' %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

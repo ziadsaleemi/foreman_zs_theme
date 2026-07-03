@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.90
+Version: 0.1.95
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -38,7 +38,10 @@ install -m 0644 %{buildroot}%{gem_dir}/gems/%{gem_name}-%{version}/theme.css %{b
 install -m 0644 %{buildroot}%{gem_dir}/gems/%{gem_name}-%{version}/theme.js %{buildroot}%{_datadir}/foreman/public/assets/%{gem_name}/theme.js
 install -m 0644 %{buildroot}%{gem_dir}/gems/%{gem_name}-%{version}/redhat-satellite-logo.svg %{buildroot}%{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
+mkdir -p %{buildroot}%{_localstatedir}/lib/foreman/%{gem_name}/uploads
+
 %post
+restorecon -R %{_localstatedir}/lib/foreman/%{gem_name} >/dev/null 2>&1 || :
 systemctl try-restart foreman httpd >/dev/null 2>&1 || :
 
 %postun
@@ -55,8 +58,27 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/theme.css
 %{_datadir}/foreman/public/assets/%{gem_name}/theme.js
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
+%dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}
+%dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.95-1
+- Store uploaded theme assets under Foreman's writable var-lib tree.
+- Restore the upload directory SELinux context during package install.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.94-1
+- Stop injecting a default favicon URL until one is uploaded or configured.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.93-1
+- Route plugin upload and asset endpoints to namespaced engine controllers.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.92-1
+- Return upload and reset actions to the normal Settings page.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.91-1
+- Add Dark Theme settings uploads for header logo and favicon.
+- Draw one consistent full-width topbar divider from the plugin.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.90-1
 - Apply AWX cancel text styling to PatternFly form cancel buttons.
 

@@ -68,9 +68,20 @@
 
     applyLogo();
     hideWordmarkText();
+    markTopbarPresence();
     markCancelActions();
     scheduleSidebarSync();
     restoreSidebarState();
+  }
+
+  function markTopbarPresence() {
+    if (!bodyIsReady()) return;
+
+    var hasTopbar = !!document.querySelector(
+      '.pf-v5-c-page__header, .pf-v6-c-page__header, .pf-v5-c-masthead, .pf-v6-c-masthead, .navbar-pf, .navbar-pf-vertical, .navbar'
+    );
+
+    document.body.classList.toggle('zs-theme-has-topbar', hasTopbar);
   }
 
   function buttonText(button) {

@@ -6,6 +6,7 @@
 :root {
   --zs-bg: #222428;
   --zs-topbar: #000000;
+  --zs-topbar-height: 71px;
   --zs-shell: #1b1d21;
   --zs-sidebar: #1b1d21;
   --zs-sidebar-2: #2d2f33;
@@ -184,11 +185,23 @@ body.foreman-theme .navbar-inverse {
   background: var(--zs-topbar) !important;
   background-color: var(--zs-topbar) !important;
   background-image: none !important;
-  border-color: var(--zs-border) !important;
-  box-shadow: inset 0 -1px 0 var(--zs-border);
+  border-color: var(--zs-topbar) !important;
+  box-shadow: none !important;
   font-size: 16px !important;
-  height: 71px !important;
-  min-height: 71px !important;
+  height: var(--zs-topbar-height) !important;
+  min-height: var(--zs-topbar-height) !important;
+}
+
+body.foreman-theme.zs-theme-has-topbar::before {
+  background: var(--zs-border);
+  content: "";
+  height: 1px;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: calc(var(--zs-topbar-height) - 1px);
+  z-index: 1030;
 }
 
 body.foreman-theme #data-toolbar,
@@ -4189,6 +4202,114 @@ body.foreman-theme .login {
   background: var(--zs-bg) !important;
   border-color: var(--zs-border) !important;
   color: var(--zs-text) !important;
+}
+
+body.foreman-theme .zs-theme-settings-upload {
+  background: var(--zs-panel) !important;
+  border: 1px solid var(--zs-border) !important;
+  color: var(--zs-text) !important;
+  margin: 0 0 24px !important;
+  padding: 20px !important;
+}
+
+body.foreman-theme .zs-theme-settings-upload h3 {
+  color: var(--zs-text) !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  margin: 0 0 16px !important;
+}
+
+body.foreman-theme .zs-theme-settings-grid {
+  display: grid !important;
+  gap: 16px !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+}
+
+body.foreman-theme .zs-theme-settings-card {
+  background: var(--zs-shell) !important;
+  border: 1px solid var(--zs-border-soft) !important;
+  color: var(--zs-text) !important;
+  min-width: 0 !important;
+  padding: 16px !important;
+}
+
+body.foreman-theme .zs-theme-settings-card h4 {
+  color: var(--zs-text) !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 12px !important;
+}
+
+body.foreman-theme .zs-theme-asset-preview {
+  align-items: center !important;
+  background: var(--zs-topbar) !important;
+  border: 1px solid var(--zs-border-soft) !important;
+  display: flex !important;
+  height: 72px !important;
+  justify-content: center !important;
+  margin: 0 0 14px !important;
+  overflow: hidden !important;
+  padding: 10px !important;
+}
+
+body.foreman-theme .zs-theme-logo-preview img {
+  max-height: 48px !important;
+  max-width: 220px !important;
+  object-fit: contain !important;
+}
+
+body.foreman-theme .zs-theme-favicon-preview {
+  justify-content: flex-start !important;
+}
+
+body.foreman-theme .zs-theme-favicon-preview img {
+  height: 32px !important;
+  object-fit: contain !important;
+  width: 32px !important;
+}
+
+body.foreman-theme .zs-theme-favicon-preview span {
+  color: var(--zs-text-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+body.foreman-theme .zs-theme-upload-form,
+body.foreman-theme .zs-theme-reset-form {
+  margin: 0 !important;
+}
+
+body.foreman-theme .zs-theme-upload-form input[type="file"] {
+  background: var(--zs-toolbar-control-bg) !important;
+  border: 1px solid var(--zs-toolbar-control-border) !important;
+  color: var(--zs-text) !important;
+  display: block !important;
+  min-height: 44px !important;
+  padding: 8px !important;
+  width: 100% !important;
+}
+
+body.foreman-theme .zs-theme-upload-form input[type="file"]::file-selector-button {
+  background: var(--zs-button-bg) !important;
+  border: 1px solid var(--zs-button-border) !important;
+  color: var(--zs-text) !important;
+  cursor: pointer !important;
+  margin-right: 12px !important;
+  min-height: 28px !important;
+  padding: 4px 12px !important;
+}
+
+body.foreman-theme .zs-theme-upload-actions {
+  align-items: center !important;
+  display: flex !important;
+  gap: 12px !important;
+  margin-top: 12px !important;
+}
+
+body.foreman-theme .zs-theme-reset-form {
+  margin-top: 10px !important;
 }
 
 body.foreman-theme .audits-data-list table.table-changes.table.table-bordered {
