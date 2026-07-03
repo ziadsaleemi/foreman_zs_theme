@@ -1087,6 +1087,16 @@ body.foreman-theme .dashboard-card {
   overflow: hidden;
 }
 
+body.foreman-theme .pf-v5-c-card,
+body.foreman-theme .pf-v6-c-card,
+body.foreman-theme .card-pf,
+body.foreman-theme .panel,
+body.foreman-theme .dashboard-widget,
+body.foreman-theme .dashboard-card {
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
+}
+
 body.foreman-theme .popover-title,
 body.foreman-theme .popover-content,
 body.foreman-theme .tooltip-inner {

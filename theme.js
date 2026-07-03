@@ -102,6 +102,11 @@
     if (!bodyIsReady()) return false;
     if (!sidebar) return false;
 
+    var sidebarWidth = sidebar.getBoundingClientRect().width;
+
+    if (sidebarWidth <= 2) return true;
+    if (sidebarWidth > 40) return false;
+
     if (
       sidebar.classList.contains('pf-m-collapsed') ||
       sidebar.getAttribute('aria-hidden') === 'true'
@@ -109,18 +114,12 @@
       return true;
     }
 
-    var sidebarWidth = sidebar.getBoundingClientRect().width;
-
-    if (sidebarWidth <= 2) return true;
-
     if (
       sidebar.classList.contains('pf-m-expanded') ||
       sidebar.getAttribute('aria-hidden') === 'false'
     ) {
       return false;
     }
-
-    if (sidebarWidth > 40) return false;
 
     if (
       document.body.classList.contains('collapsed-nav') ||
@@ -196,16 +195,6 @@
     saveSidebarState(targetState);
   }
 
-  function forceSidebarStateIfNeeded(targetState) {
-    var collapsed = syncSidebarBodyClass();
-    var expectedCollapsed = targetState === 'collapsed';
-
-    if (collapsed === null) return;
-    if (collapsed !== expectedCollapsed) {
-      applySidebarStateFallback(targetState);
-    }
-  }
-
   function scheduleSidebarSync(delay) {
     window.clearTimeout(sidebarSyncTimer);
     sidebarSyncTimer = window.setTimeout(function () {
@@ -255,14 +244,9 @@
         var targetState = sidebarIsCollapsed(sidebar) ? 'expanded' : 'collapsed';
 
         sidebarToggleInFlight = true;
-        [0, 75, 175, 350, 800].forEach(function (delay) {
+        [0, 150, 450, 900].forEach(function (delay) {
           window.setTimeout(function () {
-            if (delay === 75 || delay === 350) {
-              forceSidebarStateIfNeeded(targetState);
-              return;
-            }
-
-            if (delay < 800) {
+            if (delay < 900) {
               syncSidebarBodyClass();
               return;
             }

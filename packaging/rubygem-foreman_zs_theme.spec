@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.63
+Version: 0.1.65
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.65-1
+- Make sidebar collapse target visible geometry first and delay fallback mutation.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.64-1
+- Flatten card and panel shells by removing boxed side borders.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.63-1
 - Apply sidebar collapse fallback directly during restore and faster after toggle clicks.
 
