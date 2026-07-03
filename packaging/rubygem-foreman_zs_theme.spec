@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.74
+Version: 0.1.78
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,18 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.78-1
+- Hide nested sidebar divider rows inside expanded menu sections.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.77-1
+- Remove empty sidebar search action slot so the input spans the rail.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.76-1
+- Stretch PatternFly sidebar search to the full sidebar width.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.75-1
+- Widen the sidebar search field and remove nested menu separator lines.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.74-1
 - Remove legacy row borders from Audits change tables.
 

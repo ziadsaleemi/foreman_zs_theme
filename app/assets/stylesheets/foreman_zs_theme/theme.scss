@@ -1019,6 +1019,159 @@ body.foreman-theme .nav-pf-tertiary-nav {
   background: var(--zs-sidebar-3) !important;
 }
 
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav,
+body.foreman-theme .nav-pf-secondary-nav,
+body.foreman-theme .nav-pf-tertiary-nav {
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item > a,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__item,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__link,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__item,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__link {
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item::before,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item::after,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item > a::before,
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item > a::after,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item::before,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item::after,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item > a::before,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item > a::after,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__item::before,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__item::after,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__link::before,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__link::after,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__item::before,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__item::after,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__link::before,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__link::after {
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme #foreman-nav .pf-v5-c-nav__subnav .pf-v5-c-divider,
+body.foreman-theme #foreman-nav .pf-v5-c-nav__subnav [role="separator"],
+body.foreman-theme #foreman-nav .pf-v6-c-nav__subnav .pf-v6-c-divider,
+body.foreman-theme #foreman-nav .pf-v6-c-nav__subnav [role="separator"],
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav [role="separator"],
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav [role="separator"],
+body.foreman-theme .nav-pf-secondary-nav [role="separator"],
+body.foreman-theme .nav-pf-tertiary-nav [role="separator"] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+}
+
+body.foreman-theme #vertical-nav .nav-pf-secondary-nav .list-group-item.active > a,
+body.foreman-theme #vertical-nav .nav-pf-tertiary-nav .list-group-item.active > a,
+body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
+body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a,
+body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__link.pf-m-current,
+body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__link.pf-m-current {
+  border-left-color: var(--zs-sidebar-active-border) !important;
+  box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;
+}
+
+body.foreman-theme #vertical-nav .search,
+body.foreman-theme #vertical-nav .search-input,
+body.foreman-theme #vertical-nav .search-pf,
+body.foreman-theme #vertical-nav .search-pf-input-group,
+body.foreman-theme #vertical-nav .search-pf .form-group,
+body.foreman-theme #vertical-nav .search-pf .input-group,
+body.foreman-theme #vertical-nav .search-pf .form-control,
+body.foreman-theme #vertical-nav input[type="search"],
+body.foreman-theme #vertical-nav input[type="text"][placeholder*="Search"],
+body.foreman-theme .sidebar-pf .search,
+body.foreman-theme .sidebar-pf .search-input,
+body.foreman-theme .sidebar-pf .search-pf,
+body.foreman-theme .sidebar-pf .search-pf-input-group,
+body.foreman-theme .sidebar-pf .search-pf .form-group,
+body.foreman-theme .sidebar-pf .search-pf .input-group,
+body.foreman-theme .sidebar-pf .search-pf .form-control,
+body.foreman-theme .sidebar-pf input[type="search"],
+body.foreman-theme .sidebar-pf input[type="text"][placeholder*="Search"],
+body.foreman-theme .pf-v5-c-page__sidebar .foreman-search-bar,
+body.foreman-theme .pf-v6-c-page__sidebar .foreman-search-bar,
+body.foreman-theme .pf-v5-c-page__sidebar .autocomplete-search,
+body.foreman-theme .pf-v6-c-page__sidebar .autocomplete-search {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+body.foreman-theme .pf-v5-c-page__sidebar #navigation-search,
+body.foreman-theme .pf-v6-c-page__sidebar #navigation-search,
+body.foreman-theme #foreman-nav #navigation-search,
+body.foreman-theme #navigation-search.pf-v5-c-input-group,
+body.foreman-theme #navigation-search.pf-v6-c-input-group,
+body.foreman-theme #navigation-search .pf-v5-c-input-group__item,
+body.foreman-theme #navigation-search .pf-v6-c-input-group__item,
+body.foreman-theme #navigation-search .pf-v5-c-text-input-group,
+body.foreman-theme #navigation-search .pf-v6-c-text-input-group,
+body.foreman-theme #navigation-search .pf-v5-c-text-input-group__main,
+body.foreman-theme #navigation-search .pf-v6-c-text-input-group__main,
+body.foreman-theme #navigation-search .pf-v5-c-text-input-group__text,
+body.foreman-theme #navigation-search .pf-v6-c-text-input-group__text,
+body.foreman-theme #navigation-search .pf-v5-c-text-input-group__text-input,
+body.foreman-theme #navigation-search .pf-v6-c-text-input-group__text-input {
+  flex: 1 1 auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+body.foreman-theme #navigation-search > .pf-v5-c-input-group__item.pf-m-fill,
+body.foreman-theme #navigation-search > .pf-v6-c-input-group__item.pf-m-fill {
+  flex: 1 1 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+body.foreman-theme #navigation-search > .pf-v5-c-input-group__item:not(.pf-m-fill),
+body.foreman-theme #navigation-search > .pf-v6-c-input-group__item:not(.pf-m-fill) {
+  display: none !important;
+  flex: 0 0 0 !important;
+  margin: 0 !important;
+  max-width: 0 !important;
+  min-width: 0 !important;
+  width: 0 !important;
+}
+
+body.foreman-theme #vertical-nav .search,
+body.foreman-theme #vertical-nav .search-pf,
+body.foreman-theme .sidebar-pf .search,
+body.foreman-theme .sidebar-pf .search-pf,
+body.foreman-theme .pf-v5-c-page__sidebar .foreman-search-bar,
+body.foreman-theme .pf-v6-c-page__sidebar .foreman-search-bar {
+  box-sizing: border-box !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 body.foreman-theme .pf-v5-c-page__main-breadcrumb,
 body.foreman-theme .pf-v5-c-page__main-section,
 body.foreman-theme .pf-v5-c-page__main-section.pf-m-light,
