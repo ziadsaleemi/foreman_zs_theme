@@ -5,7 +5,9 @@ ForemanZsTheme::Engine.routes.draw do
     get 'assets/:kind', to: 'assets#show', as: :theme_asset, constraints: { kind: /logo|favicon/ }
 
     scope :settings do
+      get 'upload/:kind', to: 'settings#redirect_to_settings_page', constraints: { kind: /logo|favicon/ }
       post 'upload/:kind', to: 'settings#upload', as: :upload_theme_asset, constraints: { kind: /logo|favicon/ }
+      get 'reset/:kind', to: 'settings#redirect_to_settings_page', constraints: { kind: /logo|favicon/ }
       delete 'reset/:kind', to: 'settings#reset', as: :reset_theme_asset, constraints: { kind: /logo|favicon/ }
     end
   end

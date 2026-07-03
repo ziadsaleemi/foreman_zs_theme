@@ -10,13 +10,13 @@ Deface::Override.new(
       <link rel="icon" href="<%= zs_theme_favicon_url %>">
       <link rel="shortcut icon" href="<%= zs_theme_favicon_url %>">
     <% end %>
-    <link rel="stylesheet" href="/assets/foreman_zs_theme/theme.css?v=0.1.95">
+    <link rel="stylesheet" href="/assets/foreman_zs_theme/theme.css?v=0.1.96">
     <script>
       window.ZsForemanTheme = {
         logoUrl: <%= (Setting[:zs_theme_header_logo_url].presence || '/assets/foreman_zs_theme/redhat-satellite-logo.svg').to_json.html_safe %>,
         hideForemanHeaderText: <%= Setting[:zs_theme_hide_foreman_header_text] ? 'true' : 'false' %>
       };
     </script>
-    <script src="/assets/foreman_zs_theme/theme.js?v=0.1.95"></script>
+    <script src="/assets/foreman_zs_theme/theme.js?v=0.1.96"></script>
   ERB
 )

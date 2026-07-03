@@ -24,6 +24,10 @@ module ForemanZsTheme
       redirect_to_settings
     end
 
+    def redirect_to_settings_page
+      redirect_to_settings
+    end
+
     private
 
     def asset_kind

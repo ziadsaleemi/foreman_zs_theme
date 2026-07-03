@@ -35,7 +35,11 @@ Foreman::Plugin.register :foreman_zs_theme do
 
   edit_settings_permission = Foreman::AccessControl.permission(:edit_settings)
   if edit_settings_permission
-    %w[foreman_zs_theme/settings/upload foreman_zs_theme/settings/reset].each do |action|
+    %w[
+      foreman_zs_theme/settings/redirect_to_settings_page
+      foreman_zs_theme/settings/upload
+      foreman_zs_theme/settings/reset
+    ].each do |action|
       edit_settings_permission.actions << action unless edit_settings_permission.actions.include?(action)
     end
   end
