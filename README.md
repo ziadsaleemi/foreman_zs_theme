@@ -24,5 +24,5 @@ packaging/build-rpm.sh
 Install or upgrade the RPM on the Foreman host:
 
 ```bash
-dnf install -y pkg/rpmbuild/RPMS/noarch/rubygem-foreman_zs_theme-0.1.31-1.el9.noarch.rpm
+dnf install -y pkg/rpmbuild/RPMS/noarch/rubygem-foreman_zs_theme-0.1.35-1.el9.noarch.rpm
 ```

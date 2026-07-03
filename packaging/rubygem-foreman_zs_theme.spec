@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.31
+Version: 0.1.35
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,18 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.35-1
+- Darken legacy table headers, pagination bars, Select2 controls, disabled buttons, and long data-list rows.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.34-1
+- Preserve Foreman sidebar collapse behavior while keeping the expanded AWX-width sidebar.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.33-1
+- Keep React pages aligned with the AWX-width sidebar and remove tree-table chevron button borders.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.32-1
+- Align sidebar width, tab rhythm, card headers, and table dividers closer to AWX.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.31-1
 - Make tree-table expand chevrons plain while preserving the AWX-style row rhythm.
 
