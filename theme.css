@@ -15,6 +15,7 @@
   --zs-sidebar-accent: #aaabac;
   --zs-sidebar-active-bg: #26292d;
   --zs-sidebar-active-border: #1fa7f8;
+  --zs-sidebar-active-bar-width: 8px;
   --zs-sidebar-width: 290px;
   --zs-panel: #1b1d21;
   --zs-panel-2: #222428;
@@ -1019,7 +1020,7 @@ body.foreman-theme .pf-v6-c-nav__item.pf-m-current > .pf-v6-c-nav__link,
 body.foreman-theme .nav-pf-vertical .active > a,
 body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a {
-  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 4px, var(--zs-sidebar-active-bg) 4px) !important;
+  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 var(--zs-sidebar-active-bar-width), var(--zs-sidebar-active-bg) var(--zs-sidebar-active-bar-width)) !important;
   color: #ffffff !important;
   border-top-color: var(--zs-sidebar-border) !important;
   border-right-color: var(--zs-sidebar-border) !important;
@@ -1070,7 +1071,7 @@ body.foreman-theme .nav-pf-vertical .list-group-item.active > a:focus,
 body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a:focus,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a:focus,
 body.foreman-theme #vertical-nav .list-group-item.active > a:focus {
-  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 4px, var(--zs-sidebar-active-bg) 4px) !important;
+  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 var(--zs-sidebar-active-bar-width), var(--zs-sidebar-active-bg) var(--zs-sidebar-active-bar-width)) !important;
   border-top-color: var(--zs-sidebar-border) !important;
   border-right-color: var(--zs-sidebar-border) !important;
   border-bottom-color: var(--zs-sidebar-border) !important;
@@ -1083,7 +1084,7 @@ body.foreman-theme .pf-v5-c-nav__item.pf-m-current > .pf-v5-c-nav__link::before,
 body.foreman-theme .pf-v6-c-nav__link.pf-m-current::before,
 body.foreman-theme .pf-v6-c-nav__item.pf-m-current > .pf-v6-c-nav__link::before {
   border-left-color: var(--zs-sidebar-active-border) !important;
-  border-left-width: 3px !important;
+  border-left-width: var(--zs-sidebar-active-bar-width) !important;
 }
 
 body.foreman-theme .pf-v5-c-nav__subnav,
@@ -1223,7 +1224,7 @@ body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__lin
 body.foreman-theme .pf-v5-c-page__sidebar .pf-v5-c-nav__subnav .pf-v5-c-nav__item.pf-m-current > .pf-v5-c-nav__link,
 body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__link.pf-m-current,
 body.foreman-theme .pf-v6-c-page__sidebar .pf-v6-c-nav__subnav .pf-v6-c-nav__item.pf-m-current > .pf-v6-c-nav__link {
-  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 4px, var(--zs-sidebar-active-bg) 4px) !important;
+  background: linear-gradient(90deg, var(--zs-sidebar-active-border) 0 var(--zs-sidebar-active-bar-width), var(--zs-sidebar-active-bg) var(--zs-sidebar-active-bar-width)) !important;
   border-left-color: var(--zs-sidebar-active-border) !important;
   box-shadow: none !important;
 }

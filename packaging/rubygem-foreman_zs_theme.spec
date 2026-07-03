@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.107
+Version: 0.1.108
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.108-1
+- Increase the selected sidebar item marker to match the AWX-style active bar.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.107-1
 - Match sidebar hover background to selected items and use a blue active left accent.
 
