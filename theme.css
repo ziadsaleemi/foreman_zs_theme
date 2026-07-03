@@ -1056,6 +1056,178 @@ body.foreman-theme .pf-v6-c-table tr.pf-m-selected {
   color: var(--zs-text) !important;
 }
 
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view {
+  background: var(--zs-panel) !important;
+  border-top: 1px solid var(--zs-border) !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  border-collapse: collapse !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view > thead > tr,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view > thead > tr,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__thead,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__thead {
+  background: var(--zs-bg) !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view > thead > tr > th,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view > thead > tr > th,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__th,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__th {
+  background: var(--zs-bg) !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  color: var(--zs-muted) !important;
+  font-size: 14px;
+  font-weight: 600;
+  height: 44px;
+  padding: 8px 12px !important;
+  vertical-align: middle !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view > tbody > tr,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view > tbody > tr,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__tr,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__tr {
+  background: var(--zs-panel) !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  min-height: 48px;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view > tbody > tr:hover,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view > tbody > tr:hover,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__tr:hover,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__tr:hover {
+  background: var(--zs-panel-2) !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view > tbody > tr > th,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view > tbody > tr > td,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view > tbody > tr > th,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view > tbody > tr > td,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__td,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__td {
+  background: transparent !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  color: var(--zs-text) !important;
+  height: 48px;
+  padding: 8px 12px !important;
+  vertical-align: middle !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__tree-view-title-cell,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__tree-view-title-cell {
+  padding-left: 8px !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view tbody .pf-v5-c-table__toggle,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view tbody .pf-v6-c-table__toggle {
+  align-items: center;
+  display: inline-flex !important;
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label*="Expand row"],
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label*="Collapse row"],
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label="Expand all rows"],
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Expand row"],
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Collapse row"],
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label="Expand all rows"] {
+  align-items: center;
+  background: var(--zs-panel-3) !important;
+  border: 1px solid var(--zs-border) !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  display: inline-flex !important;
+  height: 32px !important;
+  justify-content: center;
+  min-height: 32px !important;
+  min-width: 32px !important;
+  padding: 0 !important;
+  width: 32px !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label*="Expand row"]:hover,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label*="Expand row"]:focus,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label*="Collapse row"]:hover,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label*="Collapse row"]:focus,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label="Expand all rows"]:hover,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label="Expand all rows"]:focus,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Expand row"]:hover,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Expand row"]:focus,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Collapse row"]:hover,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Collapse row"]:focus,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label="Expand all rows"]:hover,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label="Expand all rows"]:focus {
+  background: #35373c !important;
+  border-color: var(--zs-accent) !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-expanded,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-expanded,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-expanded="true"],
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-expanded="true"] {
+  background: #35373c !important;
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle svg,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle svg *,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__toggle svg,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__toggle svg * {
+  fill: currentColor !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__tree-view-text,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__tree-view-text,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__tree-view-title,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__tree-view-title {
+  color: var(--zs-text) !important;
+  font-weight: 500;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__tree-view-main,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__tree-view-main {
+  align-items: center;
+  gap: 8px;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-menu-toggle.pf-m-plain,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-menu-toggle.pf-m-plain {
+  align-items: center;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 2px !important;
+  color: var(--zs-muted) !important;
+  display: inline-flex !important;
+  height: 32px !important;
+  justify-content: center;
+  min-height: 32px !important;
+  min-width: 32px !important;
+  padding: 0 !important;
+  width: 32px !important;
+}
+
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-menu-toggle.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-menu-toggle.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-menu-toggle.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-menu-toggle.pf-m-plain:focus {
+  background: var(--zs-panel-3) !important;
+  border-color: var(--zs-border) !important;
+  color: var(--zs-text) !important;
+}
+
 body.foreman-theme .form-control,
 body.foreman-theme .pf-v5-c-form-control,
 body.foreman-theme .pf-v6-c-form-control,

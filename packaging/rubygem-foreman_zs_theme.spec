@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.24
+Version: 0.1.26
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -56,6 +56,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.26-1
+- Preserve sticky treegrid header layout while styling expandable row controls.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.25-1
+- Tighten PatternFly tree-view tables and style expandable row controls closer to AWX.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.24-1
 - Keep dashboard widget tables contained, fix dark text leaks, and align tab bars with the AWX active-tab style.
 
