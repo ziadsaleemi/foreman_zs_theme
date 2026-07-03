@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.44
+Version: 0.1.47
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,15 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.47-1
+- Restore AWX-style panel backgrounds for PatternFly table headers inside cards.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.46-1
+- Darken context selector expanded surfaces and standalone PatternFly table header cells.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.45-1
+- Align legacy and PatternFly table header surfaces with AWX data-grid panels.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.44-1
 - Let Foreman's native sidebar collapse state drive the theme and add a legacy navigation collapse fallback.
 

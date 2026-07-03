@@ -810,6 +810,16 @@ body.foreman-theme .pf-v5-c-toolbar,
 body.foreman-theme .pf-v6-c-toolbar,
 body.foreman-theme .pf-v5-c-menu,
 body.foreman-theme .pf-v5-c-dropdown__menu,
+body.foreman-theme .pf-v5-c-context-selector.pf-m-expanded,
+body.foreman-theme .pf-v5-c-context-selector__menu,
+body.foreman-theme .pf-v5-c-context-selector__menu-search,
+body.foreman-theme .pf-v5-c-context-selector__menu-list,
+body.foreman-theme .pf-v5-c-context-selector__menu-footer,
+body.foreman-theme .pf-v6-c-context-selector.pf-m-expanded,
+body.foreman-theme .pf-v6-c-context-selector__menu,
+body.foreman-theme .pf-v6-c-context-selector__menu-search,
+body.foreman-theme .pf-v6-c-context-selector__menu-list,
+body.foreman-theme .pf-v6-c-context-selector__menu-footer,
 body.foreman-theme .pf-v6-c-menu,
 body.foreman-theme .pf-v6-c-dropdown__menu,
 body.foreman-theme .modal-content,
@@ -1059,6 +1069,15 @@ body.foreman-theme .pf-v6-c-card .pf-v6-c-table__td {
   border-bottom-color: var(--zs-border-soft) !important;
 }
 
+body.foreman-theme .pf-v5-c-card .pf-v5-c-table__thead .pf-v5-c-table__th,
+body.foreman-theme .pf-v5-c-card th.pf-v5-c-table__th,
+body.foreman-theme .pf-v6-c-card .pf-v6-c-table__thead .pf-v6-c-table__th,
+body.foreman-theme .pf-v6-c-card th.pf-v6-c-table__th {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  color: var(--zs-muted) !important;
+}
+
 body.foreman-theme .table,
 body.foreman-theme table,
 body.foreman-theme .pf-v5-c-table,
@@ -1075,8 +1094,8 @@ body.foreman-theme .table > thead > tr,
 body.foreman-theme .table-view-pf thead,
 body.foreman-theme .table-view-pf thead > tr,
 body.foreman-theme .table-view-pf thead > tr > th {
-  background: var(--zs-bg) !important;
-  background-color: var(--zs-bg) !important;
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
   color: var(--zs-muted) !important;
 }
 
@@ -1151,11 +1170,15 @@ body.foreman-theme .bootstrap-switch-label {
 
 body.foreman-theme .pf-v5-c-table__thead,
 body.foreman-theme .pf-v5-c-table__thead *,
+body.foreman-theme .pf-v5-c-table__th,
 body.foreman-theme .pf-v6-c-table__thead,
 body.foreman-theme .pf-v6-c-table__thead *,
+body.foreman-theme .pf-v6-c-table__th,
+body.foreman-theme [role="columnheader"],
 body.foreman-theme [class*="Table"] [class*="Header"],
 body.foreman-theme [class*="table"] [class*="header"] {
-  background-color: var(--zs-bg) !important;
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
   color: var(--zs-muted) !important;
 }
 
@@ -1178,8 +1201,8 @@ body.foreman-theme .pf-v6-c-table td {
 body.foreman-theme .table > thead > tr > th,
 body.foreman-theme .pf-v5-c-table thead th,
 body.foreman-theme .pf-v6-c-table thead th {
-  background: var(--zs-bg) !important;
-  background-color: var(--zs-bg) !important;
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
   color: var(--zs-muted) !important;
   border-bottom: 1px solid var(--zs-border) !important;
   font-weight: 600;
@@ -1242,14 +1265,14 @@ body.foreman-theme .pf-v5-c-table.pf-m-tree-view > thead > tr,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view > thead > tr,
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__thead,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__thead {
-  background: var(--zs-bg) !important;
+  background: var(--zs-panel) !important;
 }
 
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view > thead > tr > th,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view > thead > tr > th,
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__th,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__th {
-  background: var(--zs-bg) !important;
+  background: var(--zs-panel) !important;
   border-left: 0 !important;
   border-right: 0 !important;
   border-bottom: 1px solid var(--zs-border) !important;
@@ -1801,7 +1824,7 @@ body.foreman-theme .table.table-fixed > tbody > tr > td {
 
 body.foreman-theme .table.table-bordered > thead > tr > th,
 body.foreman-theme .table.table-fixed > thead > tr > th {
-  background: var(--zs-bg) !important;
+  background: var(--zs-panel) !important;
   border-top: 0 !important;
   border-bottom: 1px solid var(--zs-border) !important;
   color: var(--zs-muted) !important;
