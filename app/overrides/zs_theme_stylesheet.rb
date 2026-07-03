@@ -6,17 +6,20 @@ Deface::Override.new(
   insert_after: 'erb[loud]:contains("stylesheet_link_tag \'application\'")',
   text: <<~'ERB'
     <% zs_theme_favicon_url = Setting[:zs_theme_favicon_url].presence %>
+    <% zs_theme_favicon_type = zs_theme_favicon_url.present? ? ForemanZsTheme::UploadedAsset.mime_for('favicon') : '' %>
     <% if zs_theme_favicon_url.present? %>
-      <link rel="icon" href="<%= zs_theme_favicon_url %>">
-      <link rel="shortcut icon" href="<%= zs_theme_favicon_url %>">
+      <link rel="icon" href="<%= zs_theme_favicon_url %>"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
+      <link rel="shortcut icon" href="<%= zs_theme_favicon_url %>"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
     <% end %>
-    <link rel="stylesheet" href="/assets/foreman_zs_theme/theme.css?v=0.1.97">
+    <link rel="stylesheet" href="/assets/foreman_zs_theme/theme.css?v=0.1.98">
     <script>
       window.ZsForemanTheme = {
         logoUrl: <%= (Setting[:zs_theme_header_logo_url].presence || '/assets/foreman_zs_theme/redhat-satellite-logo.svg').to_json.html_safe %>,
-        hideForemanHeaderText: <%= Setting[:zs_theme_hide_foreman_header_text] ? 'true' : 'false' %>
+        hideForemanHeaderText: <%= Setting[:zs_theme_hide_foreman_header_text] ? 'true' : 'false' %>,
+        faviconUrl: <%= zs_theme_favicon_url.to_json.html_safe %>,
+        faviconType: <%= zs_theme_favicon_type.to_json.html_safe %>
       };
     </script>
-    <script src="/assets/foreman_zs_theme/theme.js?v=0.1.97"></script>
+    <script src="/assets/foreman_zs_theme/theme.js?v=0.1.98"></script>
   ERB
 )

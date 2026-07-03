@@ -3,6 +3,8 @@
 
   var config = window.ZsForemanTheme || {};
   var logoUrl = typeof config.logoUrl === 'string' ? config.logoUrl.trim() : '';
+  var faviconUrl = typeof config.faviconUrl === 'string' ? config.faviconUrl.trim() : '';
+  var faviconType = typeof config.faviconType === 'string' ? config.faviconType.trim() : '';
   var hideForemanText = config.hideForemanHeaderText === true;
   var sidebarStateKey = 'zsForemanTheme.sidebarState';
   var restoreSidebarTimer = null;
@@ -31,6 +33,73 @@
         img.src = logoUrl;
         img.classList.add('zs-theme-logo');
       });
+  }
+
+  function resolvedAssetUrl(url) {
+    try {
+      return new URL(url, window.location.href).href;
+    } catch (error) {
+      return url;
+    }
+  }
+
+  function faviconTypeFromUrl(url) {
+    var cleanUrl = url.split('?')[0].toLowerCase();
+
+    if (cleanUrl.endsWith('.png')) return 'image/png';
+    if (cleanUrl.endsWith('.jpg') || cleanUrl.endsWith('.jpeg')) return 'image/jpeg';
+    if (cleanUrl.endsWith('.gif')) return 'image/gif';
+    if (cleanUrl.endsWith('.webp')) return 'image/webp';
+    if (cleanUrl.endsWith('.ico')) return 'image/x-icon';
+
+    return '';
+  }
+
+  function appendFaviconLink(rel, url, type) {
+    var link = document.createElement('link');
+
+    link.rel = rel;
+    link.href = url;
+    link.setAttribute('data-zs-theme-favicon', 'true');
+    if (type) link.type = type;
+
+    document.head.appendChild(link);
+  }
+
+  function managedFaviconMatches(link, rel, href, type) {
+    if (link.getAttribute('data-zs-theme-favicon') !== 'true') return false;
+    if (link.rel !== rel) return false;
+    if (link.href !== href) return false;
+
+    return !type || link.type === type;
+  }
+
+  function applyFavicon() {
+    if (!faviconUrl || !document.head) return;
+
+    var resolvedUrl = resolvedAssetUrl(faviconUrl);
+    var type = faviconType || faviconTypeFromUrl(faviconUrl);
+    var links = Array.prototype.slice.call(
+      document.head.querySelectorAll('link[rel~="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]')
+    );
+    var expectedIcon = links.some(function (link) {
+      return managedFaviconMatches(link, 'icon', resolvedUrl, type);
+    });
+    var expectedShortcut = links.some(function (link) {
+      return managedFaviconMatches(link, 'shortcut icon', resolvedUrl, type);
+    });
+    var unmanagedLinks = links.some(function (link) {
+      return link.getAttribute('data-zs-theme-favicon') !== 'true';
+    });
+
+    if (expectedIcon && expectedShortcut && !unmanagedLinks && links.length === 2) return;
+
+    links.forEach(function (link) {
+      link.parentNode.removeChild(link);
+    });
+
+    appendFaviconLink('icon', faviconUrl, type);
+    appendFaviconLink('shortcut icon', faviconUrl, type);
   }
 
   function hideWordmarkText() {
@@ -66,6 +135,7 @@
   function applyThemeSettings() {
     if (!bodyIsReady()) return;
 
+    applyFavicon();
     applyLogo();
     hideWordmarkText();
     markTopbarPresence();

@@ -62,6 +62,11 @@ module ForemanZsTheme
         MIME_EXTENSIONS.key(extension) || 'application/octet-stream'
       end
 
+      def mime_for(kind)
+        path = path_for(kind)
+        path.present? ? mime_for_path(path) : ''
+      end
+
       def store!(kind, upload)
         kind = normalize_kind(kind)
         raise Error, N_('Choose an image file to upload.') if upload.blank?
