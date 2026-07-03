@@ -9,6 +9,8 @@ ForemanZsTheme::Engine.routes.draw do
       post 'upload/:kind', to: 'settings#upload', as: :upload_theme_asset, constraints: { kind: /logo|favicon/ }
       get 'reset/:kind', to: 'settings#redirect_to_settings_page', constraints: { kind: /logo|favicon/ }
       delete 'reset/:kind', to: 'settings#reset', as: :reset_theme_asset, constraints: { kind: /logo|favicon/ }
+      post 'login_info', to: 'settings#update_login_info', as: :update_login_info
+      delete 'login_info', to: 'settings#reset_login_info', as: :reset_login_info
     end
   end
 end

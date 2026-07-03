@@ -1,5 +1,6 @@
 <% logo_url = Setting[:zs_theme_header_logo_url].presence || ForemanZsTheme::UploadedAsset.default_url('logo') %>
 <% favicon_url = Setting[:zs_theme_favicon_url].presence || ForemanZsTheme::UploadedAsset.default_url('favicon') %>
+<% login_info_text = Setting[:zs_theme_login_info_text].to_s %>
 
 <div class="zs-theme-settings-upload">
   <h3><%= _('ZS theme assets') %></h3>
@@ -43,5 +44,24 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+
+  <div class="zs-theme-settings-card zs-theme-login-info-card">
+    <h4><%= _('Login page info') %></h4>
+    <%= form_tag foreman_zs_theme.update_login_info_path, class: 'zs-theme-login-info-form' do %>
+      <%= text_area_tag :zs_theme_login_info_text,
+        login_info_text,
+        rows: 4,
+        maxlength: ForemanZsTheme::SettingsController::MAX_LOGIN_INFO_LENGTH,
+        placeholder: _('Text shown under the logo on the login page') %>
+      <div class="zs-theme-upload-actions">
+        <%= submit_tag _('Save login info'), class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    <% if login_info_text.present? %>
+      <%= form_tag foreman_zs_theme.reset_login_info_path, method: :delete, class: 'zs-theme-reset-form' do %>
+        <%= submit_tag _('Clear login info'), class: 'btn btn-default' %>
+      <% end %>
+    <% end %>
   </div>
 </div>

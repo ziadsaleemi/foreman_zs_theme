@@ -5,6 +5,7 @@
   var logoUrl = typeof config.logoUrl === 'string' ? config.logoUrl.trim() : '';
   var faviconUrl = typeof config.faviconUrl === 'string' ? config.faviconUrl.trim() : '';
   var faviconType = typeof config.faviconType === 'string' ? config.faviconType.trim() : '';
+  var loginInfoText = typeof config.loginInfoText === 'string' ? config.loginInfoText.trim() : '';
   var hideForemanText = config.hideForemanHeaderText === true;
   var sidebarStateKey = 'zsForemanTheme.sidebarState';
   var restoreSidebarTimer = null;
@@ -33,6 +34,51 @@
         img.src = logoUrl;
         img.classList.add('zs-theme-logo');
       });
+  }
+
+  function isLoginPage() {
+    return !!document.querySelector(
+      'foreman-react-component[name="LoginPage"], .login-pf-page, .login-page, .login-pf, form[action*="/users/login"]'
+    );
+  }
+
+  function findLoginLogo() {
+    var logos = Array.prototype.slice.call(
+      document.querySelectorAll('img.zs-theme-logo, img[src*="login_logo"], img[alt*="Foreman"], img[alt*="foreman"]')
+    );
+
+    return logos.find(function (img) {
+      return !img.closest('.navbar, .navbar-pf, .pf-v5-c-masthead, .pf-v6-c-masthead, #vertical-nav');
+    });
+  }
+
+  function applyLoginInfo() {
+    if (!bodyIsReady() || !isLoginPage()) return;
+
+    document.body.classList.toggle('zs-theme-has-login-info', !!loginInfoText);
+
+    var existing = document.querySelector('.zs-theme-login-info');
+    if (!loginInfoText) {
+      if (existing) existing.parentNode.removeChild(existing);
+      return;
+    }
+
+    var logo = findLoginLogo();
+    if (!logo) return;
+
+    if (!existing) {
+      existing = document.createElement('div');
+      existing.className = 'zs-theme-login-info';
+      logo.insertAdjacentElement('afterend', existing);
+    }
+
+    if (existing.previousElementSibling !== logo) {
+      logo.insertAdjacentElement('afterend', existing);
+    }
+
+    if (existing.textContent !== loginInfoText) {
+      existing.textContent = loginInfoText;
+    }
   }
 
   function resolvedAssetUrl(url) {
@@ -137,6 +183,7 @@
 
     applyFavicon();
     applyLogo();
+    applyLoginInfo();
     hideWordmarkText();
     markTopbarPresence();
     markCancelActions();

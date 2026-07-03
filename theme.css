@@ -4202,6 +4202,17 @@ body.foreman-theme .login {
   color: var(--zs-text) !important;
 }
 
+body.foreman-theme .zs-theme-login-info {
+  color: var(--zs-text-muted) !important;
+  display: block !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  margin: 12px auto 0 !important;
+  max-width: 420px !important;
+  text-align: center !important;
+  white-space: pre-line !important;
+}
+
 body.foreman-theme .zs-theme-settings-upload {
   background: var(--zs-panel) !important;
   border: 1px solid var(--zs-border) !important;
@@ -4272,6 +4283,26 @@ body.foreman-theme .zs-theme-favicon-preview span {
   color: var(--zs-text-muted) !important;
   font-size: 14px !important;
   line-height: 1.4 !important;
+}
+
+body.foreman-theme .zs-theme-login-info-card {
+  margin-top: 16px !important;
+}
+
+body.foreman-theme .zs-theme-login-info-form textarea {
+  background: var(--zs-toolbar-control-bg) !important;
+  border: 1px solid var(--zs-toolbar-control-border) !important;
+  color: var(--zs-text) !important;
+  display: block !important;
+  line-height: 1.45 !important;
+  min-height: 120px !important;
+  padding: 10px 12px !important;
+  resize: vertical !important;
+  width: 100% !important;
+}
+
+body.foreman-theme .zs-theme-login-info-form textarea::placeholder {
+  color: var(--zs-text-subtle) !important;
 }
 
 body.foreman-theme .zs-theme-upload-form,

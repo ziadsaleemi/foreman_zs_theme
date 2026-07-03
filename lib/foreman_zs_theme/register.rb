@@ -30,6 +30,12 @@ Foreman::Plugin.register :foreman_zs_theme do
         default: true,
         description: N_('Hide the FOREMAN wordmark text in the header while keeping the configured logo visible.'),
         full_name: N_('Hide FOREMAN header text'))
+
+      setting(:zs_theme_login_info_text,
+        type: :string,
+        default: '',
+        description: N_('Optional plain text shown under the logo on the login page.'),
+        full_name: N_('ZS theme login page info'))
     end
   end
 
@@ -39,6 +45,8 @@ Foreman::Plugin.register :foreman_zs_theme do
       foreman_zs_theme/settings/redirect_to_settings_page
       foreman_zs_theme/settings/upload
       foreman_zs_theme/settings/reset
+      foreman_zs_theme/settings/update_login_info
+      foreman_zs_theme/settings/reset_login_info
     ].each do |action|
       edit_settings_permission.actions << action unless edit_settings_permission.actions.include?(action)
     end
