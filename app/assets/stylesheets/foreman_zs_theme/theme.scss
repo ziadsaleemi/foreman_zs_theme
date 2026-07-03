@@ -1151,8 +1151,8 @@ body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Expand row"
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Collapse row"],
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label="Expand all rows"] {
   align-items: center;
-  background: #2b2d32 !important;
-  border: 1px solid #4a4c52 !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
   border-radius: 2px !important;
   box-shadow: none !important;
   color: #d7d9dd !important;
@@ -1183,16 +1183,16 @@ body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Collapse ro
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Collapse row"]:focus,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label="Expand all rows"]:hover,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label="Expand all rows"]:focus {
-  background: #34363b !important;
-  border-color: #5c5f66 !important;
+  background: transparent !important;
+  border-color: transparent !important;
 }
 
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-expanded,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-expanded,
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-expanded="true"],
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-expanded="true"] {
-  background: #34363b !important;
-  border-color: #5c5f66 !important;
+  background: transparent !important;
+  border-color: transparent !important;
 }
 
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain:focus-visible,
