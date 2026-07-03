@@ -12,6 +12,7 @@
   --zs-sidebar-3: #1b1d21;
   --zs-sidebar-border: #444548;
   --zs-sidebar-accent: #aaabac;
+  --zs-sidebar-active-bg: #26292d;
   --zs-sidebar-active-border: #1fa7f8;
   --zs-sidebar-width: 290px;
   --zs-panel: #1b1d21;
@@ -596,13 +597,13 @@ body.foreman-theme .navbar a {
   background-color: transparent !important;
   color: var(--zs-text) !important;
   --pf-v5-c-nav__link--BackgroundColor: transparent;
-  --pf-v5-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-2);
+  --pf-v5-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-active-bg);
   --pf-v5-c-nav__link--hover--BackgroundColor: transparent;
   --pf-v5-c-nav__link--before--BorderColor: transparent;
   --pf-v5-c-nav__link--m-current--before--BorderColor: var(--zs-sidebar-active-border);
   --pf-v5-c-nav__link--after--BorderColor: var(--zs-sidebar-border);
   --pf-v6-c-nav__link--BackgroundColor: transparent;
-  --pf-v6-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-2);
+  --pf-v6-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-active-bg);
   --pf-v6-c-nav__link--hover--BackgroundColor: transparent;
   --pf-v6-c-nav__link--before--BorderColor: transparent;
   --pf-v6-c-nav__link--m-current--before--BorderColor: var(--zs-sidebar-active-border);
@@ -682,7 +683,7 @@ body.foreman-theme .pf-v6-c-nav__link.pf-m-current,
 body.foreman-theme .nav-pf-vertical .active > a,
 body.foreman-theme .nav-pf-secondary-nav .list-group-item.active > a,
 body.foreman-theme .nav-pf-tertiary-nav .list-group-item.active > a {
-  background: var(--zs-sidebar-2) !important;
+  background: var(--zs-sidebar-active-bg) !important;
   color: #ffffff !important;
   border-left-color: var(--zs-sidebar-active-border) !important;
   box-shadow: inset 3px 0 0 var(--zs-sidebar-active-border) !important;

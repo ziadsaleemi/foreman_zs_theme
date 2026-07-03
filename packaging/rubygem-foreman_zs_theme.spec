@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.48
+Version: 0.1.49
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,9 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.49-1
+- Match AWX active sidebar navigation background without changing secondary sidebar surfaces.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.48-1
 - Match AWX data-row density in Foreman dashboard widget tables.
 
