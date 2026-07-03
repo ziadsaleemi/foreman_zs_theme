@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.61
+Version: 0.1.63
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -57,6 +57,12 @@ fi
 %{_datadir}/foreman/public/assets/%{gem_name}/redhat-satellite-logo.svg
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.63-1
+- Apply sidebar collapse fallback directly during restore and faster after toggle clicks.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.62-1
+- Remove boxed side borders from legacy Bootstrap tab rows.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.61-1
 - Flatten legacy Bootstrap form well wrappers on tabbed Foreman forms.
 

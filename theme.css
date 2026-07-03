@@ -2230,6 +2230,11 @@ body.foreman-theme .nav-tabs > li > a {
   margin: 0 !important;
 }
 
+body.foreman-theme .nav-tabs > li > a {
+  border: 0 !important;
+  border-top: 3px solid transparent !important;
+}
+
 body.foreman-theme .pf-v5-c-tabs__item::before,
 body.foreman-theme .pf-v5-c-tabs__item::after,
 body.foreman-theme .pf-v5-c-tabs__link::before,
@@ -2277,6 +2282,12 @@ body.foreman-theme .nav-tabs > li > a:focus {
   border-color: var(--zs-border) !important;
   border-top-color: var(--zs-accent-2) !important;
   color: var(--zs-text) !important;
+}
+
+body.foreman-theme .nav-tabs > li > a:hover,
+body.foreman-theme .nav-tabs > li > a:focus {
+  border-color: transparent !important;
+  border-top-color: var(--zs-accent-2) !important;
 }
 
 body.foreman-theme .pf-v5-c-tabs svg,

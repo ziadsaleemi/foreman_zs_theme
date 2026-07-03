@@ -237,25 +237,7 @@
         return;
       }
 
-      var toggle = findSidebarToggle();
-
-      if (toggle) {
-        sidebarToggleInFlight = true;
-        toggle.click();
-        [50, 250, 650, 1000].forEach(function (delay) {
-          window.setTimeout(function () {
-            if (delay === 1000) {
-              finishSidebarToggle('collapsed');
-              sidebarToggleInFlight = false;
-              return;
-            }
-
-            syncSidebarBodyClass();
-          }, delay);
-        });
-      } else {
-        applySidebarStateFallback('collapsed');
-      }
+      applySidebarStateFallback('collapsed');
     }, 0);
   }
 
@@ -273,14 +255,14 @@
         var targetState = sidebarIsCollapsed(sidebar) ? 'expanded' : 'collapsed';
 
         sidebarToggleInFlight = true;
-        [0, 50, 250, 450, 1000].forEach(function (delay) {
+        [0, 75, 175, 350, 800].forEach(function (delay) {
           window.setTimeout(function () {
-            if (delay === 450) {
+            if (delay === 75 || delay === 350) {
               forceSidebarStateIfNeeded(targetState);
               return;
             }
 
-            if (delay < 1000) {
+            if (delay < 800) {
               syncSidebarBodyClass();
               return;
             }
