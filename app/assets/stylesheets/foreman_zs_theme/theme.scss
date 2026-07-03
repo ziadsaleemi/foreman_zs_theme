@@ -189,6 +189,19 @@ body.foreman-theme .pf-v6-c-masthead .pf-v6-c-toolbar__item {
   background-image: none !important;
 }
 
+body.foreman-theme .pf-v5-c-masthead .pf-v5-c-notification-badge,
+body.foreman-theme .pf-v5-c-masthead .pf-v5-c-notification-badge.pf-m-unread,
+body.foreman-theme .pf-v6-c-masthead .pf-v6-c-notification-badge,
+body.foreman-theme .pf-v6-c-masthead .pf-v6-c-notification-badge.pf-m-unread {
+  --pf-v5-c-notification-badge--m-unread--BackgroundColor: var(--zs-control);
+  --pf-v6-c-notification-badge--m-unread--BackgroundColor: var(--zs-control);
+  background: var(--zs-control) !important;
+  background-color: var(--zs-control) !important;
+  border: 1px solid var(--zs-border) !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
 body.foreman-theme .navbar-pf-vertical::before,
 body.foreman-theme .navbar-pf-vertical::after,
 body.foreman-theme .navbar::before,
@@ -353,6 +366,18 @@ body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button:focus {
   background-color: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+body.foreman-theme .pf-v5-c-masthead__toggle,
+body.foreman-theme .pf-v6-c-masthead__toggle,
+body.foreman-theme .navbar-pf-vertical .navbar-toggle,
+body.foreman-theme .navbar-pf .navbar-toggle,
+body.foreman-theme .navbar .navbar-toggle {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 20 !important;
 }
 
 body.foreman-theme .navbar-pf-vertical .navbar-toggle .icon-bar,
@@ -423,6 +448,31 @@ body.foreman-theme.zs-sidebar-collapsed .pf-v6-c-page__sidebar-body,
 body.foreman-theme.pf-m-collapsed .pf-v6-c-page__sidebar-body,
 body.foreman-theme .pf-v6-c-page__sidebar.pf-m-collapsed .pf-v6-c-page__sidebar-body,
 body.foreman-theme .pf-v6-c-page__sidebar[aria-hidden="true"] .pf-v6-c-page__sidebar-body {
+  flex-basis: 0 !important;
+  max-width: 0 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  width: 0 !important;
+}
+
+body.foreman-theme.collapsed-nav #vertical-nav,
+body.foreman-theme.zs-sidebar-collapsed #vertical-nav,
+body.foreman-theme.pf-m-collapsed #vertical-nav,
+body.foreman-theme.collapsed-nav .sidebar-pf,
+body.foreman-theme.zs-sidebar-collapsed .sidebar-pf,
+body.foreman-theme.pf-m-collapsed .sidebar-pf,
+body.foreman-theme.collapsed-nav .nav-pf-vertical,
+body.foreman-theme.zs-sidebar-collapsed .nav-pf-vertical,
+body.foreman-theme.pf-m-collapsed .nav-pf-vertical,
+body.foreman-theme.collapsed-nav .nav-pf-vertical-alt,
+body.foreman-theme.zs-sidebar-collapsed .nav-pf-vertical-alt,
+body.foreman-theme.pf-m-collapsed .nav-pf-vertical-alt,
+body.foreman-theme.collapsed-nav .nav-pf-secondary-nav,
+body.foreman-theme.zs-sidebar-collapsed .nav-pf-secondary-nav,
+body.foreman-theme.pf-m-collapsed .nav-pf-secondary-nav,
+body.foreman-theme.collapsed-nav .nav-pf-tertiary-nav,
+body.foreman-theme.zs-sidebar-collapsed .nav-pf-tertiary-nav,
+body.foreman-theme.pf-m-collapsed .nav-pf-tertiary-nav {
   flex-basis: 0 !important;
   max-width: 0 !important;
   min-width: 0 !important;

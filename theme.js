@@ -4,9 +4,6 @@
   var config = window.ZsForemanTheme || {};
   var logoUrl = typeof config.logoUrl === 'string' ? config.logoUrl.trim() : '';
   var hideForemanText = config.hideForemanHeaderText === true;
-  var sidebarStateKey = 'zsForemanTheme.sidebarState';
-  var restoreSidebarTimer = null;
-  var sidebarToggleInFlight = false;
   var sidebarSyncTimer = null;
 
   function applyLogo() {
@@ -54,7 +51,7 @@
   function applyThemeSettings() {
     applyLogo();
     hideWordmarkText();
-    restoreSidebarState();
+    scheduleSidebarSync();
   }
 
   function findSidebar() {
@@ -63,125 +60,58 @@
     );
   }
 
-  function findSidebarToggle() {
-    return document.querySelector(
-      '.pf-v5-c-masthead__toggle button, .pf-v6-c-masthead__toggle button, .navbar-toggle'
-    );
-  }
-
-  function getSavedSidebarState() {
-    try {
-      return window.localStorage.getItem(sidebarStateKey);
-    } catch (error) {
-      return null;
-    }
-  }
-
-  function saveSidebarState(state) {
-    try {
-      window.localStorage.setItem(sidebarStateKey, state);
-    } catch (error) {
-      // localStorage can be unavailable in hardened browser contexts.
-    }
-  }
-
   function sidebarIsCollapsed(sidebar) {
     if (!sidebar) return false;
 
     if (
-      document.body.classList.contains('pf-m-collapsed') ||
-      sidebar.classList.contains('pf-m-collapsed') ||
-      sidebar.getAttribute('aria-hidden') === 'true'
-    ) {
-      return true;
-    }
-
-    if (
-      document.body.classList.contains('pf-m-expanded') ||
       sidebar.classList.contains('pf-m-expanded') ||
-      sidebar.getAttribute('aria-hidden') === 'false'
+      sidebar.getAttribute('aria-hidden') === 'false' ||
+      document.body.classList.contains('pf-m-expanded')
     ) {
       return false;
     }
 
+    if (
+      sidebar.classList.contains('pf-m-collapsed') ||
+      sidebar.getAttribute('aria-hidden') === 'true' ||
+      document.body.classList.contains('pf-m-collapsed')
+    ) {
+      return true;
+    }
+
+    if (sidebar.getBoundingClientRect().width <= 2) return true;
+
+    // Legacy PatternFly navigation exposes collapse through body state.
     return (
-      document.body.classList.contains('collapsed-nav') ||
-      sidebar.getBoundingClientRect().width <= 2
+      sidebar.matches('#vertical-nav, .sidebar-pf, .nav-pf-vertical, .nav-pf-vertical-alt') &&
+      document.body.classList.contains('collapsed-nav')
     );
   }
 
-  function syncSidebarBodyClass(persist) {
+  function syncSidebarBodyClass() {
     var sidebar = findSidebar();
 
-    if (!sidebar) return null;
+    if (!sidebar) {
+      document.body.classList.remove('zs-sidebar-collapsed', 'zs-sidebar-expanded');
+      return null;
+    }
 
     var collapsed = sidebarIsCollapsed(sidebar);
 
     document.body.classList.toggle('zs-sidebar-collapsed', collapsed);
     document.body.classList.toggle('zs-sidebar-expanded', !collapsed);
 
-    if (collapsed) {
-      document.body.classList.add('collapsed-nav');
-    } else {
-      document.body.classList.remove('collapsed-nav');
-    }
-
-    if (persist) {
-      saveSidebarState(collapsed ? 'collapsed' : 'expanded');
-    }
-
     return collapsed;
   }
 
-  function persistCurrentSidebarState() {
-    syncSidebarBodyClass(true);
-  }
-
-  function scheduleSidebarSync(persist) {
+  function scheduleSidebarSync(delay) {
     window.clearTimeout(sidebarSyncTimer);
     sidebarSyncTimer = window.setTimeout(function () {
-      syncSidebarBodyClass(persist);
-    }, 0);
+      syncSidebarBodyClass();
+    }, delay || 0);
   }
 
-  function restoreSidebarState() {
-    if (sidebarToggleInFlight) return;
-
-    var savedState = getSavedSidebarState();
-    if (savedState === 'expanded') {
-      syncSidebarBodyClass(false);
-      return;
-    }
-
-    if (savedState !== 'collapsed') return;
-
-    window.clearTimeout(restoreSidebarTimer);
-    restoreSidebarTimer = window.setTimeout(function () {
-      var sidebar = findSidebar();
-      if (!sidebar) return;
-
-      if (sidebarIsCollapsed(sidebar)) {
-        syncSidebarBodyClass(false);
-        return;
-      }
-
-      var toggle = findSidebarToggle();
-      if (toggle) {
-        sidebarToggleInFlight = true;
-        toggle.click();
-        window.setTimeout(function () {
-          syncSidebarBodyClass(false);
-          sidebarToggleInFlight = false;
-        }, 250);
-      } else {
-        document.body.classList.add('collapsed-nav', 'zs-sidebar-collapsed');
-        document.body.classList.remove('zs-sidebar-expanded');
-        syncSidebarBodyClass(false);
-      }
-    }, 0);
-  }
-
-  function bindSidebarPersistence() {
+  function bindSidebarStateSync() {
     document.addEventListener(
       'click',
       function (event) {
@@ -193,17 +123,9 @@
 
         if (!toggle) return;
 
-        sidebarToggleInFlight = true;
-        window.setTimeout(function () {
-          syncSidebarBodyClass(false);
-        }, 50);
-        window.setTimeout(function () {
-          persistCurrentSidebarState();
-          sidebarToggleInFlight = false;
-        }, 250);
-        window.setTimeout(function () {
-          persistCurrentSidebarState();
-        }, 650);
+        [0, 50, 250, 650].forEach(function (delay) {
+          window.setTimeout(syncSidebarBodyClass, delay);
+        });
       },
       true
     );
@@ -213,14 +135,14 @@
     document.addEventListener(
       'DOMContentLoaded',
       function () {
-        bindSidebarPersistence();
+        bindSidebarStateSync();
         applyThemeSettings();
       },
       { once: true }
     );
   } else {
-    bindSidebarPersistence();
-    scheduleSidebarSync(false);
+    bindSidebarStateSync();
+    scheduleSidebarSync();
     applyThemeSettings();
   }
 
