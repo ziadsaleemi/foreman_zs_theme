@@ -1928,6 +1928,233 @@ body.foreman-theme .pf-v6-c-card th.pf-v6-c-table__th {
   color: var(--zs-muted) !important;
 }
 
+body.foreman-theme .host-details-header-section,
+body.foreman-theme .host-details-tabs-section,
+body.foreman-theme section.host-details-cards-section {
+  background: var(--zs-bg) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .host-details-header-section {
+  border-bottom: 1px solid var(--zs-border-soft) !important;
+  padding-bottom: 18px !important;
+}
+
+body.foreman-theme .host-details-tabs-section {
+  border-bottom: 1px solid var(--zs-border-soft) !important;
+}
+
+body.foreman-theme .host-details-tabs-section .host-details-tabs,
+body.foreman-theme .host-details-tabs-section .pf-v5-c-tabs,
+body.foreman-theme .host-details-tabs-section .pf-v6-c-tabs {
+  background: var(--zs-tab-bg) !important;
+  border: 0 !important;
+  border-top: 1px solid var(--zs-border) !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .host-details-tabs-section .pf-v5-c-tabs__list,
+body.foreman-theme .host-details-tabs-section .pf-v6-c-tabs__list,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-tabs__list,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-tabs__list {
+  background: transparent !important;
+  margin-bottom: 0 !important;
+}
+
+body.foreman-theme .host-details-tabs-section .pf-v5-c-tabs__item,
+body.foreman-theme .host-details-tabs-section .pf-v6-c-tabs__item,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-tabs__item,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-tabs__item {
+  background: transparent !important;
+  border-color: var(--zs-border) !important;
+}
+
+body.foreman-theme .host-details-tabs-section .pf-v5-c-tabs__link,
+body.foreman-theme .host-details-tabs-section .pf-v6-c-tabs__link,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-tabs__link,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-tabs__link {
+  background: transparent !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .host-details-tabs-section .pf-v5-c-tabs__item.pf-m-current .pf-v5-c-tabs__link,
+body.foreman-theme .host-details-tabs-section .pf-v6-c-tabs__item.pf-m-current .pf-v6-c-tabs__link,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-tabs__item.pf-m-current .pf-v5-c-tabs__link,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-tabs__item.pf-m-current .pf-v6-c-tabs__link {
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button,
+body.foreman-theme .host-details-header-section [data-ouia-component-id="host-edit-button"] {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--Color: #ffffff !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-dropdown__toggle--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-dropdown__toggle--Color: #ffffff !important;
+  --pf-v5-c-dropdown__toggle--before--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-dropdown__toggle--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--Color: #ffffff !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-dropdown__toggle--Color: #ffffff !important;
+  --pf-v6-c-dropdown__toggle--before--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-dropdown__toggle--after--BorderColor: var(--zs-button-primary-bg) !important;
+  background: var(--zs-button-primary-bg) !important;
+  background-color: var(--zs-button-primary-bg) !important;
+  border-color: var(--zs-button-primary-bg) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle:hover,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle:focus,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle:hover,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle:focus,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button:hover,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button:focus,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button:hover,
+body.foreman-theme .host-details-header-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button:focus,
+body.foreman-theme .host-details-header-section [data-ouia-component-id="host-edit-button"]:hover,
+body.foreman-theme .host-details-header-section [data-ouia-component-id="host-edit-button"]:focus {
+  background: var(--zs-button-primary-hover-bg) !important;
+  background-color: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .host-details-header-section #hostdetails-kebab,
+body.foreman-theme .host-details-header-section .pf-v5-c-menu-toggle.pf-m-plain,
+body.foreman-theme .host-details-header-section .pf-v6-c-menu-toggle.pf-m-plain {
+  --pf-v5-c-menu-toggle--BackgroundColor: transparent !important;
+  --pf-v5-c-menu-toggle--after--BorderColor: transparent !important;
+  --pf-v5-c-menu-toggle--after--BorderWidth: 0 !important;
+  --pf-v6-c-menu-toggle--BackgroundColor: transparent !important;
+  --pf-v6-c-menu-toggle--after--BorderColor: transparent !important;
+  --pf-v6-c-menu-toggle--after--BorderWidth: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme section.host-details-cards-section {
+  padding-top: 16px !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-l-grid,
+body.foreman-theme section.host-details-cards-section .pf-v6-l-grid {
+  gap: 16px !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-l-grid__item,
+body.foreman-theme section.host-details-cards-section .pf-v6-l-grid__item {
+  min-width: 0 !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-l-grid__item > .pf-v5-c-card,
+body.foreman-theme section.host-details-cards-section .pf-v6-l-grid__item > .pf-v6-c-card,
+body.foreman-theme section.host-details-cards-section .pf-v5-l-grid__item > .pf-v6-c-card,
+body.foreman-theme section.host-details-cards-section .pf-v6-l-grid__item > .pf-v5-c-card {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  border: 1px solid var(--zs-border) !important;
+  border-left-width: 1px !important;
+  border-right-width: 1px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-height: 100% !important;
+  overflow: hidden !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card__header,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card__header {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  border-bottom: 1px solid var(--zs-border) !important;
+  color: var(--zs-text) !important;
+  min-height: 48px !important;
+  padding: 14px 16px 10px !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card__body,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card__body,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card__footer,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card__footer {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card__title,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card__title,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card__header-main,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card__header-main {
+  color: var(--zs-text) !important;
+  font-weight: 600 !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card .pf-v5-c-empty-state,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card .pf-v6-c-empty-state,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card .pf-v5-c-empty-state,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card .pf-v6-c-empty-state {
+  background: transparent !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card .pf-v5-c-button.pf-m-plain,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card .pf-v5-c-menu-toggle.pf-m-plain,
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card .pf-v5-c-dropdown__toggle.pf-m-plain,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card .pf-v6-c-button.pf-m-plain,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card .pf-v6-c-menu-toggle.pf-m-plain,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card .pf-v6-c-dropdown__toggle.pf-m-plain {
+  --pf-v5-c-button--BackgroundColor: transparent !important;
+  --pf-v5-c-button--after--BorderColor: transparent !important;
+  --pf-v5-c-button--after--BorderWidth: 0 !important;
+  --pf-v5-c-menu-toggle--BackgroundColor: transparent !important;
+  --pf-v5-c-menu-toggle--after--BorderColor: transparent !important;
+  --pf-v5-c-menu-toggle--after--BorderWidth: 0 !important;
+  --pf-v5-c-dropdown__toggle--BackgroundColor: transparent !important;
+  --pf-v5-c-dropdown__toggle--after--BorderColor: transparent !important;
+  --pf-v6-c-button--BackgroundColor: transparent !important;
+  --pf-v6-c-button--after--BorderColor: transparent !important;
+  --pf-v6-c-button--after--BorderWidth: 0 !important;
+  --pf-v6-c-menu-toggle--BackgroundColor: transparent !important;
+  --pf-v6-c-menu-toggle--after--BorderColor: transparent !important;
+  --pf-v6-c-menu-toggle--after--BorderWidth: 0 !important;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: transparent !important;
+  --pf-v6-c-dropdown__toggle--after--BorderColor: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme section.host-details-cards-section .pf-v5-c-card .pf-v5-c-button.pf-m-secondary,
+body.foreman-theme section.host-details-cards-section .pf-v6-c-card .pf-v6-c-button.pf-m-secondary {
+  --pf-v5-c-button--m-secondary--BackgroundColor: transparent !important;
+  --pf-v5-c-button--m-secondary--Color: var(--zs-button-secondary-text) !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-secondary-border) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: transparent !important;
+  --pf-v6-c-button--m-secondary--Color: var(--zs-button-secondary-text) !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-secondary-border) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: var(--zs-button-secondary-border) !important;
+  color: var(--zs-button-secondary-text) !important;
+}
+
 body.foreman-theme .table,
 body.foreman-theme table,
 body.foreman-theme .pf-v5-c-table,
@@ -5431,4 +5658,43 @@ body.foreman-theme .pf-v6-c-page__main .table-title-section .pf-m-align-right a.
   border-color: var(--zs-button-primary-hover-bg) !important;
   color: #ffffff !important;
   outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-page__main .host-details-header-section button.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="host-edit-button"],
+body.foreman-theme .pf-v6-c-page__main .host-details-header-section button.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="host-edit-button"] {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--Color: #ffffff !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--Color: #ffffff !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  background: var(--zs-button-primary-bg) !important;
+  background-color: var(--zs-button-primary-bg) !important;
+  border: 1px solid var(--zs-button-primary-bg) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .pf-v5-c-page__main .host-details-header-section button.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="host-edit-button"]:hover,
+body.foreman-theme .pf-v5-c-page__main .host-details-header-section button.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="host-edit-button"]:focus,
+body.foreman-theme .pf-v6-c-page__main .host-details-header-section button.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="host-edit-button"]:hover,
+body.foreman-theme .pf-v6-c-page__main .host-details-header-section button.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="host-edit-button"]:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  background: var(--zs-button-primary-hover-bg) !important;
+  background-color: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
 }

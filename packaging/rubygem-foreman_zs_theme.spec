@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.125
+Version: 0.1.127
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,12 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Sat Jul 04 2026 ZS Operations <ops@zs.us> - 0.1.127-1
+- Promote the host overview Edit action to the primary header-button style.
+
+* Sat Jul 04 2026 ZS Operations <ops@zs.us> - 0.1.126-1
+- Remodel React host overview cards and header actions for the AWX-style theme.
+
 * Sat Jul 04 2026 ZS Operations <ops@zs.us> - 0.1.125-1
 - Remove background from Hosts table warning icon buttons.
 
