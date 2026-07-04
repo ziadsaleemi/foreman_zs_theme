@@ -753,7 +753,7 @@ body.foreman-theme.pf-m-collapsed #rails-app-content {
 
   body.foreman-theme .row,
   body.foreman-theme #about.row,
-  body.foreman-theme #dashboard.row,
+  body.foreman-theme #dashboard.row:not(.pf-v5-c-dropdown):not(.pf-v6-c-dropdown),
   body.foreman-theme .dashboard.gridster.row {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -1544,7 +1544,7 @@ body.foreman-theme .popover,
 body.foreman-theme .dropdown-menu,
 body.foreman-theme .grid-stack-item-content,
 body.foreman-theme .dashboard-widget,
-body.foreman-theme #dashboard,
+body.foreman-theme #dashboard:not(.pf-v5-c-dropdown):not(.pf-v6-c-dropdown),
 body.foreman-theme #dashboard > ul,
 body.foreman-theme #dashboard > ul > li,
 body.foreman-theme #dashboard .widget,
@@ -1647,9 +1647,20 @@ body.foreman-theme .tooltip.right .tooltip-arrow {
   border-right-color: var(--zs-panel) !important;
 }
 
-body.foreman-theme #dashboard,
+body.foreman-theme #dashboard:not(.pf-v5-c-dropdown):not(.pf-v6-c-dropdown),
 body.foreman-theme .dashboard.gridster {
   padding-top: 6px;
+}
+
+body.foreman-theme .foreman-search-bar #dashboard.pf-v5-c-dropdown,
+body.foreman-theme .foreman-search-bar #dashboard.pf-v6-c-dropdown,
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown {
+  align-items: stretch !important;
+  background: transparent !important;
+  display: flex !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 body.foreman-theme #dashboard > ul,

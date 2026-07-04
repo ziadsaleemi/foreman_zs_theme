@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.112
+Version: 0.1.113
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.113-1
+- Exclude the search-bar bookmark dropdown from dashboard padding rules.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.112-1
 - Make the sidebar search field fill the top navigation strip.
 
