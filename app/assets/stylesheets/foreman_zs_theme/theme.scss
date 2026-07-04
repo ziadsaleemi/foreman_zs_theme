@@ -5266,6 +5266,44 @@ body.foreman-theme .pf-v6-c-table__td.pf-v6-c-table__action > .pf-v6-c-menu-togg
   outline: 0 !important;
 }
 
+body.foreman-theme .pf-v5-c-table .pf-v5-c-table__td:not(.pf-v5-c-table__action) .pf-v5-c-button.pf-m-plain:has(.pf-v5-c-icon),
+body.foreman-theme .pf-v6-c-table .pf-v6-c-table__td:not(.pf-v6-c-table__action) .pf-v6-c-button.pf-m-plain:has(.pf-v6-c-icon) {
+  --pf-v5-c-button--BackgroundColor: transparent !important;
+  --pf-v5-c-button--Color: currentColor !important;
+  --pf-v5-c-button--after--BorderColor: transparent !important;
+  --pf-v5-c-button--after--BorderWidth: 0 !important;
+  --pf-v6-c-button--BackgroundColor: transparent !important;
+  --pf-v6-c-button--Color: currentColor !important;
+  --pf-v6-c-button--after--BorderColor: transparent !important;
+  --pf-v6-c-button--after--BorderWidth: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-table .pf-v5-c-table__td:not(.pf-v5-c-table__action) .pf-v5-c-button.pf-m-plain:has(.pf-v5-c-icon)::before,
+body.foreman-theme .pf-v5-c-table .pf-v5-c-table__td:not(.pf-v5-c-table__action) .pf-v5-c-button.pf-m-plain:has(.pf-v5-c-icon)::after,
+body.foreman-theme .pf-v6-c-table .pf-v6-c-table__td:not(.pf-v6-c-table__action) .pf-v6-c-button.pf-m-plain:has(.pf-v6-c-icon)::before,
+body.foreman-theme .pf-v6-c-table .pf-v6-c-table__td:not(.pf-v6-c-table__action) .pf-v6-c-button.pf-m-plain:has(.pf-v6-c-icon)::after {
+  border: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-table .pf-v5-c-table__td:not(.pf-v5-c-table__action) .pf-v5-c-button.pf-m-plain:has(.pf-v5-c-icon):hover,
+body.foreman-theme .pf-v5-c-table .pf-v5-c-table__td:not(.pf-v5-c-table__action) .pf-v5-c-button.pf-m-plain:has(.pf-v5-c-icon):focus,
+body.foreman-theme .pf-v6-c-table .pf-v6-c-table__td:not(.pf-v6-c-table__action) .pf-v6-c-button.pf-m-plain:has(.pf-v6-c-icon):hover,
+body.foreman-theme .pf-v6-c-table .pf-v6-c-table__td:not(.pf-v6-c-table__action) .pf-v6-c-button.pf-m-plain:has(.pf-v6-c-icon):focus {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
 body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle,
 body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle,
 body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button,
