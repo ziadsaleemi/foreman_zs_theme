@@ -2372,7 +2372,7 @@ body.foreman-theme .audits-data-list.pf-v6-c-data-list__item {
 }
 
 body.foreman-theme .audits-data-list.pf-m-expanded {
-  border-top: 1px solid var(--zs-border) !important;
+  border-top: 0 !important;
 }
 
 body.foreman-theme .audits-data-list .audits-list-item-row {

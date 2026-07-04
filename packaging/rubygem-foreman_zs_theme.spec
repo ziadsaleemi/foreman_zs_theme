@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.118
+Version: 0.1.119
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Sat Jul 04 2026 ZS Operations <ops@zs.us> - 0.1.119-1
+- Remove the expanded audit row top border that created a duplicate separator.
+
 * Sat Jul 04 2026 ZS Operations <ops@zs.us> - 0.1.118-1
 - Normalize PatternFly data-list and table expanders as transparent icon-only controls.
 
