@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module ForemanZsTheme
-  VERSION = '0.1.119'
+  VERSION = '0.1.121'
 end
