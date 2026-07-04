@@ -2274,9 +2274,10 @@ body.foreman-theme .pf-v5-c-table.pf-m-tree-view button[aria-label="Expand all r
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Expand row"]:focus-visible,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label*="Collapse row"]:focus-visible,
 body.foreman-theme .pf-v6-c-table.pf-m-tree-view button[aria-label="Expand all rows"]:focus-visible {
-  border-color: var(--zs-accent) !important;
-  outline: 1px solid var(--zs-accent) !important;
-  outline-offset: 1px;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: 0 !important;
 }
 
 body.foreman-theme .pf-v5-c-table.pf-m-tree-view .pf-v5-c-table__toggle svg,
@@ -2393,32 +2394,134 @@ body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
+  display: inline-flex !important;
+  height: 32px !important;
 }
 
 body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain,
 body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain,
 body.foreman-theme .audits-data-list button[aria-label="Details"] {
+  --pf-v5-c-button--m-plain--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--hover--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--focus--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--active--BackgroundColor: transparent;
   --pf-v5-c-button--after--BorderColor: transparent;
   --pf-v5-c-button--after--BorderWidth: 0;
+  --pf-v6-c-button--m-plain--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--hover--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--focus--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--active--BackgroundColor: transparent;
   --pf-v6-c-button--after--BorderColor: transparent;
   --pf-v6-c-button--after--BorderWidth: 0;
+  align-items: center !important;
   background: transparent !important;
+  background-color: transparent !important;
   border: 0 !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
   color: #d7d9dd !important;
-  min-height: 38px !important;
+  display: inline-flex !important;
+  height: 32px !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  min-height: 32px !important;
+  min-width: 32px !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  width: 32px !important;
+}
+
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain::before,
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain::after,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain::before,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain::after,
+body.foreman-theme .audits-data-list button[aria-label="Details"]::before,
+body.foreman-theme .audits-data-list button[aria-label="Details"]::after {
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:hover,
 body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:focus,
+body.foreman-theme .audits-data-list .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:active,
 body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:hover,
 body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:focus,
+body.foreman-theme .audits-data-list .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:active,
 body.foreman-theme .audits-data-list button[aria-label="Details"]:hover,
-body.foreman-theme .audits-data-list button[aria-label="Details"]:focus {
-  background: var(--zs-panel-2) !important;
+body.foreman-theme .audits-data-list button[aria-label="Details"]:focus,
+body.foreman-theme .audits-data-list button[aria-label="Details"]:active {
+  background: transparent !important;
+  background-color: transparent !important;
   border-color: transparent !important;
+  box-shadow: none !important;
   color: var(--zs-text) !important;
-  outline: none !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain {
+  --pf-v5-c-button--m-plain--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--hover--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--focus--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--active--BackgroundColor: transparent;
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v5-c-button--after--BorderWidth: 0;
+  --pf-v6-c-button--m-plain--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--hover--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--focus--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--active--BackgroundColor: transparent;
+  --pf-v6-c-button--after--BorderColor: transparent;
+  --pf-v6-c-button--after--BorderWidth: 0;
+  align-items: center !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #d7d9dd !important;
+  display: inline-flex !important;
+  height: 32px !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  min-height: 32px !important;
+  min-width: 32px !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  width: 32px !important;
+}
+
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain::after {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain:active,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain:active,
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain:active,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain:active {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  outline: 0 !important;
 }
 
 body.foreman-theme .audits-data-list .data-list-content,
