@@ -5265,3 +5265,132 @@ body.foreman-theme .pf-v6-c-table__td.pf-v6-c-table__action > .pf-v6-c-menu-togg
   color: #ffffff !important;
   outline: 0 !important;
 }
+
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button,
+body.foreman-theme .table-title-section [data-ouia-component-id="export-hosts-button"],
+body.foreman-theme .table-title-section [data-ouia-component-id="register-host-button"] {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--Color: #ffffff !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-dropdown__toggle--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-dropdown__toggle--Color: #ffffff !important;
+  --pf-v5-c-dropdown__toggle--before--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-dropdown__toggle--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--Color: #ffffff !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-dropdown__toggle--Color: #ffffff !important;
+  --pf-v6-c-dropdown__toggle--before--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-dropdown__toggle--after--BorderColor: var(--zs-button-primary-bg) !important;
+  background: var(--zs-button-primary-bg) !important;
+  background-color: var(--zs-button-primary-bg) !important;
+  border-color: var(--zs-button-primary-bg) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle::before,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle::after,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button::before,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button::after,
+body.foreman-theme .table-title-section [data-ouia-component-id="export-hosts-button"]::before,
+body.foreman-theme .table-title-section [data-ouia-component-id="export-hosts-button"]::after,
+body.foreman-theme .table-title-section [data-ouia-component-id="register-host-button"]::before,
+body.foreman-theme .table-title-section [data-ouia-component-id="register-host-button"]::after,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle::before,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle::after,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button::before,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button::after {
+  border-color: var(--zs-button-primary-bg) !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle:hover,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v5-c-dropdown__toggle:focus-within,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button:hover,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v5-c-dropdown__toggle-button:focus,
+body.foreman-theme .table-title-section [data-ouia-component-id="export-hosts-button"]:hover,
+body.foreman-theme .table-title-section [data-ouia-component-id="export-hosts-button"]:focus,
+body.foreman-theme .table-title-section [data-ouia-component-id="register-host-button"]:hover,
+body.foreman-theme .table-title-section [data-ouia-component-id="register-host-button"]:focus,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle:hover,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown > .pf-v6-c-dropdown__toggle:focus-within,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button:hover,
+body.foreman-theme .table-title-section #schedule-a-job-dropdown .pf-v6-c-dropdown__toggle-button:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-dropdown__toggle--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-dropdown__toggle--before--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-dropdown__toggle--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-dropdown__toggle--before--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-dropdown__toggle--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  background: var(--zs-button-primary-hover-bg) !important;
+  background-color: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-page__main .table-title-section .pf-m-align-right a.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="export-hosts-button"],
+body.foreman-theme .pf-v5-c-page__main .table-title-section .pf-m-align-right a.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="register-host-button"],
+body.foreman-theme .pf-v6-c-page__main .table-title-section .pf-m-align-right a.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="export-hosts-button"],
+body.foreman-theme .pf-v6-c-page__main .table-title-section .pf-m-align-right a.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="register-host-button"] {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--Color: #ffffff !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--Color: #ffffff !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--m-secondary--Color: #ffffff !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-bg) !important;
+  background: var(--zs-button-primary-bg) !important;
+  background-color: var(--zs-button-primary-bg) !important;
+  border: 1px solid var(--zs-button-primary-bg) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .pf-v5-c-page__main .table-title-section .pf-m-align-right a.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="export-hosts-button"]:hover,
+body.foreman-theme .pf-v5-c-page__main .table-title-section .pf-m-align-right a.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="export-hosts-button"]:focus,
+body.foreman-theme .pf-v5-c-page__main .table-title-section .pf-m-align-right a.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="register-host-button"]:hover,
+body.foreman-theme .pf-v5-c-page__main .table-title-section .pf-m-align-right a.pf-v5-c-button.pf-m-secondary[data-ouia-component-id="register-host-button"]:focus,
+body.foreman-theme .pf-v6-c-page__main .table-title-section .pf-m-align-right a.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="export-hosts-button"]:hover,
+body.foreman-theme .pf-v6-c-page__main .table-title-section .pf-m-align-right a.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="export-hosts-button"]:focus,
+body.foreman-theme .pf-v6-c-page__main .table-title-section .pf-m-align-right a.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="register-host-button"]:hover,
+body.foreman-theme .pf-v6-c-page__main .table-title-section .pf-m-align-right a.pf-v6-c-button.pf-m-secondary[data-ouia-component-id="register-host-button"]:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--m-secondary--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--m-secondary--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  background: var(--zs-button-primary-hover-bg) !important;
+  background-color: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
