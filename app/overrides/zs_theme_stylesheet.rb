@@ -14,7 +14,7 @@ Deface::Override.new(
       <link rel="icon" href="<%= zs_theme_favicon_url %>"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
       <link rel="shortcut icon" href="<%= zs_theme_favicon_url %>"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
     <% end %>
-    <link rel="stylesheet" href="/assets/foreman_zs_theme/theme.css?v=0.1.121">
+    <link rel="stylesheet" href="/assets/foreman_zs_theme/theme.css?v=0.1.122">
     <script>
       window.ZsForemanTheme = {
         logoUrl: <%= (Setting[:zs_theme_header_logo_url].presence || '/assets/foreman_zs_theme/redhat-satellite-logo.svg').to_json.html_safe %>,
@@ -26,6 +26,6 @@ Deface::Override.new(
         sidebarFontSize: <%= zs_theme_sidebar_font_size.to_json.html_safe %>
       };
     </script>
-    <script src="/assets/foreman_zs_theme/theme.js?v=0.1.121"></script>
+    <script src="/assets/foreman_zs_theme/theme.js?v=0.1.122"></script>
   ERB
 )
