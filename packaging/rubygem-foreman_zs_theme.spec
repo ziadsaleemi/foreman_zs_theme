@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.113
+Version: 0.1.116
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,15 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.116-1
+- Increase joined search dropdown specificity over global button styling.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.115-1
+- Force the joined search dropdown background longhand to match the input surface.
+
+* Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.114-1
+- Unify the search input, submit button, and bookmark dropdown surface color.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.113-1
 - Exclude the search-bar bookmark dropdown from dashboard padding rules.
 

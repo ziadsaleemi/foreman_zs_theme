@@ -4589,6 +4589,60 @@ body.foreman-theme .zs-theme-reset-form {
   margin-top: 10px !important;
 }
 
+body.foreman-theme .foreman-search-bar .pf-v5-c-text-input-group,
+body.foreman-theme .foreman-search-bar .pf-v6-c-text-input-group,
+body.foreman-theme .foreman-search-bar .pf-v5-c-text-input-group__text-input,
+body.foreman-theme .foreman-search-bar .pf-v6-c-text-input-group__text-input,
+body.foreman-theme .foreman-search-bar .pf-v5-c-button.pf-m-control,
+body.foreman-theme .foreman-search-bar .pf-v6-c-button.pf-m-control,
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle {
+  --pf-v5-c-button--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v5-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v5-c-dropdown__toggle--before--BorderColor: transparent;
+  --pf-v5-c-dropdown__toggle--after--BorderColor: transparent;
+  --pf-v6-c-button--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v6-c-button--after--BorderColor: transparent;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v6-c-dropdown__toggle--before--BorderColor: transparent;
+  --pf-v6-c-dropdown__toggle--after--BorderColor: transparent;
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  border: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle::before,
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown__toggle::after,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle::before,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown__toggle::after {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown > .pf-v5-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary),
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown > .pf-v6-c-dropdown__toggle:not(.pf-m-plain):not(.pf-m-primary),
+body.foreman-theme .foreman-search-bar .pf-v5-c-dropdown > button.pf-v5-c-dropdown__toggle,
+body.foreman-theme .foreman-search-bar .pf-v6-c-dropdown > button.pf-v6-c-dropdown__toggle {
+  --pf-v5-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v5-c-dropdown__toggle--before--BorderColor: transparent;
+  --pf-v5-c-dropdown__toggle--after--BorderColor: transparent;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-bg);
+  --pf-v6-c-dropdown__toggle--before--BorderColor: transparent;
+  --pf-v6-c-dropdown__toggle--after--BorderColor: transparent;
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  border: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 body.foreman-theme .audits-data-list table.table-changes.table.table-bordered {
   background: transparent !important;
   border: 0 !important;
