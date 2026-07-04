@@ -1768,6 +1768,78 @@ body.foreman-theme .card-pf-footer {
   color: var(--zs-text) !important;
 }
 
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle button[aria-label="Details"],
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle button[aria-label="Details"] {
+  --pf-v5-c-button--m-plain--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--hover--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--focus--BackgroundColor: transparent;
+  --pf-v5-c-button--m-plain--active--BackgroundColor: transparent;
+  --pf-v5-c-button--after--BorderColor: transparent;
+  --pf-v5-c-button--after--BorderWidth: 0;
+  --pf-v6-c-button--m-plain--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--hover--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--focus--BackgroundColor: transparent;
+  --pf-v6-c-button--m-plain--active--BackgroundColor: transparent;
+  --pf-v6-c-button--after--BorderColor: transparent;
+  --pf-v6-c-button--after--BorderWidth: 0;
+  align-items: center !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #d7d9dd !important;
+  display: inline-flex !important;
+  height: 32px !important;
+  justify-content: center !important;
+  min-height: 32px !important;
+  min-width: 32px !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  width: 32px !important;
+}
+
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle .pf-v5-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle .pf-v5-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle .pf-v6-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle .pf-v6-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle button[aria-label="Details"]::before,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle button[aria-label="Details"]::after,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle button[aria-label="Details"]::before,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle button[aria-label="Details"]::after {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle .pf-v5-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle .pf-v5-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle .pf-v5-c-button.pf-m-plain:active,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle .pf-v6-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle .pf-v6-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle .pf-v6-c-button.pf-m-plain:active,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle button[aria-label="Details"]:hover,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle button[aria-label="Details"]:focus,
+body.foreman-theme .pf-v5-c-card.pf-v5-c-alert .pf-v5-c-card__header-toggle button[aria-label="Details"]:active,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle button[aria-label="Details"]:hover,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle button[aria-label="Details"]:focus,
+body.foreman-theme .pf-v6-c-card.pf-v6-c-alert .pf-v6-c-card__header-toggle button[aria-label="Details"]:active {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  outline: 0 !important;
+}
+
 body.foreman-theme .pf-v5-c-card .pf-v5-c-card,
 body.foreman-theme .pf-v5-c-card .pf-v6-c-card,
 body.foreman-theme .pf-v5-c-card .card-pf,

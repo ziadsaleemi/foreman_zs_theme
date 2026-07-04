@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.116
+Version: 0.1.117
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Sat Jul 04 2026 ZS Operations <ops@zs.us> - 0.1.117-1
+- Make host status card expanders transparent icon-only controls.
+
 * Fri Jul 03 2026 ZS Operations <ops@zs.us> - 0.1.116-1
 - Increase joined search dropdown specificity over global button styling.
 
