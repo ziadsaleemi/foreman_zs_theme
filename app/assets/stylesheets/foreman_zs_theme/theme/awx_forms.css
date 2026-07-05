@@ -1,0 +1,182 @@
+/*
+ * AWX reference form, search, and select controls.
+ *
+ * These rules normalize Foreman legacy Bootstrap controls and PatternFly v5/v6
+ * inputs into the same dark, flat, bottom-border command surfaces AWX uses in
+ * page toolbars and forms.
+ */
+
+body.foreman-theme input[type="text"],
+body.foreman-theme input[type="search"],
+body.foreman-theme input[type="email"],
+body.foreman-theme input[type="password"],
+body.foreman-theme input[type="number"],
+body.foreman-theme input[type="url"],
+body.foreman-theme input[type="tel"],
+body.foreman-theme input[type="date"],
+body.foreman-theme input[type="datetime-local"],
+body.foreman-theme select,
+body.foreman-theme textarea,
+body.foreman-theme .form-control,
+body.foreman-theme .pf-v5-c-form-control,
+body.foreman-theme .pf-v6-c-form-control,
+body.foreman-theme .pf-v5-c-text-input-group,
+body.foreman-theme .pf-v6-c-text-input-group,
+body.foreman-theme .pf-v5-c-select__toggle,
+body.foreman-theme .pf-v6-c-select__toggle {
+  --pf-v5-c-form-control--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v5-c-form-control--Color: var(--zs-text) !important;
+  --pf-v5-c-form-control--BorderTopColor: transparent !important;
+  --pf-v5-c-form-control--BorderRightColor: transparent !important;
+  --pf-v5-c-form-control--BorderBottomColor: var(--zs-toolbar-control-border) !important;
+  --pf-v5-c-form-control--BorderLeftColor: transparent !important;
+  --pf-v6-c-form-control--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v6-c-form-control--Color: var(--zs-text) !important;
+  --pf-v6-c-form-control--BorderTopColor: transparent !important;
+  --pf-v6-c-form-control--BorderRightColor: transparent !important;
+  --pf-v6-c-form-control--BorderBottomColor: var(--zs-toolbar-control-border) !important;
+  --pf-v6-c-form-control--BorderLeftColor: transparent !important;
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  border-bottom-color: var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  min-height: 42px !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme input[type="text"]:focus,
+body.foreman-theme input[type="search"]:focus,
+body.foreman-theme input[type="email"]:focus,
+body.foreman-theme input[type="password"]:focus,
+body.foreman-theme input[type="number"]:focus,
+body.foreman-theme input[type="url"]:focus,
+body.foreman-theme input[type="tel"]:focus,
+body.foreman-theme input[type="date"]:focus,
+body.foreman-theme input[type="datetime-local"]:focus,
+body.foreman-theme select:focus,
+body.foreman-theme textarea:focus,
+body.foreman-theme .form-control:focus,
+body.foreman-theme .pf-v5-c-form-control:focus,
+body.foreman-theme .pf-v6-c-form-control:focus,
+body.foreman-theme .pf-v5-c-text-input-group:focus-within,
+body.foreman-theme .pf-v6-c-text-input-group:focus-within,
+body.foreman-theme .pf-v5-c-select__toggle:focus,
+body.foreman-theme .pf-v6-c-select__toggle:focus {
+  background: var(--zs-toolbar-control-hover-bg) !important;
+  background-color: var(--zs-toolbar-control-hover-bg) !important;
+  border-bottom-color: var(--zs-focus-ring) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme input::placeholder,
+body.foreman-theme textarea::placeholder,
+body.foreman-theme .pf-v5-c-form-control::placeholder,
+body.foreman-theme .pf-v6-c-form-control::placeholder,
+body.foreman-theme .pf-v5-c-text-input-group__text-input::placeholder,
+body.foreman-theme .pf-v6-c-text-input-group__text-input::placeholder {
+  color: var(--zs-muted) !important;
+  opacity: 0.85 !important;
+}
+
+body.foreman-theme .input-group,
+body.foreman-theme .pf-v5-c-input-group,
+body.foreman-theme .pf-v6-c-input-group,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-input-group,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-input-group {
+  align-items: stretch !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  display: inline-flex !important;
+}
+
+body.foreman-theme .input-group .input-group-btn .btn,
+body.foreman-theme .pf-v5-c-input-group .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-input-group .pf-v6-c-button,
+body.foreman-theme .pf-v5-c-text-input-group__utilities .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-text-input-group__utilities .pf-v6-c-button {
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  border-color: transparent !important;
+  border-bottom-color: var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  color: var(--zs-text) !important;
+  min-height: 42px !important;
+}
+
+body.foreman-theme .input-group:focus-within .input-group-btn .btn,
+body.foreman-theme .pf-v5-c-input-group:focus-within .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-input-group:focus-within .pf-v6-c-button,
+body.foreman-theme .pf-v5-c-text-input-group__utilities .pf-v5-c-button:hover,
+body.foreman-theme .pf-v5-c-text-input-group__utilities .pf-v5-c-button:focus,
+body.foreman-theme .pf-v6-c-text-input-group__utilities .pf-v6-c-button:hover,
+body.foreman-theme .pf-v6-c-text-input-group__utilities .pf-v6-c-button:focus {
+  background: var(--zs-toolbar-control-hover-bg) !important;
+  background-color: var(--zs-toolbar-control-hover-bg) !important;
+  border-bottom-color: var(--zs-focus-ring) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .pf-v5-c-menu,
+body.foreman-theme .pf-v6-c-menu,
+body.foreman-theme .pf-v5-c-select__menu,
+body.foreman-theme .pf-v6-c-select__menu,
+body.foreman-theme .pf-v5-c-dropdown__menu,
+body.foreman-theme .pf-v6-c-dropdown__menu,
+body.foreman-theme .dropdown-menu,
+body.foreman-theme .bootstrap-select .dropdown-menu {
+  background: var(--zs-menu-bg) !important;
+  background-color: var(--zs-menu-bg) !important;
+  border: 1px solid var(--zs-border) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-menu__item,
+body.foreman-theme .pf-v6-c-menu__item,
+body.foreman-theme .pf-v5-c-select__menu-item,
+body.foreman-theme .pf-v6-c-select__menu-item,
+body.foreman-theme .pf-v5-c-dropdown__menu-item,
+body.foreman-theme .pf-v6-c-dropdown__menu-item,
+body.foreman-theme .dropdown-menu > li > a,
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a {
+  background: transparent !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-menu__item:hover,
+body.foreman-theme .pf-v5-c-menu__item:focus,
+body.foreman-theme .pf-v6-c-menu__item:hover,
+body.foreman-theme .pf-v6-c-menu__item:focus,
+body.foreman-theme .pf-v5-c-select__menu-item:hover,
+body.foreman-theme .pf-v5-c-select__menu-item:focus,
+body.foreman-theme .pf-v6-c-select__menu-item:hover,
+body.foreman-theme .pf-v6-c-select__menu-item:focus,
+body.foreman-theme .pf-v5-c-dropdown__menu-item:hover,
+body.foreman-theme .pf-v5-c-dropdown__menu-item:focus,
+body.foreman-theme .pf-v6-c-dropdown__menu-item:hover,
+body.foreman-theme .pf-v6-c-dropdown__menu-item:focus,
+body.foreman-theme .dropdown-menu > li > a:hover,
+body.foreman-theme .dropdown-menu > li > a:focus,
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a:hover,
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a:focus {
+  background: var(--zs-menu-hover-bg) !important;
+  background-color: var(--zs-menu-hover-bg) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-check__input,
+body.foreman-theme .pf-v6-c-check__input,
+body.foreman-theme input[type="checkbox"],
+body.foreman-theme input[type="radio"] {
+  accent-color: var(--zs-accent) !important;
+  box-shadow: none !important;
+}

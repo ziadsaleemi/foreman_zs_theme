@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.summary = 'ZS dark theme for Foreman'
   s.description = 'A small Foreman plugin that applies the ZS AWX-inspired dark theme and Red Hat Satellite branding.'
   s.license = 'GPL-3.0-or-later'
-  s.files = Dir['app/**/*', 'config/**/*', 'lib/**/*', 'theme.css', 'theme.js', 'redhat-satellite-logo.svg', 'README.md']
+  s.files = Dir['app/**/*', 'config/**/*', 'lib/**/*', 'scripts/**/*', 'theme.css', 'theme.js', 'redhat-satellite-logo.svg', 'README.md']
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.7'
   s.add_runtime_dependency 'deface', '>= 1.0'

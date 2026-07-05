@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'set'
+
+ROOT = File.expand_path('..', __dir__)
+SOURCE = File.join(ROOT, 'app/assets/stylesheets/foreman_zs_theme/theme.scss')
+OUTPUT = File.join(ROOT, 'theme.css')
+
+def expand_imports(path, seen = Set.new)
+  real_path = File.expand_path(path)
+  raise "Circular stylesheet import: #{real_path}" if seen.include?(real_path)
+
+  seen.add(real_path)
+  base_dir = File.dirname(real_path)
+
+  File.readlines(real_path).map do |line|
+    if (match = line.match(/\A@import\s+["']([^"']+)["'];\s*\z/))
+      import_path = File.expand_path(match[1], base_dir)
+      raise "Missing stylesheet import: #{import_path}" unless File.file?(import_path)
+
+      "/* BEGIN #{match[1]} */\n" \
+        "#{expand_imports(import_path, seen)}" \
+        "/* END #{match[1]} */\n"
+    else
+      line
+    end
+  end.join
+ensure
+  seen.delete(real_path) if defined?(real_path)
+end
+
+File.write(OUTPUT, expand_imports(SOURCE))
+puts "Wrote #{OUTPUT}"

@@ -1,0 +1,293 @@
+/*
+ * AWX reference controls.
+ *
+ * AWX uses PatternFly dark-theme tokens for toolbar split buttons and switches.
+ * Foreman/Katello mixes PatternFly v5/v6 with older Bootstrap controls, so keep
+ * the shared adaptations here instead of adding page-specific one-off rules.
+ */
+
+body.foreman-theme .zs-awx-control-surface,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox,
+body.foreman-theme #selection-checkbox.btn-group,
+body.foreman-theme .toolbar-pf #selection-checkbox,
+body.foreman-theme .toolbar #selection-checkbox {
+  align-items: stretch !important;
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: inline-flex !important;
+  min-height: 42px !important;
+}
+
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox > .pf-v5-c-dropdown__toggle,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox > .pf-v6-c-dropdown__toggle,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-check,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-check,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-button,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-button,
+body.foreman-theme #selection-checkbox.btn-group > .btn,
+body.foreman-theme #selection-checkbox.btn-group > button,
+body.foreman-theme #selection-checkbox.btn-group > .dropdown-toggle,
+body.foreman-theme .toolbar-pf #selection-checkbox > .btn,
+body.foreman-theme .toolbar #selection-checkbox > .btn {
+  --pf-v5-c-button--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v5-c-button--Color: var(--zs-text) !important;
+  --pf-v5-c-button--after--BorderColor: transparent !important;
+  --pf-v5-c-button--after--BorderWidth: 0 !important;
+  --pf-v5-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v5-c-dropdown__toggle--before--BorderColor: transparent !important;
+  --pf-v5-c-dropdown__toggle--after--BorderColor: transparent !important;
+  --pf-v5-c-dropdown__toggle--after--BorderWidth: 0 !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v6-c-button--Color: var(--zs-text) !important;
+  --pf-v6-c-button--after--BorderColor: transparent !important;
+  --pf-v6-c-button--after--BorderWidth: 0 !important;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v6-c-dropdown__toggle--before--BorderColor: transparent !important;
+  --pf-v6-c-dropdown__toggle--after--BorderColor: transparent !important;
+  --pf-v6-c-dropdown__toggle--after--BorderWidth: 0 !important;
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  min-height: 42px !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-check,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-check,
+body.foreman-theme #selection-checkbox.btn-group > .btn:first-child,
+body.foreman-theme .toolbar-pf #selection-checkbox > .btn:first-child,
+body.foreman-theme .toolbar #selection-checkbox > .btn:first-child {
+  border-right: 1px solid rgba(15, 18, 20, 0.55) !important;
+  min-width: 48px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-button,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-button,
+body.foreman-theme #selection-checkbox.btn-group > .dropdown-toggle,
+body.foreman-theme .toolbar-pf #selection-checkbox > .dropdown-toggle,
+body.foreman-theme .toolbar #selection-checkbox > .dropdown-toggle {
+  min-width: 42px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox > .pf-v5-c-dropdown__toggle::before,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox > .pf-v5-c-dropdown__toggle::after,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-check::before,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-check::after,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-button::before,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-button::after,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox > .pf-v6-c-dropdown__toggle::before,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox > .pf-v6-c-dropdown__toggle::after,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-check::before,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-check::after,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-button::before,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-button::after,
+body.foreman-theme #selection-checkbox.btn-group > .btn::before,
+body.foreman-theme #selection-checkbox.btn-group > .btn::after {
+  border: 0 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox:hover,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox:focus-within,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox:hover,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox:focus-within,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox > .pf-v5-c-dropdown__toggle:hover,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox > .pf-v5-c-dropdown__toggle:focus-within,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-button:hover,
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox .pf-v5-c-dropdown__toggle-button:focus,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox > .pf-v6-c-dropdown__toggle:hover,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox > .pf-v6-c-dropdown__toggle:focus-within,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-button:hover,
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox .pf-v6-c-dropdown__toggle-button:focus,
+body.foreman-theme #selection-checkbox.btn-group:hover,
+body.foreman-theme #selection-checkbox.btn-group:focus-within,
+body.foreman-theme #selection-checkbox.btn-group > .btn:hover,
+body.foreman-theme #selection-checkbox.btn-group > .btn:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-toolbar-control-hover-bg) !important;
+  --pf-v5-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-hover-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-toolbar-control-hover-bg) !important;
+  --pf-v6-c-dropdown__toggle--BackgroundColor: var(--zs-toolbar-control-hover-bg) !important;
+  background: var(--zs-toolbar-control-hover-bg) !important;
+  background-color: var(--zs-toolbar-control-hover-bg) !important;
+  border-bottom-color: var(--zs-focus-ring) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-toolbar #selection-checkbox input[type="checkbox"],
+body.foreman-theme .pf-v6-c-toolbar #selection-checkbox input[type="checkbox"],
+body.foreman-theme #selection-checkbox input[type="checkbox"] {
+  accent-color: var(--zs-accent) !important;
+  background-color: transparent !important;
+  border-color: var(--zs-toolbar-control-border) !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-switch,
+body.foreman-theme .pf-v6-c-switch {
+  --pf-v5-c-switch--ColumnGap: 16px !important;
+  --pf-v5-c-switch__label--Color: var(--zs-text) !important;
+  --pf-v5-c-switch__toggle--BackgroundColor: #4b4e55 !important;
+  --pf-v5-c-switch__toggle--before--BackgroundColor: #111418 !important;
+  --pf-v6-c-switch--ColumnGap: 16px !important;
+  --pf-v6-c-switch__label--Color: var(--zs-text) !important;
+  --pf-v6-c-switch__toggle--BackgroundColor: #4b4e55 !important;
+  --pf-v6-c-switch__toggle--before--BackgroundColor: #111418 !important;
+  align-items: center !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__toggle,
+body.foreman-theme .pf-v6-c-switch__toggle {
+  background: #4b4e55 !important;
+  background-color: #4b4e55 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  height: 32px !important;
+  min-width: 56px !important;
+  position: relative !important;
+  width: 56px !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__toggle::before,
+body.foreman-theme .pf-v6-c-switch__toggle::before {
+  background: #111418 !important;
+  background-color: #111418 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+  height: 24px !important;
+  left: 4px !important;
+  top: 4px !important;
+  transform: none !important;
+  width: 24px !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__toggle::after,
+body.foreman-theme .pf-v6-c-switch__toggle::after {
+  color: transparent !important;
+  content: "" !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__input:checked ~ .pf-v5-c-switch__toggle,
+body.foreman-theme .pf-v6-c-switch__input:checked ~ .pf-v6-c-switch__toggle {
+  background: var(--zs-accent) !important;
+  background-color: var(--zs-accent) !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__input:checked ~ .pf-v5-c-switch__toggle::before,
+body.foreman-theme .pf-v6-c-switch__input:checked ~ .pf-v6-c-switch__toggle::before {
+  left: 28px !important;
+  transform: none !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__input:checked ~ .pf-v5-c-switch__toggle::after,
+body.foreman-theme .pf-v6-c-switch__input:checked ~ .pf-v6-c-switch__toggle::after {
+  color: #111418 !important;
+  content: "\2713" !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  left: 13px !important;
+  line-height: 1 !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__label,
+body.foreman-theme .pf-v6-c-switch__label {
+  color: var(--zs-text) !important;
+  font-weight: 500 !important;
+  margin-left: 14px !important;
+}
+
+body.foreman-theme .bootstrap-switch {
+  background: #4b4e55 !important;
+  background-color: #4b4e55 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  height: 32px !important;
+  min-width: 56px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  width: 56px !important;
+}
+
+body.foreman-theme .bootstrap-switch.bootstrap-switch-on {
+  background: var(--zs-accent) !important;
+  background-color: var(--zs-accent) !important;
+}
+
+body.foreman-theme .bootstrap-switch .bootstrap-switch-container {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  height: 32px !important;
+}
+
+body.foreman-theme .bootstrap-switch .bootstrap-switch-handle-on,
+body.foreman-theme .bootstrap-switch .bootstrap-switch-handle-off {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: transparent !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .bootstrap-switch .bootstrap-switch-label {
+  background: #111418 !important;
+  background-color: #111418 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+  color: transparent !important;
+  height: 24px !important;
+  line-height: 24px !important;
+  margin: 4px !important;
+  min-width: 24px !important;
+  padding: 0 !important;
+  position: relative !important;
+  width: 24px !important;
+}
+
+body.foreman-theme .bootstrap-switch.bootstrap-switch-on::after {
+  color: #111418 !important;
+  content: "\2713" !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  left: 13px !important;
+  line-height: 1 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
+}
+
+body.foreman-theme #sync_toggle_cont,
+body.foreman-theme #sync_toggle_cont label,
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-switch__label,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-switch__label {
+  color: var(--zs-text) !important;
+}

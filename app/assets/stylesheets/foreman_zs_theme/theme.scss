@@ -5698,3 +5698,8 @@ body.foreman-theme .pf-v6-c-page__main .host-details-header-section button.pf-v6
   border-color: var(--zs-button-primary-hover-bg) !important;
   color: #ffffff !important;
 }
+
+@import "theme/awx_buttons.css";
+@import "theme/awx_forms.css";
+@import "theme/awx_tables.css";
+@import "theme/awx_controls.css";

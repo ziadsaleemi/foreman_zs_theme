@@ -1,0 +1,301 @@
+/*
+ * AWX reference table, data-list, and pagination styles.
+ *
+ * Foreman/Katello mixes PatternFly tables, data lists, and older Bootstrap
+ * tables. Keep the common dark table treatment here so list pages, audit rows,
+ * host tables, and expandable rows share one visual system.
+ */
+
+body.foreman-theme .pf-v5-c-table,
+body.foreman-theme .pf-v6-c-table,
+body.foreman-theme .pf-v5-c-data-list,
+body.foreman-theme .pf-v6-c-data-list,
+body.foreman-theme .list-view-pf,
+body.foreman-theme .table,
+body.foreman-theme table.table,
+body.foreman-theme .dataTables_wrapper {
+  --pf-v5-c-table--BorderColor: var(--zs-border-soft) !important;
+  --pf-v5-c-table--BackgroundColor: var(--zs-panel) !important;
+  --pf-v6-c-table--BorderColor: var(--zs-border-soft) !important;
+  --pf-v6-c-table--BackgroundColor: var(--zs-panel) !important;
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  border-color: var(--zs-border-soft) !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-table thead,
+body.foreman-theme .pf-v6-c-table thead,
+body.foreman-theme .pf-v5-c-table__thead,
+body.foreman-theme .pf-v6-c-table__thead,
+body.foreman-theme .table > thead,
+body.foreman-theme table.table > thead {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .pf-v5-c-table th,
+body.foreman-theme .pf-v6-c-table th,
+body.foreman-theme .pf-v5-c-table__th,
+body.foreman-theme .pf-v6-c-table__th,
+body.foreman-theme .table > thead > tr > th,
+body.foreman-theme table.table > thead > tr > th,
+body.foreman-theme [role="columnheader"] {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  border-color: var(--zs-border-soft) !important;
+  color: var(--zs-muted) !important;
+  font-weight: 600 !important;
+}
+
+body.foreman-theme .pf-v5-c-table tbody,
+body.foreman-theme .pf-v6-c-table tbody,
+body.foreman-theme .pf-v5-c-table__tbody,
+body.foreman-theme .pf-v6-c-table__tbody,
+body.foreman-theme .table > tbody,
+body.foreman-theme table.table > tbody {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+}
+
+body.foreman-theme .pf-v5-c-table tbody tr,
+body.foreman-theme .pf-v6-c-table tbody tr,
+body.foreman-theme .pf-v5-c-table__tbody > .pf-v5-c-table__tr,
+body.foreman-theme .pf-v6-c-table__tbody > .pf-v6-c-table__tr,
+body.foreman-theme .pf-v5-c-data-list__item,
+body.foreman-theme .pf-v6-c-data-list__item,
+body.foreman-theme .list-view-pf > .list-group-item,
+body.foreman-theme .table > tbody > tr,
+body.foreman-theme table.table > tbody > tr {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  border-color: var(--zs-border-soft) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-table tbody tr:hover,
+body.foreman-theme .pf-v6-c-table tbody tr:hover,
+body.foreman-theme .pf-v5-c-table__tbody > .pf-v5-c-table__tr:hover,
+body.foreman-theme .pf-v6-c-table__tbody > .pf-v6-c-table__tr:hover,
+body.foreman-theme .pf-v5-c-data-list__item:hover,
+body.foreman-theme .pf-v6-c-data-list__item:hover,
+body.foreman-theme .list-view-pf > .list-group-item:hover,
+body.foreman-theme .table-hover > tbody > tr:hover,
+body.foreman-theme table.table > tbody > tr:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)), var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+}
+
+body.foreman-theme .pf-v5-c-table tbody tr.pf-m-selected,
+body.foreman-theme .pf-v6-c-table tbody tr.pf-m-selected,
+body.foreman-theme .pf-v5-c-table tbody tr[aria-selected="true"],
+body.foreman-theme .pf-v6-c-table tbody tr[aria-selected="true"],
+body.foreman-theme .pf-v5-c-table__tr.pf-m-selected,
+body.foreman-theme .pf-v6-c-table__tr.pf-m-selected,
+body.foreman-theme .pf-v5-c-data-list__item.pf-m-selected,
+body.foreman-theme .pf-v6-c-data-list__item.pf-m-selected,
+body.foreman-theme tr.selected,
+body.foreman-theme tr.active,
+body.foreman-theme tr.info,
+body.foreman-theme tr.highlight {
+  background: linear-gradient(rgba(68, 204, 255, 0.08), rgba(68, 204, 255, 0.08)), var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+}
+
+body.foreman-theme .pf-v5-c-table td,
+body.foreman-theme .pf-v6-c-table td,
+body.foreman-theme .pf-v5-c-table__td,
+body.foreman-theme .pf-v6-c-table__td,
+body.foreman-theme .pf-v5-c-data-list__cell,
+body.foreman-theme .pf-v6-c-data-list__cell,
+body.foreman-theme .pf-v5-c-data-list__item-content,
+body.foreman-theme .pf-v6-c-data-list__item-content,
+body.foreman-theme .list-view-pf-main-info,
+body.foreman-theme .table > tbody > tr > td,
+body.foreman-theme table.table > tbody > tr > td {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: var(--zs-border-soft) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-table a,
+body.foreman-theme .pf-v6-c-table a,
+body.foreman-theme .pf-v5-c-data-list a,
+body.foreman-theme .pf-v6-c-data-list a,
+body.foreman-theme .table a,
+body.foreman-theme table.table a {
+  color: var(--zs-accent-2) !important;
+}
+
+body.foreman-theme .pf-v5-c-table__expandable-row,
+body.foreman-theme .pf-v6-c-table__expandable-row,
+body.foreman-theme .pf-v5-c-table__expandable-row-content,
+body.foreman-theme .pf-v6-c-table__expandable-row-content,
+body.foreman-theme .pf-v5-c-data-list__expandable-content,
+body.foreman-theme .pf-v6-c-data-list__expandable-content,
+body.foreman-theme .pf-v5-c-data-list__expandable-content-body,
+body.foreman-theme .pf-v6-c-data-list__expandable-content-body,
+body.foreman-theme .list-view-pf-expand,
+body.foreman-theme .data-list-content {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  border-color: var(--zs-border-soft) !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-table__expandable-row,
+body.foreman-theme .pf-v6-c-table__expandable-row,
+body.foreman-theme .pf-v5-c-data-list__expandable-content,
+body.foreman-theme .pf-v6-c-data-list__expandable-content {
+  border-top: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .table .btn.btn-link,
+body.foreman-theme .table .expand,
+body.foreman-theme .table .expander {
+  --pf-v5-c-button--BackgroundColor: transparent !important;
+  --pf-v5-c-button--after--BorderColor: transparent !important;
+  --pf-v5-c-button--after--BorderWidth: 0 !important;
+  --pf-v6-c-button--BackgroundColor: transparent !important;
+  --pf-v6-c-button--after--BorderColor: transparent !important;
+  --pf-v6-c-button--after--BorderWidth: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v5-c-table__toggle .pf-v5-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v6-c-table__toggle .pf-v6-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v5-c-data-list__toggle .pf-v5-c-button.pf-m-plain::after,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain::before,
+body.foreman-theme .pf-v6-c-data-list__toggle .pf-v6-c-button.pf-m-plain::after {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-table__action .pf-v5-c-menu-toggle.pf-m-plain,
+body.foreman-theme .pf-v6-c-table__action .pf-v6-c-menu-toggle.pf-m-plain,
+body.foreman-theme .pf-v5-c-data-list__item-action .pf-v5-c-menu-toggle.pf-m-plain,
+body.foreman-theme .pf-v6-c-data-list__item-action .pf-v6-c-menu-toggle.pf-m-plain,
+body.foreman-theme .pf-v5-c-table__action .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-table__action .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .dropdown-kebab-pf > .btn,
+body.foreman-theme .dropdown-kebab-pf button,
+body.foreman-theme .table .toggle-kebab {
+  --pf-v5-c-button--BackgroundColor: transparent !important;
+  --pf-v5-c-button--after--BorderColor: transparent !important;
+  --pf-v5-c-button--after--BorderWidth: 0 !important;
+  --pf-v5-c-menu-toggle--BackgroundColor: transparent !important;
+  --pf-v5-c-menu-toggle--after--BorderColor: transparent !important;
+  --pf-v5-c-menu-toggle--after--BorderWidth: 0 !important;
+  --pf-v6-c-button--BackgroundColor: transparent !important;
+  --pf-v6-c-button--after--BorderColor: transparent !important;
+  --pf-v6-c-button--after--BorderWidth: 0 !important;
+  --pf-v6-c-menu-toggle--BackgroundColor: transparent !important;
+  --pf-v6-c-menu-toggle--after--BorderColor: transparent !important;
+  --pf-v6-c-menu-toggle--after--BorderWidth: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .pf-v5-c-table__action .pf-v5-c-menu-toggle.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-table__action .pf-v5-c-menu-toggle.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-table__action .pf-v6-c-menu-toggle.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-table__action .pf-v6-c-menu-toggle.pf-m-plain:focus,
+body.foreman-theme .pf-v5-c-data-list__item-action .pf-v5-c-menu-toggle.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-data-list__item-action .pf-v5-c-menu-toggle.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-data-list__item-action .pf-v6-c-menu-toggle.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-data-list__item-action .pf-v6-c-menu-toggle.pf-m-plain:focus,
+body.foreman-theme .dropdown-kebab-pf > .btn:hover,
+body.foreman-theme .dropdown-kebab-pf > .btn:focus,
+body.foreman-theme .dropdown-kebab-pf button:hover,
+body.foreman-theme .dropdown-kebab-pf button:focus,
+body.foreman-theme .table .toggle-kebab:hover,
+body.foreman-theme .table .toggle-kebab:focus {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-pagination,
+body.foreman-theme .pf-v6-c-pagination,
+body.foreman-theme .tfm-pagination,
+body.foreman-theme .pagination,
+body.foreman-theme .pagination-pf {
+  background: var(--zs-panel) !important;
+  background-color: var(--zs-panel) !important;
+  border-color: var(--zs-border-soft) !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-pagination .pf-v5-c-menu-toggle,
+body.foreman-theme .pf-v6-c-pagination .pf-v6-c-menu-toggle,
+body.foreman-theme .tfm-pagination .pf-v5-c-menu-toggle,
+body.foreman-theme .tfm-pagination .pf-v6-c-menu-toggle,
+body.foreman-theme .pagination > li > a,
+body.foreman-theme .pagination > li > span {
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  border-color: transparent !important;
+  border-bottom-color: var(--zs-toolbar-control-border) !important;
+  border-radius: 0 !important;
+  color: var(--zs-text) !important;
+  box-shadow: none !important;
+}
+
+body.foreman-theme .pagination > .active > a,
+body.foreman-theme .pagination > .active > span {
+  background: var(--zs-button-primary-bg) !important;
+  background-color: var(--zs-button-primary-bg) !important;
+  border-color: var(--zs-button-primary-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .table-toolbar,
+body.foreman-theme .pf-v5-c-toolbar,
+body.foreman-theme .pf-v6-c-toolbar {
+  background: transparent !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-toolbar .pf-v5-c-divider,
+body.foreman-theme .pf-v6-c-toolbar .pf-v6-c-divider,
+body.foreman-theme .toolbar-pf .separator,
+body.foreman-theme .btn-toolbar .separator {
+  border-color: var(--zs-border-soft) !important;
+}
+
+body.foreman-theme .blank-slate-pf,
+body.foreman-theme .pf-v5-c-empty-state,
+body.foreman-theme .pf-v6-c-empty-state,
+body.foreman-theme .empty-state {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .blank-slate-pf .blank-slate-pf-main-action,
+body.foreman-theme .pf-v5-c-empty-state .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-empty-state .pf-v6-c-button.pf-m-primary {
+  margin-top: 16px !important;
+}

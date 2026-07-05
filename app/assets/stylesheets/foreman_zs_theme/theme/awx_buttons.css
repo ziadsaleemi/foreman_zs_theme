@@ -1,0 +1,167 @@
+/*
+ * AWX reference buttons and actions.
+ *
+ * Keep shared button variants here so pages do not each restyle primary,
+ * control, icon-only, kebab, and cancel/link actions independently.
+ */
+
+body.foreman-theme .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-button,
+body.foreman-theme .btn {
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  min-height: 38px !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-primary,
+body.foreman-theme .pf-v6-c-button.pf-m-primary,
+body.foreman-theme .btn-primary,
+body.foreman-theme input[type="submit"].btn-primary,
+body.foreman-theme button[type="submit"].btn-primary {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v5-c-button--Color: #ffffff !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-bg) !important;
+  --pf-v6-c-button--Color: #ffffff !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-bg) !important;
+  background: var(--zs-button-primary-bg) !important;
+  background-color: var(--zs-button-primary-bg) !important;
+  background-image: none !important;
+  border-color: var(--zs-button-primary-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-primary:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-primary:focus,
+body.foreman-theme .btn-primary:hover,
+body.foreman-theme .btn-primary:focus,
+body.foreman-theme input[type="submit"].btn-primary:hover,
+body.foreman-theme input[type="submit"].btn-primary:focus,
+body.foreman-theme button[type="submit"].btn-primary:hover,
+body.foreman-theme button[type="submit"].btn-primary:focus {
+  --pf-v5-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-button-primary-hover-bg) !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-primary-hover-bg) !important;
+  background: var(--zs-button-primary-hover-bg) !important;
+  background-color: var(--zs-button-primary-hover-bg) !important;
+  border-color: var(--zs-button-primary-hover-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-secondary:not([data-ouia-component-id="export-hosts-button"]):not([data-ouia-component-id="register-host-button"]):not([data-ouia-component-id="host-edit-button"]),
+body.foreman-theme .pf-v6-c-button.pf-m-secondary:not([data-ouia-component-id="export-hosts-button"]):not([data-ouia-component-id="register-host-button"]):not([data-ouia-component-id="host-edit-button"]),
+body.foreman-theme .btn-default:not(.dropdown-toggle),
+body.foreman-theme .btn-secondary {
+  --pf-v5-c-button--BackgroundColor: transparent !important;
+  --pf-v5-c-button--Color: var(--zs-button-secondary-text) !important;
+  --pf-v5-c-button--after--BorderColor: var(--zs-button-secondary-border) !important;
+  --pf-v6-c-button--BackgroundColor: transparent !important;
+  --pf-v6-c-button--Color: var(--zs-button-secondary-text) !important;
+  --pf-v6-c-button--after--BorderColor: var(--zs-button-secondary-border) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: var(--zs-button-secondary-border) !important;
+  color: var(--zs-button-secondary-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-secondary:not([data-ouia-component-id="export-hosts-button"]):not([data-ouia-component-id="register-host-button"]):not([data-ouia-component-id="host-edit-button"]):hover,
+body.foreman-theme .pf-v5-c-button.pf-m-secondary:not([data-ouia-component-id="export-hosts-button"]):not([data-ouia-component-id="register-host-button"]):not([data-ouia-component-id="host-edit-button"]):focus,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary:not([data-ouia-component-id="export-hosts-button"]):not([data-ouia-component-id="register-host-button"]):not([data-ouia-component-id="host-edit-button"]):hover,
+body.foreman-theme .pf-v6-c-button.pf-m-secondary:not([data-ouia-component-id="export-hosts-button"]):not([data-ouia-component-id="register-host-button"]):not([data-ouia-component-id="host-edit-button"]):focus,
+body.foreman-theme .btn-default:not(.dropdown-toggle):hover,
+body.foreman-theme .btn-default:not(.dropdown-toggle):focus,
+body.foreman-theme .btn-secondary:hover,
+body.foreman-theme .btn-secondary:focus {
+  background: var(--zs-button-secondary-hover-bg) !important;
+  background-color: var(--zs-button-secondary-hover-bg) !important;
+  border-color: var(--zs-button-secondary-border) !important;
+  color: var(--zs-button-secondary-text) !important;
+  outline: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-control,
+body.foreman-theme .pf-v6-c-button.pf-m-control,
+body.foreman-theme .pf-v5-c-menu-toggle,
+body.foreman-theme .pf-v6-c-menu-toggle,
+body.foreman-theme .btn.dropdown-toggle {
+  --pf-v5-c-button--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v5-c-button--Color: var(--zs-text) !important;
+  --pf-v5-c-button--after--BorderColor: transparent !important;
+  --pf-v5-c-menu-toggle--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v5-c-menu-toggle--before--BorderColor: transparent !important;
+  --pf-v5-c-menu-toggle--after--BorderColor: transparent !important;
+  --pf-v6-c-button--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v6-c-button--Color: var(--zs-text) !important;
+  --pf-v6-c-button--after--BorderColor: transparent !important;
+  --pf-v6-c-menu-toggle--BackgroundColor: var(--zs-toolbar-control-bg) !important;
+  --pf-v6-c-menu-toggle--before--BorderColor: transparent !important;
+  --pf-v6-c-menu-toggle--after--BorderColor: transparent !important;
+  background: var(--zs-toolbar-control-bg) !important;
+  background-color: var(--zs-toolbar-control-bg) !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-text) !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-control:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-control:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-control:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-control:focus,
+body.foreman-theme .pf-v5-c-menu-toggle:hover,
+body.foreman-theme .pf-v5-c-menu-toggle:focus,
+body.foreman-theme .pf-v6-c-menu-toggle:hover,
+body.foreman-theme .pf-v6-c-menu-toggle:focus,
+body.foreman-theme .btn.dropdown-toggle:hover,
+body.foreman-theme .btn.dropdown-toggle:focus {
+  background: var(--zs-toolbar-control-hover-bg) !important;
+  background-color: var(--zs-toolbar-control-hover-bg) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-link,
+body.foreman-theme .pf-v6-c-button.pf-m-link,
+body.foreman-theme .btn-link,
+body.foreman-theme .zs-theme-cancel-action {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--zs-button-secondary-text) !important;
+  min-height: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-plain,
+body.foreman-theme .pf-v6-c-button.pf-m-plain,
+body.foreman-theme .toggle-kebab,
+body.foreman-theme .dropdown-kebab-pf button,
+body.foreman-theme .dropdown-kebab-pf .btn {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: var(--zs-muted) !important;
+}
+
+body.foreman-theme .pf-v5-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v5-c-button.pf-m-plain:focus,
+body.foreman-theme .pf-v6-c-button.pf-m-plain:hover,
+body.foreman-theme .pf-v6-c-button.pf-m-plain:focus,
+body.foreman-theme .toggle-kebab:hover,
+body.foreman-theme .toggle-kebab:focus,
+body.foreman-theme .dropdown-kebab-pf button:hover,
+body.foreman-theme .dropdown-kebab-pf button:focus,
+body.foreman-theme .dropdown-kebab-pf .btn:hover,
+body.foreman-theme .dropdown-kebab-pf .btn:focus {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}

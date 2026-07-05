@@ -5,6 +5,8 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VERSION="$(ruby -I"$ROOT/lib" -rforeman_zs_theme/version -e 'print ForemanZsTheme::VERSION')"
 RPMTOP="${RPMTOP:-$ROOT/pkg/rpmbuild}"
 
+"$ROOT/scripts/build-theme-css"
+
 rm -rf "$ROOT/pkg" "$RPMTOP"
 mkdir -p "$RPMTOP"/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 
