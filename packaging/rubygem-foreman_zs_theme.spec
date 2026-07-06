@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.131
+Version: 0.1.132
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.132-1
+- Preload and prepaint the configured logo before Foreman React login/header rendering to prevent the default logo flash on reload.
+
 * Sun Jul 05 2026 ZS Operations <ops@zs.us> - 0.1.131-1
 - Match PatternFly and Bootstrap switches to AWX toggle sizing, colors, and checked-state treatment.
 
