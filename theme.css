@@ -452,9 +452,67 @@ body.foreman-theme .navbar .navbar-toggle {
   z-index: 20 !important;
 }
 
+body.foreman-theme .navbar-pf-vertical .navbar-toggle,
+body.foreman-theme .navbar-pf .navbar-toggle,
+body.foreman-theme .navbar .navbar-toggle {
+  align-items: center !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  float: none !important;
+  gap: 3px !important;
+  height: var(--zs-topbar-height) !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  min-width: 48px !important;
+  padding: 0 10px !important;
+}
+
 body.foreman-theme .navbar-pf-vertical .navbar-toggle .icon-bar,
+body.foreman-theme .navbar-pf .navbar-toggle .icon-bar,
 body.foreman-theme .navbar .navbar-toggle .icon-bar {
-  background-color: var(--zs-text) !important;
+  background-color: var(--zs-muted) !important;
+  border-radius: 2px !important;
+  display: block !important;
+  height: 3px !important;
+  margin: 0 !important;
+  width: 24px !important;
+}
+
+body.foreman-theme .navbar-pf-vertical .navbar-toggle .icon-bar + .icon-bar,
+body.foreman-theme .navbar-pf .navbar-toggle .icon-bar + .icon-bar,
+body.foreman-theme .navbar .navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button {
+  align-items: center !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  min-height: var(--zs-topbar-height) !important;
+  min-width: 48px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button .fa,
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button .fas,
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button .pficon,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button .fa,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button .fas,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button .pficon {
+  color: var(--zs-muted) !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+}
+
+body.foreman-theme .pf-v5-c-masthead__toggle .pf-v5-c-button svg,
+body.foreman-theme .pf-v6-c-masthead__toggle .pf-v6-c-button svg {
+  color: var(--zs-muted) !important;
+  fill: currentColor !important;
+  height: 24px !important;
+  width: 24px !important;
 }
 
 body.foreman-theme .pf-v5-c-page__sidebar,

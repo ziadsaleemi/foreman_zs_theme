@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.132
+Version: 0.1.135
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,15 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.135-1
+- Reduce the topbar hamburger icon size and use muted header icon coloring.
+
+* Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.134-1
+- Refine topbar sidebar-toggle sizing and center alignment after increasing the menu icon.
+
+* Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.133-1
+- Increase the topbar sidebar-toggle hamburger icon size while keeping table action menus unchanged.
+
 * Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.132-1
 - Preload and prepaint the configured logo before Foreman React login/header rendering to prevent the default logo flash on reload.
 
