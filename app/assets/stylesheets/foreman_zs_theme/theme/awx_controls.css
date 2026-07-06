@@ -141,74 +141,144 @@ body.foreman-theme #selection-checkbox input[type="checkbox"] {
 
 body.foreman-theme .pf-v5-c-switch,
 body.foreman-theme .pf-v6-c-switch {
-  --pf-v5-c-switch--ColumnGap: 16px !important;
+  --zs-switch-track-off: #4b4e55;
+  --zs-switch-track-on: var(--zs-accent);
+  --zs-switch-knob: #111418;
+  --zs-switch-width: 40px;
+  --zs-switch-height: 24px;
+  --zs-switch-knob-size: 16px;
+  --zs-switch-offset: 4px;
+  --zs-switch-checked-x: 16px;
+  --pf-v5-c-switch--ColumnGap: 14px !important;
+  --pf-v5-c-switch--FontSize: 16px !important;
+  --pf-v5-c-switch--LineHeight: 1.5 !important;
   --pf-v5-c-switch__label--Color: var(--zs-text) !important;
-  --pf-v5-c-switch__toggle--BackgroundColor: #4b4e55 !important;
-  --pf-v5-c-switch__toggle--before--BackgroundColor: #111418 !important;
-  --pf-v6-c-switch--ColumnGap: 16px !important;
+  --pf-v5-c-switch__input--checked__label--Color: var(--zs-text) !important;
+  --pf-v5-c-switch__input--not-checked__label--Color: var(--zs-text) !important;
+  --pf-v5-c-switch__input--checked__toggle--BackgroundColor: var(--zs-switch-track-on) !important;
+  --pf-v5-c-switch__input--checked__toggle--before--TranslateX: var(--zs-switch-checked-x) !important;
+  --pf-v5-c-switch__input--focus__toggle--OutlineColor: var(--zs-focus-ring) !important;
+  --pf-v5-c-switch__input--focus__toggle--OutlineOffset: 3px !important;
+  --pf-v5-c-switch__input--disabled__toggle--BackgroundColor: #4b4e55 !important;
+  --pf-v5-c-switch__input--disabled__toggle--before--BackgroundColor: #1b1d21 !important;
+  --pf-v5-c-switch__toggle--BackgroundColor: var(--zs-switch-track-off) !important;
+  --pf-v5-c-switch__toggle--BorderRadius: var(--zs-switch-height) !important;
+  --pf-v5-c-switch__toggle--Height: var(--zs-switch-height) !important;
+  --pf-v5-c-switch__toggle--Width: var(--zs-switch-width) !important;
+  --pf-v5-c-switch__toggle--before--BackgroundColor: var(--zs-switch-knob) !important;
+  --pf-v5-c-switch__toggle--before--BorderRadius: 50% !important;
+  --pf-v5-c-switch__toggle--before--BoxShadow: none !important;
+  --pf-v5-c-switch__toggle--before--Height: var(--zs-switch-knob-size) !important;
+  --pf-v5-c-switch__toggle--before--Left: var(--zs-switch-offset) !important;
+  --pf-v5-c-switch__toggle--before--Top: var(--zs-switch-offset) !important;
+  --pf-v5-c-switch__toggle--before--Width: var(--zs-switch-knob-size) !important;
+  --pf-v5-c-switch__toggle-icon--Color: var(--zs-switch-knob) !important;
+  --pf-v5-c-switch__toggle-icon--FontSize: 10px !important;
+  --pf-v5-c-switch__toggle-icon--Left: 9px !important;
+  --pf-v6-c-switch--ColumnGap: 14px !important;
+  --pf-v6-c-switch--FontSize: 16px !important;
+  --pf-v6-c-switch--LineHeight: 1.5 !important;
   --pf-v6-c-switch__label--Color: var(--zs-text) !important;
-  --pf-v6-c-switch__toggle--BackgroundColor: #4b4e55 !important;
-  --pf-v6-c-switch__toggle--before--BackgroundColor: #111418 !important;
+  --pf-v6-c-switch__input--checked__label--Color: var(--zs-text) !important;
+  --pf-v6-c-switch__input--not-checked__label--Color: var(--zs-text) !important;
+  --pf-v6-c-switch__input--checked__toggle--BackgroundColor: var(--zs-switch-track-on) !important;
+  --pf-v6-c-switch__input--checked__toggle--before--TranslateX: var(--zs-switch-checked-x) !important;
+  --pf-v6-c-switch__input--focus__toggle--OutlineColor: var(--zs-focus-ring) !important;
+  --pf-v6-c-switch__input--focus__toggle--OutlineOffset: 3px !important;
+  --pf-v6-c-switch__input--disabled__toggle--BackgroundColor: #4b4e55 !important;
+  --pf-v6-c-switch__input--disabled__toggle--before--BackgroundColor: #1b1d21 !important;
+  --pf-v6-c-switch__toggle--BackgroundColor: var(--zs-switch-track-off) !important;
+  --pf-v6-c-switch__toggle--BorderRadius: var(--zs-switch-height) !important;
+  --pf-v6-c-switch__toggle--Height: var(--zs-switch-height) !important;
+  --pf-v6-c-switch__toggle--Width: var(--zs-switch-width) !important;
+  --pf-v6-c-switch__toggle--before--BackgroundColor: var(--zs-switch-knob) !important;
+  --pf-v6-c-switch__toggle--before--BorderRadius: 50% !important;
+  --pf-v6-c-switch__toggle--before--BoxShadow: none !important;
+  --pf-v6-c-switch__toggle--before--Height: var(--zs-switch-knob-size) !important;
+  --pf-v6-c-switch__toggle--before--Left: var(--zs-switch-offset) !important;
+  --pf-v6-c-switch__toggle--before--Top: var(--zs-switch-offset) !important;
+  --pf-v6-c-switch__toggle--before--Width: var(--zs-switch-knob-size) !important;
+  --pf-v6-c-switch__toggle-icon--Color: var(--zs-switch-knob) !important;
+  --pf-v6-c-switch__toggle-icon--FontSize: 10px !important;
+  --pf-v6-c-switch__toggle-icon--Left: 9px !important;
   align-items: center !important;
   color: var(--zs-text) !important;
+  cursor: pointer !important;
 }
 
 body.foreman-theme .pf-v5-c-switch__toggle,
 body.foreman-theme .pf-v6-c-switch__toggle {
-  background: #4b4e55 !important;
-  background-color: #4b4e55 !important;
+  background: var(--zs-switch-track-off) !important;
+  background-color: var(--zs-switch-track-off) !important;
   border: 0 !important;
   border-radius: 999px !important;
   box-shadow: none !important;
-  height: 32px !important;
-  min-width: 56px !important;
+  display: inline-block !important;
+  height: var(--zs-switch-height) !important;
+  min-width: var(--zs-switch-width) !important;
   position: relative !important;
-  width: 56px !important;
+  transition: background-color 0.2s ease !important;
+  width: var(--zs-switch-width) !important;
 }
 
 body.foreman-theme .pf-v5-c-switch__toggle::before,
 body.foreman-theme .pf-v6-c-switch__toggle::before {
-  background: #111418 !important;
-  background-color: #111418 !important;
+  background: var(--zs-switch-knob) !important;
+  background-color: var(--zs-switch-knob) !important;
   border: 0 !important;
   border-radius: 50% !important;
   box-shadow: none !important;
-  height: 24px !important;
-  left: 4px !important;
-  top: 4px !important;
-  transform: none !important;
-  width: 24px !important;
+  content: "" !important;
+  height: var(--zs-switch-knob-size) !important;
+  left: var(--zs-switch-offset) !important;
+  position: absolute !important;
+  top: var(--zs-switch-offset) !important;
+  transform: translateX(0) !important;
+  transition: transform 0.2s ease !important;
+  width: var(--zs-switch-knob-size) !important;
 }
 
 body.foreman-theme .pf-v5-c-switch__toggle::after,
 body.foreman-theme .pf-v6-c-switch__toggle::after {
-  color: transparent !important;
   content: "" !important;
+  display: none !important;
 }
 
 body.foreman-theme .pf-v5-c-switch__input:checked ~ .pf-v5-c-switch__toggle,
 body.foreman-theme .pf-v6-c-switch__input:checked ~ .pf-v6-c-switch__toggle {
-  background: var(--zs-accent) !important;
-  background-color: var(--zs-accent) !important;
+  background: var(--zs-switch-track-on) !important;
+  background-color: var(--zs-switch-track-on) !important;
 }
 
 body.foreman-theme .pf-v5-c-switch__input:checked ~ .pf-v5-c-switch__toggle::before,
 body.foreman-theme .pf-v6-c-switch__input:checked ~ .pf-v6-c-switch__toggle::before {
-  left: 28px !important;
-  transform: none !important;
+  left: var(--zs-switch-offset) !important;
+  transform: translateX(var(--zs-switch-checked-x)) !important;
 }
 
-body.foreman-theme .pf-v5-c-switch__input:checked ~ .pf-v5-c-switch__toggle::after,
-body.foreman-theme .pf-v6-c-switch__input:checked ~ .pf-v6-c-switch__toggle::after {
-  color: #111418 !important;
-  content: "\2713" !important;
-  font-size: 15px !important;
-  font-weight: 800 !important;
-  left: 13px !important;
-  line-height: 1 !important;
+body.foreman-theme .pf-v5-c-switch__toggle-icon,
+body.foreman-theme .pf-v6-c-switch__toggle-icon {
+  color: var(--zs-switch-knob) !important;
+  display: flex !important;
+  font-size: 10px !important;
+  inset-block: 0 !important;
+  left: 9px !important;
+  line-height: var(--zs-switch-height) !important;
   position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
+  top: 0 !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__input:not(:checked) ~ .pf-v5-c-switch__toggle .pf-v5-c-switch__toggle-icon,
+body.foreman-theme .pf-v6-c-switch__input:not(:checked) ~ .pf-v6-c-switch__toggle .pf-v6-c-switch__toggle-icon {
+  display: none !important;
+}
+
+body.foreman-theme .pf-v5-c-switch__toggle-icon svg,
+body.foreman-theme .pf-v6-c-switch__toggle-icon svg {
+  color: var(--zs-switch-knob) !important;
+  fill: currentColor !important;
+  height: 10px !important;
+  width: 10px !important;
 }
 
 body.foreman-theme .pf-v5-c-switch__label,
@@ -219,28 +289,43 @@ body.foreman-theme .pf-v6-c-switch__label {
 }
 
 body.foreman-theme .bootstrap-switch {
-  background: #4b4e55 !important;
-  background-color: #4b4e55 !important;
+  --zs-switch-track-off: #4b4e55;
+  --zs-switch-track-on: var(--zs-accent);
+  --zs-switch-knob: #111418;
+  --zs-switch-width: 40px;
+  --zs-switch-height: 24px;
+  --zs-switch-knob-size: 16px;
+  --zs-switch-offset: 4px;
+  --zs-switch-checked-x: 16px;
+  background: var(--zs-switch-track-off) !important;
+  background-color: var(--zs-switch-track-off) !important;
   border: 0 !important;
   border-radius: 999px !important;
   box-shadow: none !important;
-  height: 32px !important;
-  min-width: 56px !important;
+  display: inline-block !important;
+  height: var(--zs-switch-height) !important;
+  min-width: var(--zs-switch-width) !important;
   overflow: hidden !important;
   position: relative !important;
-  width: 56px !important;
+  vertical-align: middle !important;
+  width: var(--zs-switch-width) !important;
 }
 
 body.foreman-theme .bootstrap-switch.bootstrap-switch-on {
-  background: var(--zs-accent) !important;
-  background-color: var(--zs-accent) !important;
+  background: var(--zs-switch-track-on) !important;
+  background-color: var(--zs-switch-track-on) !important;
 }
 
 body.foreman-theme .bootstrap-switch .bootstrap-switch-container {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
-  height: 32px !important;
+  height: var(--zs-switch-height) !important;
+  inset: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  width: var(--zs-switch-width) !important;
 }
 
 body.foreman-theme .bootstrap-switch .bootstrap-switch-handle-on,
@@ -249,34 +334,51 @@ body.foreman-theme .bootstrap-switch .bootstrap-switch-handle-off {
   border: 0 !important;
   box-shadow: none !important;
   color: transparent !important;
-  height: 32px !important;
-  line-height: 32px !important;
+  height: var(--zs-switch-height) !important;
+  line-height: var(--zs-switch-height) !important;
   padding: 0 !important;
   text-shadow: none !important;
 }
 
 body.foreman-theme .bootstrap-switch .bootstrap-switch-label {
-  background: #111418 !important;
-  background-color: #111418 !important;
+  background: transparent !important;
+  background-color: transparent !important;
   border: 0 !important;
-  border-radius: 50% !important;
   box-shadow: none !important;
   color: transparent !important;
-  height: 24px !important;
-  line-height: 24px !important;
-  margin: 4px !important;
-  min-width: 24px !important;
+  height: var(--zs-switch-height) !important;
+  line-height: var(--zs-switch-height) !important;
+  margin: 0 !important;
+  min-width: var(--zs-switch-width) !important;
   padding: 0 !important;
-  position: relative !important;
-  width: 24px !important;
+  width: var(--zs-switch-width) !important;
+}
+
+body.foreman-theme .bootstrap-switch::before {
+  background: var(--zs-switch-knob) !important;
+  background-color: var(--zs-switch-knob) !important;
+  border-radius: 50% !important;
+  content: "" !important;
+  height: var(--zs-switch-knob-size) !important;
+  left: var(--zs-switch-offset) !important;
+  position: absolute !important;
+  top: var(--zs-switch-offset) !important;
+  transform: translateX(0) !important;
+  transition: transform 0.2s ease !important;
+  width: var(--zs-switch-knob-size) !important;
+  z-index: 2 !important;
+}
+
+body.foreman-theme .bootstrap-switch.bootstrap-switch-on::before {
+  transform: translateX(var(--zs-switch-checked-x)) !important;
 }
 
 body.foreman-theme .bootstrap-switch.bootstrap-switch-on::after {
-  color: #111418 !important;
+  color: var(--zs-switch-knob) !important;
   content: "\2713" !important;
-  font-size: 15px !important;
+  font-size: 12px !important;
   font-weight: 800 !important;
-  left: 13px !important;
+  left: 9px !important;
   line-height: 1 !important;
   pointer-events: none !important;
   position: absolute !important;

@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.130
+Version: 0.1.131
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Sun Jul 05 2026 ZS Operations <ops@zs.us> - 0.1.131-1
+- Match PatternFly and Bootstrap switches to AWX toggle sizing, colors, and checked-state treatment.
+
 * Sun Jul 05 2026 ZS Operations <ops@zs.us> - 0.1.130-1
 - Add shared AWX-style button, form, and table partials for consistent Foreman controls.
 - Normalize table/list expanders, row action menus, pagination, selects, and toolbar controls.
