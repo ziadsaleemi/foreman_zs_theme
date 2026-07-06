@@ -1,0 +1,104 @@
+name: Build RPM Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+      - '*.*.*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Optional version tag to validate, for example v0.1.132.
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build-rpm:
+    name: Build EL9 RPM
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate tag and plugin version
+        id: version
+        shell: bash
+        env:
+          REQUESTED_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+
+          ref_name="${GITHUB_REF_NAME}"
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" && -n "${REQUESTED_TAG}" ]]; then
+            ref_name="${REQUESTED_TAG}"
+          fi
+
+          version="${ref_name#v}"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Tag '$ref_name' is not a semantic version tag. Use vX.Y.Z or X.Y.Z."
+            exit 1
+          fi
+
+          plugin_version="$(sed -n "s/.*VERSION = '\([^']*\)'.*/\1/p" lib/foreman_zs_theme/version.rb)"
+          if [[ "$plugin_version" != "$version" ]]; then
+            echo "::error::Tag version '$version' does not match ForemanZsTheme::VERSION '$plugin_version'."
+            exit 1
+          fi
+
+          rpm_path="pkg/rpmbuild/RPMS/noarch/rubygem-foreman_zs_theme-${version}-1.el9.noarch.rpm"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "rpm_path=$rpm_path" >> "$GITHUB_OUTPUT"
+
+      - name: Build RPM in EL9 container
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          docker run --rm \
+            -e RPMTOP=/work/pkg/rpmbuild \
+            -v "$PWD:/work" \
+            -w /work \
+            quay.io/centos/centos:stream9 \
+            /bin/bash -lc '
+              set -euo pipefail
+              dnf install -y ruby ruby-devel rubygems rpm-build redhat-rpm-config make gcc
+              ruby -c app/overrides/zs_theme_stylesheet.rb
+              ruby -c scripts/build-theme-css
+              ruby -c lib/foreman_zs_theme/version.rb
+              packaging/build-rpm.sh
+            '
+
+          sudo chown -R "$(id -u):$(id -g)" pkg theme.css "foreman_zs_theme-${{ steps.version.outputs.version }}.gem"
+          test -f "${{ steps.version.outputs.rpm_path }}"
+
+      - name: Generate checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum "${{ steps.version.outputs.rpm_path }}" > "${{ steps.version.outputs.rpm_path }}.sha256"
+
+      - name: Upload RPM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rubygem-foreman_zs_theme-${{ steps.version.outputs.version }}-el9-rpm
+          if-no-files-found: error
+          path: |
+            ${{ steps.version.outputs.rpm_path }}
+            ${{ steps.version.outputs.rpm_path }}.sha256
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: foreman_zs_theme ${{ steps.version.outputs.version }}
+          generate_release_notes: true
+          files: |
+            ${{ steps.version.outputs.rpm_path }}
+            ${{ steps.version.outputs.rpm_path }}.sha256
