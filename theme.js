@@ -9,6 +9,10 @@
   var siteFontSize = normalizedFontSize(config.siteFontSize, 14);
   var sidebarFontSize = normalizedFontSize(config.sidebarFontSize, 14);
   var hideForemanText = config.hideForemanHeaderText === true;
+  var colorModeStateKey = 'zsForemanTheme.colorMode';
+  var themeToggleItemId = 'zs-theme-mode-toggle-item';
+  var themeToggleId = 'zs-theme-mode-toggle';
+  var themeSettingsTimer = null;
   var sidebarStateKey = 'zsForemanTheme.sidebarState';
   var restoreSidebarTimer = null;
   var sidebarToggleInFlight = false;
@@ -60,6 +64,156 @@
     document.body.style.setProperty('--zs-site-font-size', siteFontSize + 'px');
     document.body.style.setProperty('--zs-sidebar-font-size', sidebarFontSize + 'px');
     document.body.style.setProperty('--zs-sidebar-description-font-size', Math.max(10, sidebarFontSize - 2) + 'px');
+  }
+
+  function normalizeColorMode(mode) {
+    return mode === 'light' ? 'light' : 'dark';
+  }
+
+  function getSavedColorMode() {
+    try {
+      return normalizeColorMode(window.localStorage.getItem(colorModeStateKey));
+    } catch (error) {
+      return 'dark';
+    }
+  }
+
+  function saveColorMode(mode) {
+    try {
+      window.localStorage.setItem(colorModeStateKey, normalizeColorMode(mode));
+    } catch (error) {
+      // localStorage can be unavailable in hardened browser contexts.
+    }
+  }
+
+  function applyColorMode(mode) {
+    var normalizedMode = normalizeColorMode(mode);
+    var isLight = normalizedMode === 'light';
+    var root = document.documentElement;
+
+    root.classList.toggle('zs-theme-light-mode', isLight);
+    root.classList.toggle('zs-theme-dark-mode', !isLight);
+    root.classList.toggle('pf-v5-theme-dark', !isLight);
+    root.classList.toggle('pf-v6-theme-dark', !isLight);
+    root.classList.toggle('pf-v5-theme-light', isLight);
+    root.classList.toggle('pf-v6-theme-light', isLight);
+    root.setAttribute('data-zs-theme-mode', normalizedMode);
+
+    if (bodyIsReady()) {
+      document.body.classList.toggle('zs-theme-light-mode', isLight);
+      document.body.classList.toggle('zs-theme-dark-mode', !isLight);
+      document.body.classList.toggle('zs-dark-theme', !isLight);
+      document.body.classList.toggle('pf-theme-dark', !isLight);
+      document.body.classList.toggle('pf-t-dark', !isLight);
+      document.body.classList.toggle('pf-v5-theme-dark', !isLight);
+      document.body.classList.toggle('pf-v6-theme-dark', !isLight);
+      document.body.classList.toggle('pf-v5-theme-light', isLight);
+      document.body.classList.toggle('pf-v6-theme-light', isLight);
+      document.body.setAttribute('data-zs-theme-mode', normalizedMode);
+    }
+
+    updateColorModeToggle(normalizedMode);
+  }
+
+  function colorModeToggleIcon(mode) {
+    if (mode === 'light') {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 4.5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1Zm0 17.5a1 1 0 0 1-1-1v-1.5a1 1 0 1 1 2 0V21a1 1 0 0 1-1 1Zm7.07-15.07a1 1 0 0 1-.7-1.71l1.06-1.06a1 1 0 0 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-.71.3ZM4.86 19.14a1 1 0 0 1-.7-1.71l1.06-1.06a1 1 0 0 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-.71.3ZM22 13h-1.5a1 1 0 1 1 0-2H22a1 1 0 1 1 0 2ZM3.5 13H2a1 1 0 1 1 0-2h1.5a1 1 0 1 1 0 2Zm16.63 6.14a1 1 0 0 1-.7-.3l-1.06-1.06a1 1 0 1 1 1.41-1.41l1.06 1.06a1 1 0 0 1-.71 1.71ZM5.93 6.93a1 1 0 0 1-.71-.3L4.16 5.57a1 1 0 0 1 1.41-1.41l1.06 1.06a1 1 0 0 1-.7 1.71ZM12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg>';
+    }
+
+    return '<svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M21 14.3A8.7 8.7 0 0 1 9.7 3a1 1 0 0 0-1.1-1.4A10.8 10.8 0 1 0 22.4 15.4a1 1 0 0 0-1.4-1.1ZM11.2 20A8.8 8.8 0 0 1 7.7 3.1a10.7 10.7 0 0 0 13.2 13.2A8.8 8.8 0 0 1 11.2 20Z"/></svg>';
+  }
+
+  function updateColorModeToggle(mode) {
+    var button = document.getElementById(themeToggleId);
+    var normalizedMode = normalizeColorMode(mode || getSavedColorMode());
+
+    if (!button) return;
+
+    button.innerHTML = colorModeToggleIcon(normalizedMode);
+    button.setAttribute('aria-pressed', normalizedMode === 'dark' ? 'true' : 'false');
+    button.setAttribute('aria-label', normalizedMode === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    button.setAttribute('title', normalizedMode === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+
+  function findNotificationAnchor() {
+    var selector = [
+      '#notification-badge',
+      '.pf-v5-c-notification-badge',
+      '.pf-v6-c-notification-badge',
+      '[aria-label*="Notification"]',
+      '[aria-label*="notification"]',
+      '.navbar-utility .fa-bell',
+      '.navbar-utility .pficon-bell',
+      '.navbar-right .fa-bell',
+      '.navbar-right .pficon-bell'
+    ].join(', ');
+    var anchor = document.querySelector(selector);
+
+    if (!anchor) return null;
+
+    return anchor.closest('button, a, li, .pf-v5-c-toolbar__item, .pf-v6-c-toolbar__item') || anchor;
+  }
+
+  function findTopbarFallbackContainer() {
+    return document.querySelector(
+      '.navbar-utility, .navbar-right, .pf-v5-c-masthead .pf-v5-c-toolbar__content-section, .pf-v6-c-masthead .pf-v6-c-toolbar__content-section, .pf-v5-c-masthead .pf-v5-c-toolbar__group, .pf-v6-c-masthead .pf-v6-c-toolbar__group, .pf-v5-c-masthead__content, .pf-v6-c-masthead__content'
+    );
+  }
+
+  function topbarInsertionItem(anchor) {
+    if (!anchor) return null;
+
+    return anchor.closest('li, .pf-v5-c-toolbar__item, .pf-v6-c-toolbar__item') || anchor;
+  }
+
+  function buildColorModeToggleItem(parent) {
+    var item = document.createElement(parent && /^(UL|OL)$/i.test(parent.tagName) ? 'li' : 'div');
+    var button = document.createElement('button');
+
+    item.id = themeToggleItemId;
+    item.className = 'zs-theme-mode-toggle-item';
+    if (parent && parent.classList) {
+      if (parent.closest('.pf-v5-c-toolbar')) item.classList.add('pf-v5-c-toolbar__item');
+      if (parent.closest('.pf-v6-c-toolbar')) item.classList.add('pf-v6-c-toolbar__item');
+    }
+    button.id = themeToggleId;
+    button.className = 'zs-theme-mode-toggle';
+    button.type = 'button';
+    button.addEventListener('click', function () {
+      var nextMode = getSavedColorMode() === 'dark' ? 'light' : 'dark';
+
+      saveColorMode(nextMode);
+      applyColorMode(nextMode);
+    });
+    item.appendChild(button);
+
+    return item;
+  }
+
+  function ensureColorModeToggle() {
+    if (!bodyIsReady()) return;
+
+    var anchor = findNotificationAnchor();
+    var anchorItem = topbarInsertionItem(anchor);
+    var parent = (anchorItem && anchorItem.parentNode) || findTopbarFallbackContainer();
+    var item = document.getElementById(themeToggleItemId);
+
+    if (!parent) return;
+
+    if (!item || (parent.tagName && /^(UL|OL)$/i.test(parent.tagName) && !/^(LI)$/i.test(item.tagName))) {
+      if (item && item.parentNode) item.parentNode.removeChild(item);
+      item = buildColorModeToggleItem(parent);
+    }
+
+    if (anchorItem && anchorItem.parentNode === parent && item.nextSibling !== anchorItem) {
+      parent.insertBefore(item, anchorItem);
+    } else if (!item.parentNode) {
+      parent.appendChild(item);
+    } else if (!anchorItem && item.parentNode !== parent) {
+      parent.appendChild(item);
+    }
+
+    updateColorModeToggle(getSavedColorMode());
   }
 
   function applyLogo() {
@@ -182,8 +336,8 @@
       link.parentNode.removeChild(link);
     });
 
-    appendFaviconLink('icon', faviconUrl, type);
-    appendFaviconLink('shortcut icon', faviconUrl, type);
+    appendFaviconLink('icon', resolvedUrl, type);
+    appendFaviconLink('shortcut icon', resolvedUrl, type);
   }
 
   function hideWordmarkText() {
@@ -219,6 +373,8 @@
   function applyThemeSettings() {
     if (!bodyIsReady()) return;
 
+    applyColorMode(getSavedColorMode());
+    ensureColorModeToggle();
     applyFontSizes();
     applyFavicon();
     applyLogo();
@@ -229,6 +385,15 @@
     applySidebarDescriptions();
     scheduleSidebarSync();
     restoreSidebarState();
+  }
+
+  function scheduleThemeSettings() {
+    if (themeSettingsTimer) return;
+
+    themeSettingsTimer = window.setTimeout(function () {
+      themeSettingsTimer = null;
+      applyThemeSettings();
+    }, 50);
   }
 
   function markTopbarPresence() {
@@ -546,7 +711,7 @@
     applyThemeSettings();
   }
 
-  new MutationObserver(applyThemeSettings).observe(document.documentElement, {
+  new MutationObserver(scheduleThemeSettings).observe(document.documentElement, {
     childList: true,
     subtree: true
   });

@@ -13,8 +13,8 @@ Deface::Override.new(
     <% zs_theme_site_font_size = ForemanZsTheme::FontSize.normalize(Setting[:zs_theme_site_font_size], ForemanZsTheme::FontSize::DEFAULT_SITE) %>
     <% zs_theme_sidebar_font_size = ForemanZsTheme::FontSize.normalize(Setting[:zs_theme_sidebar_font_size], ForemanZsTheme::FontSize::DEFAULT_SIDEBAR) %>
     <% if zs_theme_favicon_url.present? %>
-      <link rel="icon" href="<%= zs_theme_favicon_url %>"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
-      <link rel="shortcut icon" href="<%= zs_theme_favicon_url %>"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
+      <link rel="icon" href="<%= zs_theme_favicon_url %>" data-zs-theme-favicon="true"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
+      <link rel="shortcut icon" href="<%= zs_theme_favicon_url %>" data-zs-theme-favicon="true"<%= zs_theme_favicon_type.present? ? " type=\"#{zs_theme_favicon_type}\"".html_safe : '' %>>
     <% end %>
     <link rel="preload" as="image" href="<%= zs_theme_logo_url %>">
     <style id="zs-theme-logo-prepaint">
@@ -31,6 +31,25 @@ Deface::Override.new(
         padding: 0 !important;
       }
     </style>
+    <script>
+      (function () {
+        var mode = 'dark';
+
+        try {
+          if (window.localStorage.getItem('zsForemanTheme.colorMode') === 'light') mode = 'light';
+        } catch (error) {
+          mode = 'dark';
+        }
+
+        document.documentElement.classList.toggle('zs-theme-light-mode', mode === 'light');
+        document.documentElement.classList.toggle('zs-theme-dark-mode', mode !== 'light');
+        document.documentElement.classList.toggle('pf-v5-theme-dark', mode !== 'light');
+        document.documentElement.classList.toggle('pf-v6-theme-dark', mode !== 'light');
+        document.documentElement.classList.toggle('pf-v5-theme-light', mode === 'light');
+        document.documentElement.classList.toggle('pf-v6-theme-light', mode === 'light');
+        document.documentElement.setAttribute('data-zs-theme-mode', mode);
+      })();
+    </script>
     <link rel="stylesheet" href="/assets/foreman_zs_theme/theme.css?v=<%= ForemanZsTheme::VERSION %>">
     <script>
       (function () {

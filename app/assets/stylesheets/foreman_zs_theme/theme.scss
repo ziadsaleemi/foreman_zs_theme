@@ -6,6 +6,7 @@
 :root {
   --zs-bg: #222428;
   --zs-topbar: #000000;
+  --zs-topbar-hover: #222428;
   --zs-topbar-height: 71px;
   --zs-shell: #1b1d21;
   --zs-sidebar: #1b1d21;
@@ -151,6 +152,99 @@ body.foreman-theme.zs-dark-theme {
   color-scheme: dark;
 }
 
+html.zs-theme-light-mode,
+html.zs-theme-light-mode body.foreman-theme,
+body.foreman-theme.zs-theme-light-mode {
+  --zs-bg: #f0f0f0;
+  --zs-topbar: #000000;
+  --zs-topbar-hover: #222428;
+  --zs-shell: #f8f8f8;
+  --zs-sidebar: #ffffff;
+  --zs-sidebar-2: #f0f0f0;
+  --zs-sidebar-3: #ffffff;
+  --zs-sidebar-border: #d2d2d2;
+  --zs-sidebar-accent: #6a6e73;
+  --zs-sidebar-active-bg: #edf5fd;
+  --zs-panel: #ffffff;
+  --zs-panel-2: #f5f5f5;
+  --zs-panel-3: #e7e7e7;
+  --zs-tab-bg: #f8f8f8;
+  --zs-border: #d2d2d2;
+  --zs-border-soft: #ececec;
+  --zs-text: #151515;
+  --zs-muted: #6a6e73;
+  --zs-dim: #8a8d90;
+  --zs-link: #0066cc;
+  --zs-button-bg: #f0f0f0;
+  --zs-button-hover-bg: #e6e6e6;
+  --zs-button-active-bg: #d2d2d2;
+  --zs-button-border: #8a8d90;
+  --zs-button-border-hover: #6a6e73;
+  --zs-button-secondary-hover-bg: rgba(0, 102, 204, 0.08);
+  --zs-toolbar-control-bg: #f0f0f0;
+  --zs-toolbar-control-hover-bg: #e6e6e6;
+  --zs-toolbar-control-border: #6a6e73;
+  --zs-menu-bg: #ffffff;
+  --zs-menu-hover-bg: #f0f0f0;
+  --zs-focus-ring: #0066cc;
+  color-scheme: light;
+}
+
+html.zs-theme-light-mode body.foreman-theme,
+body.foreman-theme.zs-theme-light-mode {
+  --pf-global--BackgroundColor--100: var(--zs-bg);
+  --pf-global--BackgroundColor--150: var(--zs-panel);
+  --pf-global--BackgroundColor--200: var(--zs-panel);
+  --pf-global--BackgroundColor--300: var(--zs-bg);
+  --pf-global--BackgroundColor--400: var(--zs-panel-3);
+  --pf-global--BackgroundColor--light-100: var(--zs-panel);
+  --pf-global--BackgroundColor--light-200: var(--zs-bg);
+  --pf-global--BackgroundColor--light-300: var(--zs-panel-2);
+  --pf-global--BackgroundColor--dark-100: var(--zs-panel);
+  --pf-global--BackgroundColor--dark-200: var(--zs-topbar);
+  --pf-global--BackgroundColor--dark-300: var(--zs-bg);
+  --pf-global--BackgroundColor--dark-400: var(--zs-panel-3);
+  --pf-global--Color--100: var(--zs-text);
+  --pf-global--Color--200: var(--zs-muted);
+  --pf-global--Color--light-100: var(--zs-text);
+  --pf-global--Color--light-200: var(--zs-muted);
+  --pf-global--BorderColor--100: var(--zs-border);
+  --pf-global--BorderColor--200: var(--zs-border);
+  --pf-global--BorderColor--300: var(--zs-button-border);
+  --pf-global--active-color--100: var(--zs-accent);
+  --pf-global--primary-color--100: var(--zs-accent);
+  --pf-global--primary-color--light-100: var(--zs-accent);
+  --pf-global--primary-color--dark-100: var(--zs-accent);
+  --pf-global--link--Color: var(--zs-link);
+  --pf-global--link--Color--hover: #004080;
+  --pf-global--link--Color--light: var(--zs-link);
+  --pf-global--link--Color--light--hover: #004080;
+  --pf-global--link--Color--dark: var(--zs-link);
+  --pf-global--link--Color--dark--hover: #004080;
+  --pf-v5-global--BackgroundColor--100: var(--zs-bg);
+  --pf-v5-global--BackgroundColor--200: var(--zs-shell);
+  --pf-v5-global--Color--100: var(--zs-text);
+  --pf-v5-global--Color--200: var(--zs-muted);
+  --pf-v5-global--BorderColor--100: var(--zs-border);
+  --pf-v5-global--primary-color--100: var(--zs-accent);
+  --pf-v5-global--link--Color: var(--zs-link);
+  --pf-t--global--background--color--primary--default: var(--zs-bg);
+  --pf-t--global--background--color--secondary--default: var(--zs-shell);
+  --pf-t--global--background--color--floating--default: var(--zs-panel);
+  --pf-t--global--text--color--regular: var(--zs-text);
+  --pf-t--global--text--color--subtle: var(--zs-muted);
+  --pf-t--global--border--color--default: var(--zs-border);
+  --pf-t--global--color--brand--default: var(--zs-accent);
+  --navbar-pf-bg-color: var(--zs-topbar);
+  --navbar-pf-navbar-bg-color: var(--zs-topbar);
+  --navbar-pf-navbar-primary-bg-color: var(--zs-topbar);
+  --navbar-pf-navbar-utility-bg-color: var(--zs-topbar);
+  --navbar-pf-border-color: var(--zs-topbar);
+  --navbar-pf-link-color: #e0e0e0;
+  --navbar-pf-link-hover-bg-color: var(--zs-topbar-hover);
+  color-scheme: light;
+}
+
 body.foreman-theme a {
   color: var(--zs-accent-2);
 }
@@ -269,9 +363,65 @@ body.foreman-theme .pf-v5-c-masthead #notification-badge:hover,
 body.foreman-theme .pf-v5-c-masthead #notification-badge:focus,
 body.foreman-theme .pf-v6-c-masthead #notification-badge:hover,
 body.foreman-theme .pf-v6-c-masthead #notification-badge:focus {
-  background: var(--zs-panel-2) !important;
-  background-color: var(--zs-panel-2) !important;
+  background: var(--zs-topbar-hover) !important;
+  background-color: var(--zs-topbar-hover) !important;
   color: var(--zs-text) !important;
+}
+
+body.foreman-theme .zs-theme-mode-toggle-item {
+  align-items: center !important;
+  background: var(--zs-topbar) !important;
+  background-color: var(--zs-topbar) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  display: inline-flex !important;
+  height: var(--zs-topbar-height) !important;
+  justify-content: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: top !important;
+}
+
+body.foreman-theme .zs-theme-mode-toggle {
+  align-items: center !important;
+  appearance: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--zs-muted) !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  height: var(--zs-topbar-height) !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  min-height: var(--zs-topbar-height) !important;
+  min-width: 44px !important;
+  outline: 0 !important;
+  padding: 0 10px !important;
+  text-shadow: none !important;
+}
+
+body.foreman-theme .zs-theme-mode-toggle:hover,
+body.foreman-theme .zs-theme-mode-toggle:focus {
+  background: var(--zs-topbar-hover) !important;
+  background-color: var(--zs-topbar-hover) !important;
+  color: #ffffff !important;
+}
+
+body.foreman-theme .zs-theme-mode-toggle:focus-visible {
+  box-shadow: inset 0 -2px 0 var(--zs-focus-ring) !important;
+}
+
+body.foreman-theme .zs-theme-mode-toggle svg {
+  display: block !important;
+  fill: currentColor !important;
+  height: 20px !important;
+  pointer-events: none !important;
+  width: 20px !important;
 }
 
 body.foreman-theme .navbar-pf-vertical::before,
@@ -410,10 +560,105 @@ body.foreman-theme .navbar .dropdown-toggle:hover,
 body.foreman-theme .navbar .dropdown-toggle:focus,
 body.foreman-theme .navbar .btn:hover,
 body.foreman-theme .navbar .btn:focus {
-  background: var(--zs-panel-2) !important;
-  background-color: var(--zs-panel-2) !important;
+  background: var(--zs-topbar-hover) !important;
+  background-color: var(--zs-topbar-hover) !important;
   border-color: var(--zs-border) !important;
   color: var(--zs-text) !important;
+}
+
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-page__header,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-page__header,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-alt,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-vertical,
+html.zs-theme-light-mode body.foreman-theme .navbar,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-page__header *,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-page__header *,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead *,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead *,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf *,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-alt *,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-vertical *,
+html.zs-theme-light-mode body.foreman-theme .navbar * {
+  color: #e0e0e0 !important;
+}
+
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-page__header a,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-page__header a,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead a,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead a,
+html.zs-theme-light-mode body.foreman-theme .navbar a,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf a,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-vertical a,
+html.zs-theme-light-mode body.foreman-theme .zs-theme-mode-toggle,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead #notification-badge,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead #notification-badge,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-notification-badge,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-notification-badge {
+  color: #aaabac !important;
+}
+
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-page__header a:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-page__header a:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-page__header a:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-page__header a:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead a:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead a:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead a:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead a:focus,
+html.zs-theme-light-mode body.foreman-theme .navbar a:hover,
+html.zs-theme-light-mode body.foreman-theme .navbar a:focus,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf a:hover,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf a:focus,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-vertical a:hover,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-vertical a:focus,
+html.zs-theme-light-mode body.foreman-theme .zs-theme-mode-toggle:hover,
+html.zs-theme-light-mode body.foreman-theme .zs-theme-mode-toggle:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead #notification-badge:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead #notification-badge:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead #notification-badge:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead #notification-badge:focus {
+  background: var(--zs-topbar-hover) !important;
+  background-color: var(--zs-topbar-hover) !important;
+  color: #ffffff !important;
+}
+
+html.zs-theme-light-mode body.foreman-theme .navbar-pf-vertical .navbar-toggle .icon-bar,
+html.zs-theme-light-mode body.foreman-theme .navbar-pf .navbar-toggle .icon-bar,
+html.zs-theme-light-mode body.foreman-theme .navbar .navbar-toggle .icon-bar {
+  background-color: #aaabac !important;
+}
+
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-context-selector__toggle,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-dropdown__toggle,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-button:not(.zs-theme-mode-toggle):not(#notification-badge),
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-context-selector__toggle,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-dropdown__toggle,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-button:not(.zs-theme-mode-toggle):not(#notification-badge) {
+  background: #35383e !important;
+  background-color: #35383e !important;
+  border-color: #4d5258 !important;
+  box-shadow: none !important;
+  color: #e0e0e0 !important;
+}
+
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-context-selector__toggle:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-context-selector__toggle:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-dropdown__toggle:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-dropdown__toggle:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-button:not(.zs-theme-mode-toggle):not(#notification-badge):hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-masthead .pf-v5-c-button:not(.zs-theme-mode-toggle):not(#notification-badge):focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-context-selector__toggle:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-context-selector__toggle:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-dropdown__toggle:hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-dropdown__toggle:focus,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-button:not(.zs-theme-mode-toggle):not(#notification-badge):hover,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-masthead .pf-v6-c-button:not(.zs-theme-mode-toggle):not(#notification-badge):focus {
+  background: var(--zs-topbar-hover) !important;
+  background-color: var(--zs-topbar-hover) !important;
+  color: #ffffff !important;
 }
 
 body.foreman-theme .navbar-pf-vertical .navbar-toggle,
