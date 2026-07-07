@@ -16,6 +16,8 @@
   --zs-sidebar-accent: #aaabac;
   --zs-sidebar-active-bg: #26292d;
   --zs-sidebar-active-border: #1fa7f8;
+  --zs-sidebar-text: #e0e0e0;
+  --zs-sidebar-muted: #aaabac;
   --zs-sidebar-active-bar-width: 4px;
   --zs-sidebar-search-height: 40px;
   --zs-sidebar-width: 290px;
@@ -159,12 +161,14 @@ body.foreman-theme.zs-theme-light-mode {
   --zs-topbar: #000000;
   --zs-topbar-hover: #222428;
   --zs-shell: #f8f8f8;
-  --zs-sidebar: #ffffff;
-  --zs-sidebar-2: #f0f0f0;
-  --zs-sidebar-3: #ffffff;
-  --zs-sidebar-border: #d2d2d2;
-  --zs-sidebar-accent: #6a6e73;
-  --zs-sidebar-active-bg: #edf5fd;
+  --zs-sidebar: #1b1d21;
+  --zs-sidebar-2: #2d2f33;
+  --zs-sidebar-3: #1b1d21;
+  --zs-sidebar-border: #444548;
+  --zs-sidebar-accent: #aaabac;
+  --zs-sidebar-active-bg: #26292d;
+  --zs-sidebar-text: #e0e0e0;
+  --zs-sidebar-muted: #aaabac;
   --zs-panel: #ffffff;
   --zs-panel-2: #f5f5f5;
   --zs-panel-3: #e7e7e7;
@@ -963,7 +967,7 @@ body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-annotated .nav-title {
 
 body.foreman-theme .pf-v5-c-page__sidebar .zs-theme-nav-description,
 body.foreman-theme .pf-v6-c-page__sidebar .zs-theme-nav-description {
-  color: var(--zs-muted) !important;
+  color: var(--zs-sidebar-muted) !important;
   display: block !important;
   font-size: var(--zs-sidebar-description-font-size) !important;
   font-weight: 400 !important;
@@ -1258,7 +1262,7 @@ body.foreman-theme #vertical-nav a,
 body.foreman-theme .navbar a {
   background: transparent !important;
   background-color: transparent !important;
-  color: var(--zs-text) !important;
+  color: var(--zs-sidebar-text) !important;
   --pf-v5-c-nav__link--BackgroundColor: transparent;
   --pf-v5-c-nav__link--m-current--BackgroundColor: var(--zs-sidebar-active-bg);
   --pf-v5-c-nav__link--hover--BackgroundColor: var(--zs-sidebar-active-bg);

@@ -44,7 +44,7 @@ packaging/build-rpm.sh
 Install or upgrade the RPM on the Foreman host:
 
 ```bash
-dnf install -y pkg/rpmbuild/RPMS/noarch/rubygem-foreman_zs_theme-0.1.137-1.el9.noarch.rpm
+dnf install -y pkg/rpmbuild/RPMS/noarch/rubygem-foreman_zs_theme-0.1.138-1.el9.noarch.rpm
 ```
 
 ## Release
@@ -53,8 +53,8 @@ RPM releases are built by GitHub Actions when a version tag is pushed. The tag
 must match `ForemanZsTheme::VERSION` in `lib/foreman_zs_theme/version.rb`.
 
 ```bash
-git tag -a v0.1.137 -m "foreman_zs_theme 0.1.137"
-git push origin v0.1.137
+git tag -a v0.1.138 -m "foreman_zs_theme 0.1.138"
+git push origin v0.1.138
 ```
 
 The release workflow builds the EL9 RPM in a CentOS Stream 9 container, uploads

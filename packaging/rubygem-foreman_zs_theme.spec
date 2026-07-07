@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.137
+Version: 0.1.138
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.138-1
+- Keep the sidebar and masthead dark while light mode switches only content surfaces.
+
 * Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.137-1
 - Debounce runtime DOM theme sync and add a stable masthead dark/light toggle.
 
