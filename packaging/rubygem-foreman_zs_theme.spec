@@ -2,7 +2,7 @@
 %global gem_dir /usr/share/gems
 
 Name: rubygem-%{gem_name}
-Version: 0.1.138
+Version: 0.1.139
 Release: 1%{?dist}
 Summary: ZS dark theme plugin for Foreman
 License: GPL-3.0-or-later
@@ -62,6 +62,9 @@ fi
 %dir %attr(0750,foreman,foreman) %{_localstatedir}/lib/foreman/%{gem_name}/uploads
 
 %changelog
+* Tue Jul 07 2026 ZS Operations <ops@zs.us> - 0.1.139-1
+- Keep command search controls and dropdown menus dark in light content mode.
+
 * Mon Jul 06 2026 ZS Operations <ops@zs.us> - 0.1.138-1
 - Keep the sidebar and masthead dark while light mode switches only content surfaces.
 

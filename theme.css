@@ -52,8 +52,15 @@
   --zs-toolbar-control-bg: #383a3f;
   --zs-toolbar-control-hover-bg: #43464c;
   --zs-toolbar-control-border: #a7a9ac;
+  --zs-shell-control-bg: #383a3f;
+  --zs-shell-control-hover-bg: #43464c;
+  --zs-shell-control-border: #a7a9ac;
+  --zs-shell-control-text: #e0e0e0;
+  --zs-shell-control-muted: #aaabac;
   --zs-menu-bg: #24272b;
   --zs-menu-hover-bg: #30333a;
+  --zs-menu-text: #e0e0e0;
+  --zs-menu-muted: #aaabac;
   --zs-focus-ring: #73bcf7;
   --zs-site-font-size: 14px;
   --zs-sidebar-font-size: 14px;
@@ -188,8 +195,15 @@ body.foreman-theme.zs-theme-light-mode {
   --zs-toolbar-control-bg: #f0f0f0;
   --zs-toolbar-control-hover-bg: #e6e6e6;
   --zs-toolbar-control-border: #6a6e73;
-  --zs-menu-bg: #ffffff;
-  --zs-menu-hover-bg: #f0f0f0;
+  --zs-shell-control-bg: #383a3f;
+  --zs-shell-control-hover-bg: #43464c;
+  --zs-shell-control-border: #a7a9ac;
+  --zs-shell-control-text: #e0e0e0;
+  --zs-shell-control-muted: #aaabac;
+  --zs-menu-bg: #24272b;
+  --zs-menu-hover-bg: #30333a;
+  --zs-menu-text: #e0e0e0;
+  --zs-menu-muted: #aaabac;
   --zs-focus-ring: #0066cc;
   color-scheme: light;
 }
@@ -6307,14 +6321,22 @@ body.foreman-theme .pf-v5-c-select__menu,
 body.foreman-theme .pf-v6-c-select__menu,
 body.foreman-theme .pf-v5-c-dropdown__menu,
 body.foreman-theme .pf-v6-c-dropdown__menu,
+body.foreman-theme .pf-v5-c-context-selector__menu,
+body.foreman-theme .pf-v6-c-context-selector__menu,
 body.foreman-theme .dropdown-menu,
-body.foreman-theme .bootstrap-select .dropdown-menu {
+body.foreman-theme .bootstrap-select .dropdown-menu,
+body.foreman-theme .select2-drop,
+body.foreman-theme .select2-dropdown,
+body.foreman-theme .ui-autocomplete,
+body.foreman-theme .autocomplete-suggestions,
+body.foreman-theme .autocomplete-results,
+body.foreman-theme .typeahead.dropdown-menu {
   background: var(--zs-menu-bg) !important;
   background-color: var(--zs-menu-bg) !important;
   border: 1px solid var(--zs-border) !important;
   border-radius: 0 !important;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35) !important;
-  color: var(--zs-text) !important;
+  color: var(--zs-menu-text) !important;
 }
 
 body.foreman-theme .pf-v5-c-menu__item,
@@ -6323,10 +6345,21 @@ body.foreman-theme .pf-v5-c-select__menu-item,
 body.foreman-theme .pf-v6-c-select__menu-item,
 body.foreman-theme .pf-v5-c-dropdown__menu-item,
 body.foreman-theme .pf-v6-c-dropdown__menu-item,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item > *,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item > *,
 body.foreman-theme .dropdown-menu > li > a,
-body.foreman-theme .bootstrap-select .dropdown-menu > li > a {
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a,
+body.foreman-theme .select2-results__option,
+body.foreman-theme .select2-results .select2-result-label,
+body.foreman-theme .ui-autocomplete .ui-menu-item,
+body.foreman-theme .ui-autocomplete .ui-menu-item-wrapper,
+body.foreman-theme .autocomplete-suggestion,
+body.foreman-theme .autocomplete-results > *,
+body.foreman-theme .typeahead.dropdown-menu > li > a {
   background: transparent !important;
-  color: var(--zs-text) !important;
+  color: var(--zs-menu-text) !important;
 }
 
 body.foreman-theme .pf-v5-c-menu__item:hover,
@@ -6341,14 +6374,50 @@ body.foreman-theme .pf-v5-c-dropdown__menu-item:hover,
 body.foreman-theme .pf-v5-c-dropdown__menu-item:focus,
 body.foreman-theme .pf-v6-c-dropdown__menu-item:hover,
 body.foreman-theme .pf-v6-c-dropdown__menu-item:focus,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item:hover,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item:focus,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item:hover > *,
+body.foreman-theme .pf-v5-c-context-selector__menu-list-item:focus > *,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item:hover,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item:focus,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item:hover > *,
+body.foreman-theme .pf-v6-c-context-selector__menu-list-item:focus > *,
 body.foreman-theme .dropdown-menu > li > a:hover,
 body.foreman-theme .dropdown-menu > li > a:focus,
 body.foreman-theme .bootstrap-select .dropdown-menu > li > a:hover,
-body.foreman-theme .bootstrap-select .dropdown-menu > li > a:focus {
+body.foreman-theme .bootstrap-select .dropdown-menu > li > a:focus,
+body.foreman-theme .select2-results__option:hover,
+body.foreman-theme .select2-results__option:focus,
+body.foreman-theme .select2-results__option--highlighted,
+body.foreman-theme .select2-results .select2-highlighted,
+body.foreman-theme .ui-autocomplete .ui-menu-item:hover,
+body.foreman-theme .ui-autocomplete .ui-menu-item:focus,
+body.foreman-theme .ui-autocomplete .ui-menu-item-wrapper:hover,
+body.foreman-theme .ui-autocomplete .ui-menu-item-wrapper:focus,
+body.foreman-theme .autocomplete-suggestion:hover,
+body.foreman-theme .autocomplete-suggestion:focus,
+body.foreman-theme .autocomplete-results > *:hover,
+body.foreman-theme .autocomplete-results > *:focus,
+body.foreman-theme .typeahead.dropdown-menu > li > a:hover,
+body.foreman-theme .typeahead.dropdown-menu > li > a:focus {
   background: var(--zs-menu-hover-bg) !important;
   background-color: var(--zs-menu-hover-bg) !important;
   color: #ffffff !important;
   outline: 0 !important;
+}
+
+html.zs-theme-light-mode body.foreman-theme .foreman-search-bar,
+html.zs-theme-light-mode body.foreman-theme .rails-table-toolbar,
+html.zs-theme-light-mode body.foreman-theme .toolbar-pf,
+html.zs-theme-light-mode body.foreman-theme .toolbar,
+html.zs-theme-light-mode body.foreman-theme .pf-v5-c-toolbar.table-toolbar,
+html.zs-theme-light-mode body.foreman-theme .pf-v6-c-toolbar.table-toolbar,
+html.zs-theme-light-mode body.foreman-theme .tfm-pagination {
+  --zs-toolbar-control-bg: var(--zs-shell-control-bg);
+  --zs-toolbar-control-hover-bg: var(--zs-shell-control-hover-bg);
+  --zs-toolbar-control-border: var(--zs-shell-control-border);
+  --zs-text: var(--zs-shell-control-text);
+  --zs-muted: var(--zs-shell-control-muted);
 }
 
 body.foreman-theme .pf-v5-c-check__input,

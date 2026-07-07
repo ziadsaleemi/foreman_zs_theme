@@ -52,8 +52,15 @@
   --zs-toolbar-control-bg: #383a3f;
   --zs-toolbar-control-hover-bg: #43464c;
   --zs-toolbar-control-border: #a7a9ac;
+  --zs-shell-control-bg: #383a3f;
+  --zs-shell-control-hover-bg: #43464c;
+  --zs-shell-control-border: #a7a9ac;
+  --zs-shell-control-text: #e0e0e0;
+  --zs-shell-control-muted: #aaabac;
   --zs-menu-bg: #24272b;
   --zs-menu-hover-bg: #30333a;
+  --zs-menu-text: #e0e0e0;
+  --zs-menu-muted: #aaabac;
   --zs-focus-ring: #73bcf7;
   --zs-site-font-size: 14px;
   --zs-sidebar-font-size: 14px;
@@ -188,8 +195,15 @@ body.foreman-theme.zs-theme-light-mode {
   --zs-toolbar-control-bg: #f0f0f0;
   --zs-toolbar-control-hover-bg: #e6e6e6;
   --zs-toolbar-control-border: #6a6e73;
-  --zs-menu-bg: #ffffff;
-  --zs-menu-hover-bg: #f0f0f0;
+  --zs-shell-control-bg: #383a3f;
+  --zs-shell-control-hover-bg: #43464c;
+  --zs-shell-control-border: #a7a9ac;
+  --zs-shell-control-text: #e0e0e0;
+  --zs-shell-control-muted: #aaabac;
+  --zs-menu-bg: #24272b;
+  --zs-menu-hover-bg: #30333a;
+  --zs-menu-text: #e0e0e0;
+  --zs-menu-muted: #aaabac;
   --zs-focus-ring: #0066cc;
   color-scheme: light;
 }
